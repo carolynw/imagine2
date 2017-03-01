@@ -1,0 +1,118 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+body {
+    &.IsPageEditor {
+
+        .carousel-cover-item {
+            position: absolute;
+        }
+
+        #page_section_content {
+            min-height: 20px;
+        }
+
+        .container-fluid {
+            min-height: 20px;
+        }
+
+        .content-widget {
+            &.hero-banner {
+                &.hero-tabs {
+                    .hero-banner-content {
+                        background-color: rgba($brand-black, 0.5);
+
+                        .carousel-indicators {
+                            position: relative;
+                            bottom: 0;
+                        }
+
+                        .carousel {
+                            &.fade {
+                                .carousel-inner {
+                                    .scLooseFrameZone {
+                                    }
+
+                                    .item {
+                                        opacity: 1;
+                                        position: relative;
+                                        display: block;
+
+                                        .content-widget {
+                                            padding-top: 0;
+                                            padding-bottom: 0;
+
+                                            .content-widget-inner {
+                                                padding-top: 0;
+                                                padding-bottom: 0;
+                                                opacity: 1;
+                                                transform: scale(0.60,0.60) translate(0, 0);
+                                            }
+                                        }
+
+                                        &:active {
+                                            .content-widget {
+                                                .content-widget-inner {
+                                                    transform: scale(0.60,0.60) translate(0, 0);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //.row-eq-height in capabilities component does not show the placeholders correctly
+            &.plus-4-col {
+                .col-sm-3 {
+                    &.row-eq-height {
+                        display: block;
+                    }
+                }
+            }
+
+            &.product-device {
+                .product-example {
+                    img {
+                        display: block !important;
+                        float: left;
+                        max-height: 200px;
+                        margin-left: 20px;
+                        max-width: 32%;
+                    }
+                }
+            }
+
+            &.tab-control-new {
+                .content-widget-inner {
+                    .section {
+                        .tab-content {
+                            .tab-pane {
+
+                                &.fade {
+                                    opacity: 1;
+                                    transform: translateX(0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.IsPreview {
+        #page_section_content {
+            min-height: auto;
+        }
+
+        .container-fluid {
+            min-height: auto;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.promoted-article {  
+        .content-widget-inner {   
+            padding-top: 8%;
+            padding-bottom: 8%;  
+            header, .header {
+                 @media (max-width: $screen-xs-max) {
+                     text-align:left;
+                }
+            }
+
+            section, .section {
+                @media (max-width: $screen-xs-max) {
+                    text-align:left;
+                    blockquote {
+                        padding:10px 0;
+                        font-size:inherit;
+                    }
+                }
+            }
+
+            footer, .footer {
+                a {
+                    @media (max-width: $screen-xs-max) {
+                        display:block;
+                        
+                    }
+                }
+            }
+        }
+
+        &.with-back-image {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-security</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon-security" stroke="#004089" stroke-width="2">
+            <path d="M43,25 L43,13 C43,6.373 37.627,1 31,1 L31,1 C24.373,1 19,6.373 19,13 L19,25" id="Shape"></path>
+            <rect id="Rectangle-path" x="9" y="25" width="44" height="36"></rect>
+            <path d="M31,46 L31,52" id="Shape"></path>
+            <circle id="Oval" cx="31" cy="40" r="6"></circle>
+        </g>
+    </g>
+</svg>

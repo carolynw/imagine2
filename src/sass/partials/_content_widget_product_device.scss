@@ -1,0 +1,37 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+.product-device{
+    .visible-important{
+        display:block !important;
+    }
+     .hidden-important{
+        display:none !important;
+    }
+    .product-example{
+            padding-top:20px;
+            width: 100%;
+        img{
+
+        }
+    }
+        .device-nav{
+            text-align:center;
+            
+        .laptop-button,
+        .tablet-button, 
+        .phone-button{
+            height:20px;
+            width:34px;
+            background-size: 33px 40px;
+            background-position: 0 20px;
+            display:inline-block;
+                margin: 35px 10px 0;
+            &.active{
+                    background-position: 0 0;
+            }
+        }
+        }
+}

@@ -1,0 +1,183 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.articles {
+        .content-widget-inner {
+              @media (max-width:$screen-xs-max) {
+                  padding: 15px 0;
+              }
+            .header {
+            }
+
+            .section {
+                @media (max-width:$screen-xs-max) {
+                    padding: 0;
+                }
+               
+                .article-list {
+
+                    &.slick-slider {
+                        .slick-track {
+                            display: flex;
+                        }
+                        .slick-slide {
+                            display: flex;
+                            height: auto;
+                            .panel {
+                                opacity:0;
+                                transform: translateX(50px);
+                                transition: opacity $default-transition-time ease, transform $default-transition-time ease; 
+                                @media (max-width:$screen-xs-max) {
+                                    opacity:1;
+                                    transform: translateX(0);
+                                    transition: none; 
+                                }
+                            }
+                            &.slick-active {
+                                .panel {
+                                    opacity:1;
+                                    transform: translateX(0);
+                                    transition: opacity $default-transition-time ease, transform $default-transition-time ease; 
+                                    @media (max-width:$screen-xs-max) {
+                                        transition: none; 
+                                    }
+                                }
+                                &:nth-child(1) {
+                                    .panel {
+                                        transition-delay: 0.1s;
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    .panel {
+                                        transition-delay: 0.2s;
+                                    }
+                                }
+                                &:nth-child(3) {
+                                    .panel {
+                                        transition-delay: 0.3s;
+                                    }
+                                }
+                                &:nth-child(4) {
+                                    .panel {
+                                        transition-delay: 0.4s;
+                                    }
+                                }
+                                &:nth-child(5) {
+                                    .panel {
+                                        transition-delay: 0.1s;
+                                    }
+                                }
+                                &:nth-child(6) {
+                                    .panel {
+                                        transition-delay: 0.2s;
+                                    }
+                                }
+                                &:nth-child(7) {
+                                    .panel {
+                                        transition-delay: 0.3s;
+                                    }
+                                }
+                                &:nth-child(8) {
+                                    .panel {
+                                        transition-delay: 0.4s;
+                                    }
+                                }
+                            }
+                            &.slick-current {
+                                .panel {}
+                            }
+                        }
+                    }
+
+                    .article-panel {
+                         padding:0;
+                        .panel {
+                            border-left: none;
+                            border-right: none;
+                            border-top: 10px solid $brand-light-azul;
+                            border-bottom: 1px solid $brand-light-azul;
+                            border-radius: 0;
+                            text-align: left;
+                            margin: 0 15px;
+
+                            @media (max-width:$screen-xxs-max) {
+                                margin: 0 10px;
+                            }
+
+                            @media (max-width:$screen-xs-max)and (min-width:$screen-xs-min) {
+                               
+                                margin: 0 20px;
+                                border-bottom: 1px solid $brand-light-azul;
+                                
+                            }
+
+                            @media (max-width:$screen-sm-max) and (min-width:$screen-sm-min) {
+                                
+                                margin: 0 10px;
+                            }
+
+                            .panel-heading {
+                                background-color: $brand-white;
+                                border-bottom: none;
+                                min-height: 275px;
+
+                                @media (max-width:$screen-sm-max) {
+                                    padding: 0;
+                                }
+
+                                p {
+                                    font-size: 0.9em;
+                                    line-height: 1.4em;
+
+                                    &.h1 {
+                                        line-height: inherit;
+                                        font-weight: normal;
+                                        font-size: 1.1em;
+                                        color: $brand-light-azul;
+                                    }
+                                }
+                            }
+
+                            .panel-body {
+                                @media (max-width:$screen-sm-max) {
+                                    padding: 0;
+                                }
+
+                                hr {
+                                    margin: 5px 0;
+                                }
+
+                                a {
+                                    color: $brand-light-azul;
+                                    text-decoration: underline;
+                                    font-size: 0.9em;
+                                    font-weight: bold;
+
+                                    &.media {
+                                        font-weight: normal;
+                                        display: block;
+                                        i{
+                                            padding-right:5px;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer {
+                padding-top: 10px;
+                 @media (max-width:$screen-xxs-max) {
+                     margin-top:60px !important;
+                        }
+            }
+        }
+    }
+}

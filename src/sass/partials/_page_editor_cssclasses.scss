@@ -1,0 +1,41 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+
+.serif {
+    font-family: AdelleSAGE, sans-serif;
+}
+.text-xs {
+    font-size: 0.6em;
+}
+.text-sm {
+    font-size: 1.0em;
+    @media (max-width: $screen-xs-max) {
+        font-size: 0.6em;
+    }
+}
+.text-lg {
+    font-size: 2.0em;
+    @media (max-width: $screen-xs-max) {
+        font-size: 1.5em;
+    }
+}
+.text-xlg {
+    font-size:2.5em;
+    @media (max-width: $screen-xs-max) {
+        font-size:2.0em;
+    }
+}
+.text-xxlg {
+    font-size:3em;
+    @media (max-width: $screen-xs-max) {
+        font-size:2.5em;
+    }
+}
+.text-xxxlg {
+    font-size:4em;
+    @media (max-width: $screen-xs-max) {
+        font-size:3em;
+    }
+}

@@ -1,0 +1,46 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+
+#page_header_sub_nav_call_to_action {
+    background-color: $page-header-nav-sub-call-to-action-background-color;
+    padding: 15px 0;
+    color: $brand-white;
+    display: none;
+
+    .call-to-action-container {
+
+        .btn-default {
+            color: $brand-white;
+            background-color: $brand-pink;
+            border-color: $brand-white;
+        }
+
+        .btn-primary {
+            color: $brand-pink;
+            background-color: $brand-white;
+            border-color: $brand-white;
+        }
+
+        .btn {
+            @media(max-width: $screen-xs-max) {
+                display: block;
+                margin-bottom: 5px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 0;
+        padding-top: 15px;
+
+        @media(max-width: $screen-xs-max) {
+            padding-bottom: 10px;
+            padding-top: 0;
+        }
+    }
+}

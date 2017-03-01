@@ -1,0 +1,49 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.solution-explorer {
+        .content-widget-inner {
+            .wrapper {
+                @media (max-width: $screen-md-max) {
+                    padding:3% 10% 3% 10%;
+                }
+                @media (max-width: $screen-sm-max) {
+                    padding:3% 5% 3% 5%;
+                }
+                .solution-item {
+                    cursor:pointer;
+                    margin:0 15px;
+                    .solution-item-inner-left {
+                        transition: $default-transition-time ease;
+                        margin-right:50px;
+                        padding-left:0;
+                        padding-right:15px;
+                        &:hover {
+                            padding-left:15px;
+                            padding-right:0;
+                        }
+                    }
+                    .solution-item-inner-right {
+                        float:right;
+                        margin-top:20px;
+                    }
+                    .inner-solution-image {
+                        float:left;
+                        margin-top:10px;
+                    }
+                    .inner-solution-button {
+                        margin-left:70px;
+                        .heading {
+                            margin-bottom:0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

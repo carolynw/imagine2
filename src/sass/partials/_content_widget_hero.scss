@@ -1,0 +1,51 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.generic-content-hero {
+        margin:0;
+        //padding:15px;
+
+        .content-widget-inner {
+            padding-top: 5%;
+            padding-bottom: 5%;
+            padding-left :15px;
+            padding-right:15px;
+            header, .header {
+            }
+
+            section, .section {
+            }
+
+            footer, .footer {
+            }
+        }
+
+        &.with-back-image {
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        
+
+        .active & {
+            .content-widget-inner {
+                padding-top: 5%;
+                padding-bottom: 5%;
+               
+                header, .header {
+                }
+
+                section, .section {
+                }
+
+                footer, .footer {
+                }
+            }
+        }
+    }
+}

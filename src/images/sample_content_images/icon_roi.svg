@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-roi</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-roi" stroke="#243741" stroke-width="1.5">
+            <path d="M36,20 L34.3333333,20 C29.7309583,20 26,23.8375571 26,28.5714286 L26,32 L27.6666667,32 C32.2690417,32 36,28.1624429 36,23.4285714 L36,20 L36,20 Z" id="Shape"></path>
+            <path d="M16,11.4285714 L17.6666667,11.4285714 C22.2690417,11.4285714 26,15.2661286 26,20 L26,23.4285714 L24.3333333,23.4285714 C19.7309583,23.4285714 16,19.5910143 16,14.8571429 L16,11.4285714 L16,11.4285714 Z" id="Shape"></path>
+            <path d="M26,44 L26,0" id="Shape"></path>
+            <path d="M0,51 L16,51 C16,49.1063743 17.4924083,47.5714286 19.3333333,47.5714286 C20.1645333,47.5714286 20.9152667,47.8955743 21.4990667,48.4131943 C22.4925167,45.9100886 24.8757333,44.1428571 27.6666667,44.1428571 C31.3486083,44.1428571 34.3333333,47.21286 34.3333333,51 L52,51" id="Shape"></path>
+        </g>
+    </g>
+</svg>

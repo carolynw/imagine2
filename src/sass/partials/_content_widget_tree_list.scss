@@ -1,0 +1,26 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.tree-list {
+        line-height: 2.3em;    
+        color:$brand-dark-grey;
+        .inner-indent {
+            padding-left: 20px;
+        }       
+        a {
+            text-decoration: underline;
+        }
+        header {
+        }
+
+        section {
+        }
+
+        footer {
+        }
+    }
+}

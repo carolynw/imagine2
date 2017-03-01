@@ -1,0 +1,93 @@
+﻿@import '_ux2_colours';
+
+#page_header_nav {
+  .call-to-action {
+    position: relative;
+    color: $ux2-white;
+
+    .inner {
+      @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9000;
+      overflow: visible;
+
+      &.sticky {
+        position: fixed;
+      }
+
+      .action-bar {
+        .title {
+          margin-top: 20px;
+          font-size: 32px;
+          font-weight: bold;
+        }
+
+        .actions {
+          text-align: right;
+
+          .from {
+            vertical-align: middle;
+          }
+
+          a {
+            padding: 8px 70px 8px 12px;
+            margin: 12px 20px;
+
+            &.button-white-solid-invert {
+              color: $ux2-fuchsia;
+            }
+          }
+        }
+      }
+
+      .nav-bar {
+        border-top: 1px solid $ux2-fuchsia-lighter;
+
+        a {
+          display: inline-block;
+          position:relative;
+          color:$ux2-white;
+          padding:3px 12px;
+          margin-right:10px;
+
+          &:after{
+            content:"";
+            border-right: 2px solid $ux2-white;
+            position: absolute;
+            top: 20%;
+            right: -9px;
+            height: 60%;
+          }
+
+          &:last-child:after{
+            border:none;
+          }
+
+          &:hover{
+            text-decoration: none;
+            background-color:transparentize($ux2-fuchsia-lighter, 0.8)
+          }
+        }
+      }
+    }
+  }
+
+  .nav-pills-sage.header-right li a {
+    color: $ux2-slate-dark;
+    font-family: AdelleSansSAGE;
+  }
+
+  .nav-pills-sage li {
+    a {
+      color: $ux2-slate-dark;
+      font-family: AdelleSansSAGE;
+
+      i {
+        margin-left: 10px;
+      }
+    }
+  }
+}

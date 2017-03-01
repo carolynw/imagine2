@@ -1,0 +1,135 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.hero-banner {
+        &.static {
+            padding-bottom: 0;
+
+            .hero-banner-content {
+                padding: 0;
+
+                .generic-content-hero {
+                    .content-widget-inner {
+                        padding: 260px 8.33% 175px 8.33%;
+
+                        @media(max-width:$screen-sm-min) {
+                            padding: 80px 10px 100px 10px;
+                            //padding-bottom: 100px;
+                            //padding-top: 80px;
+                            text-align: center;
+                        }
+
+                        .wrapper {
+                            max-width: 1360px;
+                            margin: auto;
+
+                            .wrapper-content {
+                                width: 58%;
+                                padding: 0 15px;
+
+                                @media (max-width:$screen-md-max) and (min-width:$screen-md-min) {
+                                    width: 80%;
+                                }
+
+                                @media (max-width:$screen-sm-max) {
+                                    width: 100%;
+                                    padding: 0;
+                                }
+                            }
+                        }
+
+                        @media (max-width:$screen-sm-max) {
+                            .header,
+                            .section,
+                            .footer {
+                                padding-left: 0;
+                                padding-right: 0;
+                            }
+                        }
+
+                        .header {
+                            font-size: 1.1em;
+                            padding-bottom: 40px;
+                            .h1{
+                                &.serif{
+                                     font-family: AdelleSAGE, sans-serif;
+                                }
+                            }
+                        }
+
+                        .section {
+                            font-size: 1.3em;
+                            font-weight: 300;
+                            padding-bottom: 40px;
+                             @media (max-width:$screen-xs-max) {
+                                 font-size: 1.1em;
+                             }
+                        }
+
+                        .footer {
+                            a {
+                                @media (max-width:$screen-xs-max) {
+                                    width: 100%;
+                                    margin-left: 0px;
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.left-content {
+                    .content-widget {
+                        .content-widget-inner {
+                            .wrapper {
+                                .wrapper-content {
+                                    margin: 0 auto 0 0;
+
+                                    @media(max-width:$screen-xs-min) {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.center-content {
+                    .content-widget {
+                        .content-widget-inner {
+                            .wrapper {
+                                .wrapper-content {
+                                    margin: auto;
+
+                                    @media(max-width:$screen-xs-min) {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.right-content {
+                    .content-widget {
+                        .content-widget-inner {
+                            .wrapper {
+                                .wrapper-content {
+                                    margin: 0 0 0 auto;
+
+                                    @media(max-width:$screen-xs-min) {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.content-widget-roi {  
+        .content-widget-inner {   
+            .header {
+              
+            }
+
+            .section {
+              .details{
+                  //float:left;
+                  //text-align:right;
+                  //width: calc(100% - 55px);
+                  margin-bottom:100px;
+                  margin-top:30px;
+                  @media(max-width:$screen-xs-max){
+                      text-align:center;
+                      float:none;
+                      margin-bottom:0;
+                  }
+                  .title{
+                      font-weight:bold;
+                      font-size:13px;
+                      margin-bottom:2px;
+                      line-height: 16px;
+                  }
+                  .green-figure{
+                      color:$brand-brilliant-green-AA;
+                      font-size:26px;
+                      font-weight: 300;
+                       @media(max-width:$screen-md-min) and (min-width:$screen-sm-min){
+                           font-size:18px;
+                       }
+                  }
+                  .description{
+                      font-size:13px;
+                          line-height: 17px;
+                  }
+              }
+              .detail-icon{
+                  margin-top:50px;
+                   @media(max-width:$screen-md-min) and (min-width:$screen-sm-min){
+                       
+                           height:40px;
+                           width:40px;
+                      
+                   }
+                   @media(max-width:$screen-xs-max){
+                      text-align:center;
+                      float:none !important;
+                  }
+              }
+              .result-img{
+                  padding:0 60px;
+                  border-bottom:1px solid $brand-black;
+                  @media(max-width:$screen-md-min){
+                      padding:0;
+                  }
+              } 
+              .source{
+                  font-size:13px;
+                  color:rgba($brand-black,0.7);
+              }
+            }
+
+            .footer {
+                 @media(max-width:$screen-xs-max){
+                     padding:20px 15px;
+                 }
+            }
+        }
+
+        
+        
+    }
+}

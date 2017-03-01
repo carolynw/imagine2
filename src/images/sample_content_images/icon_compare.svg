@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-compare</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon-compare" stroke="#41A940" stroke-width="1.5">
+            <path d="M6,12 L30,12" id="Shape"></path>
+            <path d="M30,24 L6,24" id="Shape"></path>
+            <polyline id="Shape" points="24 6 30 12 24 18"></polyline>
+            <polyline id="Shape" points="12 30 6 24 12 18"></polyline>
+        </g>
+    </g>
+</svg>

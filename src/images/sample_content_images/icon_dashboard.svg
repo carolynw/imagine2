@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="102px" height="102px" viewBox="0 0 102 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-dashboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon-dashboard" stroke="#156E96" stroke-width="2">
+            <path d="M91.6,80 L12.4,80 C9.90666667,80 8,78.05 8,75.5 L8,71 L96,71 L96,75.5 C96,78.05 94.0933333,80 91.6,80 L91.6,80 Z" id="Shape"></path>
+            <path d="M17.1034483,71 L17.1034483,24.8823529 C17.1034483,23.2970588 18.4310345,22 20.0536398,22 L84.9578544,22 C86.5804598,22 87.908046,23.2970588 87.908046,24.8823529 L87.908046,71" id="Shape"></path>
+            <polyline id="Shape" points="66.6781609 49 51.5057471 49 51.5057471 34"></polyline>
+            <ellipse id="Oval" cx="52" cy="48.5" rx="14.6666667" ry="14.5"></ellipse>
+        </g>
+    </g>
+</svg>

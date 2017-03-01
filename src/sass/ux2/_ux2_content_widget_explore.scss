@@ -1,0 +1,55 @@
+﻿.content-widget.explore {
+  text-align: center;
+
+  .header {
+    margin-bottom: 35px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .areas {
+    a {
+      text-align:left;
+      display: inline-block;
+      font-weight: bold;
+      height:52px;
+      line-height:52px;
+      white-space:nowrap;
+
+      img {
+        float:left;
+        margin-right: 15px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    .row > div {
+      margin-bottom:15px;
+    }
+  }
+
+  .growth {
+    a {
+      max-width: 240px;
+      margin-bottom:20px;
+    }
+  }
+
+  .industries {
+    a {
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom:20px;
+
+      img {
+        width: 52px;
+        height: 52px;
+        display: block;
+        margin: 0 auto 5px;
+      }
+    }
+  }
+}

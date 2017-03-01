@@ -1,0 +1,66 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    @include reset-bootstrap-margin($bootstrap-margin-reset);
+    
+    /*reset negative margin on nested content widgets*/
+    .content-widget { 
+        margin:0;
+    }
+    .content-widget-inner {
+
+        .wrapper {
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            padding: $default_content_widget_padding;
+            @media (max-width: $screen-xs-max) {
+                padding:0;
+            }
+
+            header, .header {
+                padding: 0;
+
+                @media (max-width: $screen-xs-max) {
+                    padding-left: $default-padding-fixed-mobile-val;
+                    padding-right: $default-padding-fixed-mobile-val;
+                }
+            }
+
+            section, .section {
+                padding: 0;
+
+                @media (max-width: $screen-xs-max) {
+                    padding-left: $default-padding-fixed-mobile-val;
+                    padding-right: $default-padding-fixed-mobile-val;
+                }
+            }
+
+            footer, .footer {
+                padding: 0;
+
+                @media (max-width: $screen-xs-max) {
+                    padding-left: $default-padding-fixed-mobile-val;
+                    padding-right: $default-padding-fixed-mobile-val;
+                }
+            }
+        }
+    }
+    &.live-chat-module {
+        margin-top:2%;
+        margin-bottom:2%;
+    }
+    &.plus-4-col{
+        .col-sm-3{
+            p{
+                margin-bottom:0;
+            }
+        }
+    }
+}

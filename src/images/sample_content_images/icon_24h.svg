@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-24h</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-24h" stroke-width="2" stroke="#41A940">
+            <polyline id="Shape" points="31 13.8571429 31 31 14.9285714 31"></polyline>
+            <path d="M61,31 C61,47.5685714 47.5685714,61 31,61 C14.4314286,61 1,47.5685714 1,31 C1,14.4314286 14.4314286,1 31,1 C43.0910714,1 53.6382143,8.47 58.3867857,18.775" id="Shape"></path>
+            <polyline id="Shape" points="60.1878571 5.33392857 58.3867857 18.775 45.7482143 17.0821429"></polyline>
+        </g>
+    </g>
+</svg>

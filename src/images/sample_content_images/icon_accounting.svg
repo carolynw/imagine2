@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-accounting</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-accounting" stroke="#28a3da" stroke-width="1.5">
+            <path d="M26,39.3333333 L26,49.3333333" id="Shape"></path>
+            <path d="M21,39.3333333 L11,51" id="Shape"></path>
+            <path d="M31,39.3333333 L41,51" id="Shape"></path>
+            <rect id="Shape" x="22.6666667" y="1" width="6.66666667" height="5"></rect>
+            <polyline id="Shape" points="46 34.3333333 46 6 6 6 6 34.3333333"></polyline>
+            <rect id="Shape" x="1" y="34.3333333" width="50" height="5"></rect>
+            <polyline id="Shape" points="36 16 26 26 19.3333333 19.3333333 14.3333333 24.3333333"></polyline>
+            <polyline id="Shape" points="29.3333333 16 36 16 36 22.6666667"></polyline>
+        </g>
+    </g>
+</svg>

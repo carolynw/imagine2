@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="62px" viewBox="0 0 54 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-services-inactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="B-Business-&amp;-Solutions" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.329999983">
+        <g id="B08-Sage-X3---States" transform="translate(-1103.000000, -750.000000)" stroke="#243741" stroke-width="2">
+            <g id="Services-4-inactive" transform="translate(1000.000000, 720.000000)">
+                <g id="icon-services-inactive" transform="translate(99.000000, 30.000000)">
+                    <path d="M20,29.5245902 L10,29.5245902 L10,44.2786885 C10,47.5383607 12.686,50.1803279 16,50.1803279 L20,50.1803279 L20,29.5245902 L20,29.5245902 Z" id="Shape"></path>
+                    <path d="M52,29.5245902 L42,29.5245902 L42,50.1803279 L46,50.1803279 C49.314,50.1803279 52,47.5383607 52,44.2786885 L52,29.5245902 L52,29.5245902 Z" id="Shape"></path>
+                    <path d="M42,60.0163934 L43,60.0163934 C50.732,60.0163934 57,53.8511475 57,46.2459016 L57,26.5737705 C57,12.4501639 45.359,1 31,1 L31,1 C16.641,1 5,12.4501639 5,26.5737705 L5,36.4098361" id="Shape"></path>
+                    <path d="M36,60.0163934 L30,60.0163934" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 27 41" style="enable-background:new 0 0 27 41;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#C8006E;stroke-width:0.5;}
+	.st1{fill:#C8006E;}
+	.st2{fill:none;stroke:#1B2931;stroke-width:0.5;}
+	.st3{fill:#1B2931;}
+</style>
+<title>icon-tablet</title>
+<desc>Created with Sketch.</desc>
+<g id="P-Products">
+	<g id="P02-Product-Features" transform="translate(-924.000000, -865.000000)">
+		<g id="Preview" transform="translate(500.000000, 360.000000)">
+			<g id="Preview-Selector" transform="translate(357.000000, 503.000000)">
+				<g id="icon-tablet" transform="translate(68.000000, 3.000000)">
+					<polyline id="Rectangle-path" class="st0" points="23,2 23,17 5,17 5,2 23,2 					"/>
+					<path id="Shape" class="st0" d="M0,17V2c0-1.1,1-2,2.3-2h20.5C24,0,25,0.9,25,2v15c0,1.1-1,2-2.3,2H2.3C1,19,0,18.1,0,17L0,17"
+						/>
+					<circle id="Oval" class="st1" cx="2.5" cy="9.5" r="1"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="P-Products_1_">
+	<g id="P02-Product-Features_1_" transform="translate(-924.000000, -865.000000)">
+		<g id="Preview_1_" transform="translate(500.000000, 360.000000)">
+			<g id="Preview-Selector_1_" transform="translate(357.000000, 503.000000)">
+				<g id="icon-tablet_1_" transform="translate(68.000000, 3.000000)">
+					<polyline id="Rectangle-path_1_" class="st2" points="23.1,22.1 23.1,37.1 5.1,37.1 5.1,22.1 23.1,22.1 					"/>
+					<path id="Shape_1_" class="st2" d="M0.1,37.1v-15c0-1.1,1-2,2.3-2h20.5c1.3,0,2.3,0.9,2.3,2v15c0,1.1-1,2-2.3,2H2.4
+						C1.1,39.1,0.1,38.2,0.1,37.1L0.1,37.1"/>
+					<circle id="Oval_1_" class="st3" cx="2.6" cy="29.6" r="1"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

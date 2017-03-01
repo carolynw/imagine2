@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-payroll</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-payroll" stroke="#ce0058" stroke-width="1.5">
+            <path d="M17.1891667,22.1991667 C16.3866667,20.5083333 14.6625,19.3333333 12.6666667,19.3333333 L6,19.3333333 C3.23833333,19.3333333 1,21.5716667 1,24.3333333 L1,31 L4.33333333,32.6666667 L5.16666667,44.3333333 L14.3333333,44.3333333" id="Shape"></path>
+            <circle id="Shape" cx="9.33333333" cy="9.33333333" r="5"></circle>
+            <path d="M34.8108333,22.1991667 C35.6133333,20.5083333 37.3375,19.3333333 39.3333333,19.3333333 L46,19.3333333 C48.7616667,19.3333333 51,21.5716667 51,24.3333333 L51,31 L47.6666667,32.6666667 L46.8333333,44.3333333 L37.6666667,44.3333333" id="Shape"></path>
+            <circle id="Shape" cx="42.6666667" cy="9.33333333" r="5"></circle>
+            <path d="M21,51 L20.1666667,37.6666667 L16,36.8333333 L16,26 C16,22.3183333 18.985,19.3333333 22.6666667,19.3333333 L29.3333333,19.3333333 C33.015,19.3333333 36,22.3183333 36,26 L36,36.8333333 L31.8333333,37.6666667 L31,51 L21,51 Z" id="Shape"></path>
+            <ellipse id="Shape" cx="26" cy="7.66666667" rx="6.66666667" ry="6.66666667"></ellipse>
+        </g>
+    </g>
+</svg>

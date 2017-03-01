@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-livechat</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-livechat" stroke="#41A940" stroke-width="2">
+            <path d="M20.242,45.3346429 C23.145,51.9625 30.883,56.7142857 40,56.7142857 C42.403,56.7142857 44.702,56.3682143 46.852,55.7617857 L55,61 L55,51.5575 C58.708,48.4664286 61,44.2385714 61,39.5714286 C61,34.7457143 58.55,30.3957143 54.619,27.28" id="Shape"></path>
+            <path d="M28,1 C13.088,1 1,11.0735714 1,23.5 C1,28.8539286 3.253,33.7642857 7,37.6278571 L7,52.4285714 L20.626,45.1289286 C22.973,45.6839286 25.44,46 28,46 C42.912,46 55,35.9264286 55,23.5 C55,11.0735714 42.912,1 28,1 L28,1 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

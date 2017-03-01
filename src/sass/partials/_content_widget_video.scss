@@ -1,0 +1,88 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.video {
+        .content-widget-inner {
+            padding-top: 3%;
+            padding-bottom: 3%;
+
+            .header {
+            }
+
+            .section {
+                .video-container {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    padding-top: 30px;
+                    height: 0;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    &.video-playing {
+                        .forced-image {
+                            display: none;
+                        }
+                    }
+
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .footer {
+            }
+        }
+
+        &.with-back-image {
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &.with-chapters {
+            .content-widget-inner {
+                .section {
+                    .video-container {
+                        padding-top: 0;
+                    }
+
+                    .video-chapters {
+                        display: block;
+                        padding: 5px 10px;
+                        background-color: $brand-lightest-grey;
+                        text-transform:uppercase;
+                        font-weight:bold;
+                        @media(max-width:$screen-xs-max) {
+                            margin-top: 30px;
+                        }
+                    }
+                    .video-chapters-list {
+                        padding: 0 10px 5px 10px;
+                        li {
+                            &:hover {
+                                text-decoration:underline;
+                            }
+                            &.playing {
+                                font-weight:bold;
+                                text-decoration:underline;
+                                cursor:default;
+                            }
+                            &.played {
+                                color:$brand-med-grey;
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}

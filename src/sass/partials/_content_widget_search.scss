@@ -1,0 +1,59 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.search-widget {
+        .wrapper {
+            .header {
+            }
+
+            .section {
+                p {
+                    font-size: 1.3em;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                }
+
+                .search-container {
+                     @media(max-width:$screen-xxs-max) {
+                         margin : 0 -15px;
+                     }
+                    .form-group {
+                        padding-top: 16px;
+                        border-bottom: 1px solid $brand-dark-grey;
+                        text-align: left;
+
+                        .search-box {
+                            display: inline-block;
+                            border: none;
+                            border-radius: 0;
+                            -webkit-box-shadow: none;
+                            box-shadow: none;
+                            width: 87%;
+                            background-color: transparent;
+
+                            @media(max-width:$screen-xxs-max) {
+                                font-size: 13px;
+                                width: 86%;
+                            }
+                            //float:left;
+                        }
+
+                        .btn-search {
+                            display: inline-block;
+                            border: none;
+                            background: none;
+                            //float:left;
+                        }
+                    }
+                }
+            }
+
+            .footer {
+            }
+        }
+    }
+}

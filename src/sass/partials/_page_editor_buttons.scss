@@ -1,0 +1,203 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+
+a {
+    &.text-link-white { 
+        color:$brand-white;
+        text-decoration:underline;
+    }
+
+    &.text-link-green {
+        color:$brand-light-green-AA;
+         text-decoration:underline;
+    }
+    
+    &.text-link-blue {
+        color:$brand-med-blue;
+         text-decoration:underline;
+    }
+
+    &.text-link-pink {
+        color:$brand-pink;
+         text-decoration:underline;
+    }
+
+    &.button-black {
+        border-color: $brand-black;
+        background-color: transparent;
+        color: $brand-black;
+    }
+
+    &.button-black-block {
+        border-color: $brand-black;
+        background-color: transparent;
+        color: $brand-black;
+    }
+
+    &.button-black-block-back {
+        border-color: $brand-black;
+        background-color: transparent;
+        color: $brand-black;
+    }
+
+    &.button-black-block-no-icon {
+        border-color: $brand-black;
+        background-color: transparent;
+        color: $brand-black;
+    }
+
+    &.button-black-solid-invert {
+        color: $brand-white;
+        @include linear-h-gradient($brand-black, $brand-dark-grey);
+    }
+
+    &.button-black-solid-block-invert {
+        color: $brand-white;
+        @include linear-h-gradient($brand-black, $brand-dark-grey);
+    }
+
+    &.button-white {
+        border-color: $brand-white;
+        background-color: transparent;
+        color: $brand-white;
+    }
+
+    &.button-white-block {
+        border-color: $brand-white;
+        background-color: transparent;
+        color: $brand-white;
+    }
+
+    &.button-white-back {
+        border-color: $brand-white;
+        background-color: transparent;
+        color: $brand-white;
+    }
+    
+    &.button-white-block-back{
+        border-color: $brand-white;
+        background-color: transparent;
+        color: $brand-white;
+    }
+
+    &.button-white-solid-invert {
+        border-color: $brand-white;
+        background-color: $brand-white;
+        color: $brand-black;
+    }
+
+    &.button-green {
+        border-color: $brand-light-green-AA;
+        background-color: transparent;
+        color: $brand-light-green-AA;
+    }
+
+    &.button-green-block {
+        border-color: $brand-light-green-AA;
+        background-color: transparent;
+        color: $brand-light-green-AA;
+    }
+
+    &.button-green-back {
+        border-color: $brand-light-green-AA;
+        background-color: transparent;
+        color: $brand-light-green-AA;
+    }
+
+    &.button-green-block-back {
+        border-color: $brand-light-green-AA;
+        background-color: transparent;
+        color: $brand-light-green-AA;
+    }
+
+    &.button-green-no-arrow {
+        border-color: $brand-light-green-AA;
+        background-color: transparent;
+        color: $brand-light-green-AA;
+    }
+
+    &.button-green-solid-invert {
+        color: $brand-white;
+        @include linear-h-gradient($brand-dark-green, $brand-light-green);
+    }
+
+    &.button-green-solid-block-invert {
+        color: $brand-white;
+        @include linear-h-gradient($brand-dark-green, $brand-light-green);
+    }
+
+    &.button-blue {
+        border-color: $brand-med-blue; 
+        background-color: transparent;
+        color: $brand-med-blue;
+    }
+
+    &.button-blue-block {
+        border-color: $brand-med-blue; 
+        background-color: transparent;
+        color: $brand-med-blue;
+    }
+
+    &.button-blue-back {
+        border-color: $brand-med-blue; 
+        background-color: transparent;
+        color: $brand-med-blue;
+    }
+
+    &.button-blue-block-back {
+        border-color: $brand-med-blue; 
+        background-color: transparent;
+        color: $brand-med-blue;
+    }
+
+    &.button-blue-solid-invert {
+        border-color: $brand-med-blue;
+        background-color: $brand-med-blue;
+        color: $brand-white;
+        @include linear-h-gradient($brand-dark-blue, $brand-med-blue);
+    }
+
+    &.button-blue-solid-block-invert {
+        border-color: $brand-med-blue;
+        background-color: $brand-med-blue;
+        color: $brand-white;
+        @include linear-h-gradient($brand-dark-blue, $brand-med-blue);
+    }
+
+    &.button-pink {
+        border-color: $brand-pink;
+        background-color: transparent;
+        color: $brand-pink;
+    }
+
+    &.button-pink-block {
+        border-color: $brand-pink;
+        background-color: transparent;
+        color: $brand-pink;
+    }
+
+    &.button-pink-back {
+        border-color: $brand-pink;
+        background-color: transparent;
+        color: $brand-pink;
+    }
+
+    &.button-pink-block-back {
+        border-color: $brand-pink;
+        background-color: transparent;
+        color: $brand-pink;
+    }
+
+    &.button-pink-solid-invert {
+        color: $brand-white;
+        @include linear-h-gradient($brand-dark-pink, $brand-pink);
+    }
+
+    &.button-pink-solid-block-invert {
+        color: $brand-white;
+        @include linear-h-gradient($brand-dark-pink, $brand-pink);
+    }
+}
+

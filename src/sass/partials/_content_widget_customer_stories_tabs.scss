@@ -1,0 +1,395 @@
+﻿/* Scss Document */
+/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+
+
+.content-widget {
+    &.customer-story {
+        &.customer-story-tabs {
+            .customer-story-content {
+
+                .hidden {
+                    opacity: 0;
+                    display: block !important;
+                }
+
+                padding: 0;
+                //min-height: 712px;
+                @media (max-width:$screen-xs-max) {
+                    min-height: inherit;
+                }
+
+                #customer_story_tab_carousel {
+                    .carousel-indicators {
+                        width: 100%;
+                        margin-left: -50%;
+                        &.hidden {
+                            pointer-events:none;
+                             @media (max-width:$screen-md-max) {
+                                display:none !important;
+                            }
+                        }
+                        @media (max-width:$screen-xs-max) {
+                            bottom: auto;
+                            top: 30px;
+                        }
+
+                        li {
+                            @media (max-width:$screen-xs-max) {
+                                width: 40px;
+                                min-width: inherit;
+                                text-indent: -5000px;
+                                margin: 0 3px;
+                            }
+
+                            @media (max-width:$screen-md-max) and (min-width:$screen-md-min) {
+                                min-width: 125px;
+                            }
+
+                            @media (max-width:$screen-sm-max) and (min-width:$screen-sm-min) {
+                                min-width: 115px;
+                                margin: 0 3px;
+                            }
+
+                            min-width: 163px;
+                            text-indent: 0;
+                            border: transparent 1px solid;
+                            border-top: rgba($brand-white, 0.5) 4px solid;
+                            border-radius: 0;
+                            padding: 10px 0;
+                            margin: 0 15px;
+                            color: rgba($brand-white, 0.5);
+                            height: 90px;
+                            vertical-align: bottom;
+                            overflow: hidden;
+
+
+                            &:hover {
+                                border-top: rgba($brand-white, 0.7) 4px solid;
+                                color: rgba($brand-white, 0.7);
+                            }
+
+                            &.active {
+                                background-color: transparent;
+                                font-weight: bold;
+                                border-top: $brand-white 4px solid;
+                                color: $brand-white;
+                            }
+                        }
+                    }
+
+                    .carousel-inner {
+                        .item {
+                            font-size: 1.3em;
+
+                            .carousel-item-inner {
+                                .story-container {
+                                    margin: 0;
+                                }
+
+                                .content-widget {
+                                    .section, .footer div {
+                                        padding: 0;
+
+                                        @media (max-width:$screen-xs-max) {
+                                            padding: 0 15px;
+                                        }
+                                    }
+
+                                    &.video {
+                                        .content-widget-inner {
+                                            padding: 0;
+
+                                            .wrapper {
+                                                padding-left: 0;
+                                                padding-right: 0;
+
+                                                .section {
+                                                    padding: 0 30px 0 0;
+                                                    @media(max-width:$screen-md-min) and (min-width: $screen-sm-min) {
+                                                        padding: 0 30px 0 0;
+                                                    }
+                                                    @media(max-width:$screen-xs-max) {
+                                                        padding: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .blurred + .content-widget-inner {
+                                        //padding: 65px 0 15px 0;
+                                        @media (max-width:$screen-md-max) {
+                                            padding: 165px 0 0 0;
+                                        }
+                                        @media (max-width:$screen-sm-max) {
+                                            padding: 280px 0 0 0;
+                                        }
+                                        @media (max-width:$screen-xs-max) {
+                                            padding: 125px 0 0 0;
+                                        }
+                                        @media (max-width:$screen-xxs-max) {
+                                            padding: 165px 0 0 0;
+                                        }
+                                        
+                                        
+                                        
+                                    }
+
+                                    .blurred {
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+
+                                        &.with-back-image {
+                                            background-position: top center;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            filter: blur(5px);
+                                            opacity: 0.95;
+                                        }
+                                    }
+
+                                    .proper-focus {
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+
+                                        &.with-back-image {
+                                            background-position: top center;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            filter: blur(0px);
+                                            opacity: 0.97;
+
+                                            &.content-widget-inner {
+                                                position: relative;
+                                            }
+                                        }
+                                    }
+
+                                    .content-widget-inner {
+                                        padding: 110px 0 150px 0;
+
+                                        @media (max-width:$screen-xs-max) {
+                                            padding-bottom: 50px;
+                                            padding-top: 70px;
+                                        }
+
+                                        .header {
+                                            h1 {
+                                                margin: 0 0 30px;
+
+                                                @media (max-width:$screen-xs-max) {
+                                                    margin-bottom: 0 !important;
+                                                }
+
+                                                @media (max-width:$screen-sm-max) {
+                                                    padding: 30px 0 0;
+                                                }
+                                            }
+                                        }
+
+                                        .wrapper {
+
+                                            @media (max-width:$screen-xs-max) {
+                                                width: 100%;
+                                            }
+
+                                            .hide-on-play {
+                                                margin: 0 30px;
+                                                position: relative;
+
+                                                @media (max-width:$screen-xs-max) {
+                                                    margin: 0 15px;
+                                                }
+
+                                                .header {
+                                                    h1 {
+                                                        padding-bottom: 20px;
+                                                    }
+
+                                                    @media (max-width:$screen-xs-max) {
+                                                        text-align: center;
+                                                        padding: 0 0 50px;
+
+                                                        h1 {
+                                                            font-size: 28px;
+                                                        }
+                                                    }
+                                                }
+
+                                                &.hidden {
+
+                                                    .section {
+                                                        @media (max-width:$screen-xxs-max) {
+                                                            display: none !important;
+                                                        }
+                                                    }
+                                                }
+                                                .section {
+
+                                                    blockquote {
+                                                        padding: 0 0 30px;
+
+                                                        @media (max-width:$screen-xs-max) {
+                                                            padding: 0 0 30px;
+                                                        }
+
+                                                        .lead {
+                                                            margin-bottom: 20px;
+                                                            font-size: 20px;
+
+                                                            @media (max-width:$screen-xs-max) {
+                                                                font-size: 16px;
+                                                            }
+                                                        }
+
+                                                        footer {
+                                                            color: $brand-white;
+
+                                                            @media(max-width:$screen-sm-min) {
+                                                                padding-left: 0;
+                                                                padding-right: 0;
+                                                            }
+
+                                                            &:before {
+                                                                content: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                .footer {
+                                                    a {
+                                                        &.button-white {
+                                                            @media(max-width:$screen-sm-min) {
+                                                                width: 100%;
+                                                                text-align: left;
+                                                            }
+
+                                                            @media(max-width:$screen-xxs-max) {
+                                                                padding: 12px 70px 12px 20px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .show-on-play {
+                                                transition: $default-transition-time ease;
+                                                position: absolute;
+                                                padding: 30px 15px 15px 15px;
+                                                width: 100%;
+                                                max-width: 1360px;
+                                                margin: auto;
+                                                top: 0;
+
+                                                &.hidden {
+                                                    pointer-events: none;
+
+                                                    h1 {
+                                                        transform: translateY(-100%);
+                                                    }
+                                                    .wrapper {
+                                                        .video-container {
+                                                            transform: translateY(100%);
+                                                        }
+                                                    }
+                                                }
+
+                                                @media (max-width:$screen-xxs-max) {
+                                                    padding: 15px 0 0 0;                                                     
+                                                }
+
+                                                h1 {
+                                                    transition: $default-transition-time ease;
+                                                    transform: translateY(0);
+
+                                                    @media (max-width:$screen-xs-max) {
+                                                        font-size: 16px;
+                                                    }
+                                                }
+
+                                                a.button-white-back {
+
+                                                    @media(max-width:$screen-xs-max) {
+                                                        font-size: 16px;
+                                                    }
+                                                }
+
+                                                .wrapper {
+                                                    width: 100%;
+                                                    max-width: none;
+
+                                                    @media (min-width:$screen-lg-min) {
+                                                        max-width: 1360px;
+                                                    }
+
+                                                    .content-widget-inner {
+                                                        @media (max-width:$screen-xs-max) {
+                                                            padding-top: 20px !important;
+                                                        }
+                                                    }
+
+                                                    .video-container {
+                                                        margin-top:10px;
+                                                        transform: translateY(0);
+                                                        transition: $default-transition-time ease;
+                                                        @media (max-width:$screen-xs-max) {
+                                                            padding-right: 0px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .header {
+                                                h1 {
+                                                    margin: 0 0 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.left-content {
+                                    .content-widget {
+                                        .content-widget-inner {
+                                            .wrapper {
+                                                margin: 0 auto 0 0;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.center-content {
+                                    .content-widget {
+                                        .content-widget-inner {
+                                            .wrapper {
+                                                margin: auto;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.right-content {
+                                    .content-widget {
+                                        .content-widget-inner {
+                                            .wrapper {
+                                                margin: 0 0 0 auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

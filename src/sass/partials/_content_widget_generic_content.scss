@@ -1,0 +1,215 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.generic-content {
+        .content-widget-inner {
+            padding-top: 3%;
+            padding-bottom: 3%;
+
+            .header {
+            }
+
+            .section {
+                p.underline {
+                    @media(max-width:$screen-xs-max) {
+                        padding-bottom: 10px;
+                        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+
+            .footer {
+            }
+        }
+
+        &.with-back-image {
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /*Page specific styles*/
+        /*product pages Your own business ecosystem*/
+        .connect-image-ecosystem {
+            margin-top: -10px;
+            margin-right: 10px;
+            display: inline-block;
+
+            @media(max-width:$screen-xxs-max) {
+                display: none;
+            }
+        }
+
+        .connect-image-ecosystem-h2 {
+            display: inline-block;
+
+            @media(max-width:$screen-xs-max) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &.plus-4-col, &.plus-5-col {
+        .slick-list {
+        }
+
+        > .content-widget-inner {
+            padding-bottom: 0;
+        }
+
+        .slick-track {
+            display: flex;
+            padding-bottom:6px;
+
+            .slick-slide {
+                display: flex;
+                height: auto;
+
+                .widget-placeholder-inner {
+                    padding:0;
+                    margin:0;
+                    .content-widget {
+                        padding:0;
+                        margin:0;
+                        &.generic-content {
+                            .content-widget-inner {
+                                padding:0;
+                                margin:0;
+                                .wraper {
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .partner-filter, .solution-filter {
+            padding: 30px 0 0 0;
+        }
+
+        .border-top-bottom {
+            transition: background-color $default-transition-time ease;
+            margin-top: 45px;
+            border-top: 1px solid $brand-med-grey;
+            border-bottom: 1px solid $brand-med-grey;
+            padding: 15px 15px 15px 15px;
+            text-align: center;
+            margin: 0 10px;
+
+
+            @media(max-width:$screen-sm-max) {
+                
+            }
+
+            @media(max-width:$screen-xs-max) {
+                width:100%;
+                margin:0;
+            }
+
+            .widget-placeholder-inner {
+
+
+                &.solution {
+                    cursor: pointer;
+
+                    hr {
+                        color: $brand-black;
+                        background-color: $brand-black;
+                        height: 2px;
+                        border: 0 none;
+                    }
+
+                    .summary {
+
+                        ul {
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+
+                            li {
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+            &.inactive {
+                .widget-placeholder-inner {
+                    opacity: 0.33;
+
+                    hgroup {
+                        .h4 {
+                            color: $brand-med-grey;
+                        }
+                    }
+
+                    .icon {
+                        &.solution {
+                            &.distribution {
+                                background-image: url('/images/sample_content_images/icon_distribution_inactive.svg');
+                            }
+
+                            &.manufacturing {
+                                background-image: url('/images/sample_content_images/icon_manufacturing_inactive.svg');
+                            }
+
+                            &.process {
+                                background-image: url('/images/sample_content_images/icon_process_inactive.svg');
+                            }
+
+                            &.services {
+                                background-image: url('/images/sample_content_images/icon_services_inactive.svg');
+                            }
+
+                            &.service-reseller {
+                                background-image: url('/images/sample_content_images/icon_service_reseller_inactive.svg');
+                            }
+
+                            &.system-implementer {
+                                background-image: url('/images/sample_content_images/icon_system_implementer_inactive.svg');
+                            }
+
+                            &.independant-software-vendor {
+                                background-image: url('/images/sample_content_images/icon_independant_software_vendor_inactive.svg');
+                            }
+
+                            &.professional-accountant {
+                                background-image: url('/images/sample_content_images/icon_professional_accountant_inactive.svg');
+                            }
+
+                            &.alliance-partner {
+                                background-image: url('/images/sample_content_images/icon_alliance_partner_inactive.svg');
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            &.active {
+                margin-bottom: -3px;
+                opacity: 1;
+
+                &.solutions {
+                    border-top: 1px solid $brand-azul;
+                    border-bottom: 4px solid $brand-azul;
+                    background-color: rgba($brand-azul, 0.05);
+                }
+
+                &.partners {
+                    border-top: 1px solid $brand-dark-plum;
+                    border-bottom: 4px solid $brand-dark-plum;
+                    background-color: rgba($brand-dark-plum, 0.05);
+                }
+            }
+        }
+    }
+}

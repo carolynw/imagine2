@@ -1,0 +1,94 @@
+﻿@import '../partials/common_mixins';
+@import '_ux2_colours';
+
+form.ux2form {
+  margin: 50px 0;
+
+  legend {
+    border: none;
+    color: $ux2-fuchsia;
+    margin-bottom:40px;
+  }
+
+  label {
+    position: relative;
+    margin-bottom: 40px;
+    text-transform:uppercase;
+
+    &.focus-within {
+      color: $ux2-fuchsia;
+    }
+
+    input[type="text"], input[type="password"] {
+      display: block;
+      width: 100%;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid $ux2-grey-lighter;
+
+      &:focus {
+        outline: none;
+        border-bottom-color: $ux2-fuchsia;
+      }
+    }
+
+    input[type="checkbox"] {
+      visibility: hidden;
+      height: 0;
+      width: 0;
+
+      & + i {
+        position: relative;
+        float: left;
+        display: block;
+        margin-left: 25px;
+        width: 50px;
+        min-height: 25px;
+      }
+
+      & + i:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: $ux2-fuchsia;
+        border-radius: 15%;
+      }
+
+      & + i:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 8px;
+        width: 10px;
+        height: 20px;
+        transform: rotate(45deg);
+        border-bottom: 3px solid $ux2-fuchsia-dark;
+        border-right: 3px solid $ux2-fuchsia-dark;
+      }
+
+      &:checked + i:after {
+        border-color: $ux2-white;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .pre-existing {
+    line-height: 50px;
+    text-align: right;
+
+    a {
+      display: block;
+      margin: auto 0;
+      color: $ux2-slate-light;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}

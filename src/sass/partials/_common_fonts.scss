@@ -1,0 +1,16 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+@include font-face(AdelleSAGE, '../Fonts/adellesage-webfont', normal, normal);
+@include font-face(AdelleSansSAGE, '../Fonts/adellesanssage-webfont', normal, normal);
+@include font-face(AdelleSansSAGE, '../Fonts/adellesanssage-italic-webfont', normal, italic);
+@include font-face(AdelleSansSAGE, '../Fonts/adellesanssage-bold-webfont', bold, normal);
+@include font-face(AdelleSansSAGE, '../Fonts/adellesanssage-bolditalic-webfont', bold, italic);
+@include font-face(AdelleSansSAGETh, '../Fonts/adellesanssageth-webfont', 100, normal);
+@include font-face(AdelleSansSAGETh, '../Fonts/adellesanssageth-italic-webfont', 100, italic);
+@include font-face(AdelleSansSAGELt, '../Fonts/adellesanssagelt-webfont', 300, normal);
+@include font-face(AdelleSansSAGELt, '../Fonts/adellesanssagelt-italic-webfont', 300, italic);
+

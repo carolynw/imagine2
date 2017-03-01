@@ -1,0 +1,22 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+
+#page_header_sub_nav_content {
+    background-color: $page-header-nav-sub-content-background-color;
+    display: none;
+
+    ul {
+        margin-bottom: 0;
+
+        li {
+            padding: 13px 53px;
+
+            a {
+                color: $brand-dark-grey;
+                font-size: 16px;
+            }
+        }
+    }
+}

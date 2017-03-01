@@ -1,0 +1,21 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.solutions-module {
+        .content-widget-inner {
+            header, .header {
+            }
+
+            section, .section {
+                padding-top: 10px;
+            }
+
+            footer,.footer {
+            }
+        }
+    }
+}

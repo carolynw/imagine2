@@ -1,0 +1,18 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_fonts';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+#page_section_content {
+    .widget-placeholder {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    .container,
+    .container-fluid {
+        background-color:$brand-white;
+    }
+
+}

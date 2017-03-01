@@ -1,0 +1,17 @@
+﻿@import '_ux2_colours';
+
+.ux2-slate-light-bg {
+  background-color: $ux2-slate-light;
+}
+
+.button-pink-block {
+  @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
+  color: $ux2-white;
+  font-weight: bold;
+}
+
+.button-pink-block.inverse {
+  background:$ux2-white;
+  color:$ux2-fuchsia;
+  font-weight: bold;
+}

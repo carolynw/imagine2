@@ -1,0 +1,183 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.switcher {
+        .content-widget-inner {
+            .header {
+            }
+            .section {
+                .the-switcher {
+                    padding-top:60px;
+                    .the-switcher-nav {
+                        text-align: center;
+                        border-bottom: solid 1px $brand-med-grey;
+
+                        ul {
+                            display: none;
+                            padding: 0;
+                            margin: 0;
+
+                            li {
+                                padding: 0;
+                                margin: 0 10px 0 10px;
+                                font-size: $default-font-size-md;
+                                border-bottom: 6px transparent solid;
+                                border-top:6px solid transparent;
+                                max-width: 270px;
+                                opacity: 0.33;
+                                display: inline-block;
+                                transition: $default-transition-time ease;
+
+                                @media(max-width:$screen-xs-max) {
+                                    display: none;
+                                }
+
+                                @media(max-width:$screen-xxs-max) {
+                                    max-width: 115px;
+                                }
+
+                                &.navigation {
+                                    display: none;
+                                    opacity: 1;
+                                    @media(max-width:$screen-xs-max) {
+                                        //position:absolute;
+                                        display: inline-block;
+
+                                        &.disabled {
+                                            visibility: hidden;
+                                            cursor: inherit;
+                                        }
+                                    }
+
+                                 
+                                    cursor: pointer;
+                                }
+
+                                .icon {
+                                    display: block;
+                                    margin: 8px 8px 0 0;
+                                }
+                                &.active {
+                                    border-bottom: 6px solid;
+                                   //margin: 0 10px 0 10px;
+                                    opacity: 1.0;
+
+                                    @media(max-width:$screen-xs-max) {
+                                        display: inline-block;
+                                        margin: 0 auto;
+                                    }
+                                    a{
+                                        color:$brand-brilliant-green-AA;
+                                    }
+                                }
+                                a {
+                                    border: none;
+                                    display: block;
+                                    padding: 5px 0 10px 0;
+                                    color:$brand-med-grey;
+
+                                    &:hover,
+                                    &:focus {
+                                        background-color: transparent;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                            &.active {
+                                display: block;
+                                 @media (max-width:$screen-xs-max) {
+                                     display: -webkit-box;
+                                     display: -webkit-flex;
+                                     display: -ms-flexbox;
+                                     display: flex;
+                                 }
+                            }
+                        }
+                        .the-switcher-nav-left,
+                        .the-switcher-nav-center,
+                        .the-switcher-nav-right {
+                            border-top: solid 1px transparent;
+                            padding-top: 15px;
+                        }
+                        .the-switcher-nav-right {
+                            ul{
+                                li{
+                                    &.navigation{
+                                        transform: translateY(9px);
+                                    }
+                                }
+                            }
+                        }
+
+                        .the-switcher-nav-left{
+                            
+                             @media (max-width:$screen-sm-max){
+                                border-top: solid 1px $brand-med-grey;
+                                padding-top:0;
+                             }
+                            ul{
+                                li{
+                                     border-top:6px solid transparent;
+                                     height:100%;
+                                    &.active{
+                                        @media (max-width:$screen-sm-max){
+                                            border-bottom: none;
+                                            border-top: 6px solid $brand-brilliant-green-AA;
+                                        }
+                                        
+                                    }
+                                    a{
+                                         //height:80px;
+                                    }
+                                     &.navigation {
+                                        @media(max-width:$screen-xxs-max) {
+                                            //transform: none;
+                                        }
+                                           transform: translateY(7px);
+                                    }
+                                }
+                            }
+                        }
+                        .the-switcher-nav-center{
+                             @media (max-width:$screen-md-min) {
+                                 padding: 20px 0;
+                             }
+                            img{
+                                 @media (max-width:$screen-md-min) {
+                                transform: rotate(90deg);
+                                }
+                            }
+                        }
+                    }
+
+                    .the-switcher-content {
+                        .the-switcher-content-panel {
+                            display: none;
+                            @media(max-width:$screen-xxs-max) {
+                                .tab-control-id {
+                                    .nav-tabs {
+                                        li {
+                                            a {
+                                                max-width: 94px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer {
+            }
+        }
+    }
+}

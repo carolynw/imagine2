@@ -1,0 +1,17 @@
+﻿@import '../partials/common_mixins';
+@import '_ux2_colours';
+
+.content-widget.trial {
+  .pre-existing {
+    line-height: 50px;
+    text-align: right;
+
+    a {
+      display: block;
+      margin: auto 0;
+      color: $ux2-slate-light;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}

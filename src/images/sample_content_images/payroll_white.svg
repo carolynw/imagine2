@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:1.5;}
+</style>
+<title>icon-payroll</title>
+<desc>Created with Sketch.</desc>
+<g id="Symbols">
+	<g id="icon-payroll">
+		<path id="Shape" class="st0" d="M17.2,22.2c-0.8-1.7-2.5-2.9-4.5-2.9H6c-2.8,0-5,2.2-5,5V31l3.3,1.7l0.8,11.7h9.2"/>
+		<circle id="Shape_1_" class="st0" cx="9.3" cy="9.3" r="5"/>
+		<path id="Shape_2_" class="st0" d="M34.8,22.2c0.8-1.7,2.5-2.9,4.5-2.9H46c2.8,0,5,2.2,5,5V31l-3.3,1.7l-0.8,11.7h-9.2"/>
+		<circle id="Shape_3_" class="st0" cx="42.7" cy="9.3" r="5"/>
+		<path id="Shape_4_" class="st0" d="M21,51l-0.8-13.3L16,36.8V26c0-3.7,3-6.7,6.7-6.7h6.7c3.7,0,6.7,3,6.7,6.7v10.8l-4.2,0.8L31,51
+			H21z"/>
+		<ellipse id="Shape_5_" class="st0" cx="26" cy="7.7" rx="6.7" ry="6.7"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,68 @@
+﻿/*Main Site Sass*/
+@import '_common_mixins';
+@import '_common_colours';
+@import '_common_variables';
+@import '_sage_bootstrap_variables';
+
+.content-widget {
+    &.two-col-generic-content {  
+        .content-widget-inner {
+            padding-top: 5%;
+            padding-bottom: 5%; 
+            header, .header {
+                @media (max-width:$screen-xs-max) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
+                  margin-top:0;
+                }
+                .serif {
+                        font-family: AdelleSAGE, sans-serif;
+                }
+            }
+
+            section, .section {
+                @media (max-width:$screen-xs-max) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            footer, .footer {
+                a{
+                    &.button-white-block{
+                        font-weight:300;
+                    }
+                }
+            }
+
+            .row {
+                .col-md-8, .col-md-4, .col-sm-6 {
+                    &.divider-right {
+                        border-right: solid 1px;
+                        padding-right: 5%;
+                        margin-right: 5%;
+                        @media (max-width:$screen-xs-max) {
+                            border-right: none;
+                            border-bottom: solid 1px;
+                            margin: 0 15px 4% 15px;
+                            padding: 0 0 4% 0;
+                        }
+                    }
+                    @media (max-width:$screen-xs-max) {
+                        .footer {
+                            padding: 0 0 2% 0;
+                        }
+                     }
+                }
+            }
+        }
+
+        &.with-back-image {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
