@@ -42,10 +42,6 @@
             margin: 0 20px;
             vertical-align: bottom;
 
-            &.button-white-solid-invert {
-              color: $ux2-fuchsia;
-            }
-
             &:last-child {
               margin-right: 0;
             }
@@ -85,20 +81,20 @@
             a {
               display: inline-block;
               position: relative;
-              color: $ux2-white;
+              color: #eee;
               padding: 1px 0px;
               margin-bottom: 2px;
 
               &.active {
                 margin-bottom: 0px;
-                border-bottom: 2px solid $ux2-white;
+                border-bottom: 2px solid #eee;
               }
 
               &:hover {
-                color: $ux2-fuchsia-lighter;
+                color: $ux2-white;
                 text-decoration: none;
                 margin-bottom: 0px;
-                border-bottom: 2px solid $ux2-fuchsia-lighter;
+                border-bottom: 2px solid $ux2-white;
               }
             }
           }
