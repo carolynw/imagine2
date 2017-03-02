@@ -6,6 +6,7 @@
     color: $ux2-white;
 
     .inner {
+      @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
       position: absolute;
       top: 0;
       left: 0;
@@ -18,23 +19,28 @@
       }
 
       .action-bar {
-        @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
+        margin-top: 16px;
 
         .title {
-          margin-top: 20px;
-          font-size: 32px;
+          font-size: 30px;
         }
 
         .actions {
           text-align: right;
 
           .from {
-            vertical-align: middle;
+            display: inline-block;
+            font-size: 18px;
+
+            > span {
+              font-size: 30px;
+            }
           }
 
           a {
-            padding: 8px 70px 8px 12px;
-            margin: 12px 20px;
+            padding: 4px 70px 4px 25px;
+            margin: 0 20px;
+            vertical-align: bottom;
 
             &.button-white-solid-invert {
               color: $ux2-fuchsia;
@@ -48,22 +54,23 @@
       }
 
       .nav-bar {
-        background: #f0f0f0;
+        margin-top: 2px;
 
-        ul{
-          margin:0;
+        ul {
+          margin: 0;
+          font-size: 13px;
 
-          li{
-            float:left;
-            position:relative;
-            margin-right:50px;
+          li {
+            float: left;
+            position: relative;
+            margin-right: 60px;
 
             &:after {
               content: "";
-              border-right: 2px solid $ux2-black;
+              border-right: 1px solid $ux2-white;
               position: absolute;
-              top: 20%;
-              right:-26px;
+              bottom: 0;
+              right: -31px;
               height: 60%;
             }
 
@@ -78,15 +85,20 @@
             a {
               display: inline-block;
               position: relative;
-              color: $ux2-black;
-              padding: 3px 0px;
-              margin-bottom: 3px;
+              color: $ux2-white;
+              padding: 1px 0px;
+              margin-bottom: 2px;
+
+              &.active {
+                margin-bottom: 0px;
+                border-bottom: 2px solid $ux2-white;
+              }
 
               &:hover {
-                color:$ux2-fuchsia;
+                color: $ux2-fuchsia-lighter;
                 text-decoration: none;
-                margin-bottom: 1px;
-                border-bottom: 2px solid $ux2-fuchsia;
+                margin-bottom: 0px;
+                border-bottom: 2px solid $ux2-fuchsia-lighter;
               }
             }
           }
