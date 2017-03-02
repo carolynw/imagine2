@@ -23,35 +23,29 @@
     <div id="page_header_nav" class="navbar-sage">
         @@include("../../_common/_header_nav.html")
         @@include("../../_common/_header_nav_call_to_action.html", {
-            "title" : "Sage One"
+        "title" : "Sage One"
         })
     </div>
+
+    <header id="page_header">
+        <div id="page_header_content">
+            @@include("./_index/_hero_banner.html")
+        </div>
+    </header>
+
+    <section id="page_section">
+        <div id="page_section_content">
+            @@include("./_index/_product_features.html")
+            @@include("./_index/_do_business.html")
+            @@include("./_index/_solutions.html")
+            @@include("./_index/_live_chat.html")
+            @@include("./_index/_customer_stories.html")
+            @@include("./_index/_generic_content_3_col.html")
+        </div>
+    </section>
+
+    @@include("../../_common/_footer.html")
 </div>
-
-<header id="page_header">
-    <div id="page_header_content">
-        @@include("./_index/_hero_banner.html")
-    </div>
-</header>
-
-<section id="page_section">
-    <div id="page_section_content">
-        @@include("./_index/_product_features.html")
-        @@include("./_index/_do_business.html")
-        @@include("./_index/_solutions.html")
-        @@include("./_index/_live_chat.html")
-        @@include("./_index/_customer_stories.html")
-        @@include("./_index/_generic_content_3_col.html")
-    </div>
-</section>
-
-<footer id="page_footer">
-    <div id="page_footer_content"></div>
-    <div id="page_footer_search_content">@@include("../../_common/_footer_search_content.html")</div>
-    <div id="page_footer_nav_content">@@include("../../_common/_footer_nav_content.html")</div>
-    <div id="page_footer_other_sites_content">@@include("../../_common/_footer_other_sites_content.html")</div>
-    <div id="page_footer_logo_content">@@include("../../_common/_footer_logo_content.html")</div>
-</footer>
 
 <!-- vendor:js --><!-- endinject -->
 <!-- sage:js --><!-- endinject -->
