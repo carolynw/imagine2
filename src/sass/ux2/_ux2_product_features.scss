@@ -3,7 +3,7 @@
 @import '_ux2_colours';
 
 .content-widget.product-features {
-  h2 {
+  h1, h2 {
     color: $ux2-fuchsia;
   }
 
@@ -17,12 +17,20 @@
       margin-top:20px;
     }
 
-    .external-links {
-      margin: 30px 0 40px;
 
-      li{
-        margin-top:20px;
-      }
-    }
+  }
+}
+
+.content-widget.product-feature-detail{
+  margin-top:30px;
+
+  h1 {
+    color: $ux2-fuchsia;
+  }
+
+  .row.indent-m-md {
+    margin-bottom:30px;
+    padding-bottom:50px;
+    border-bottom:2px solid $ux2-grey-lighter;
   }
 }

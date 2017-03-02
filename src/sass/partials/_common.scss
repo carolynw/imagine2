@@ -36,14 +36,6 @@ body {
             }
         }
 
-        &.with-reduced-width {
-            max-width: $default-reduced-width;
-
-            .wrapper {
-                max-width: none;
-            }
-        }
-
         .wrapper {
             max-width: $default-fixed-width;
             margin: 0 auto;
