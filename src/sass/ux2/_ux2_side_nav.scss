@@ -21,8 +21,8 @@
 body.side-nav-open {
   overflow: hidden;
 
-  #page_main, #page_header, #page_section, #page_footer{
-    filter:blur(5px);
+  #page_main, #page_header, #page_section, #page_footer {
+    filter: blur(5px);
   }
 }
 
@@ -40,7 +40,6 @@ body.side-nav-open {
   opacity: 0;
   font-family: AdelleSansSAGE;
   color: $brand-white;
-  font-size: 14px;
 
   &.open {
     overflow-y: auto;
@@ -57,8 +56,8 @@ body.side-nav-open {
   }
 
   .header {
-    margin: 30px auto;
-    min-height: 70px;
+    margin: 15px auto 25px;
+    padding-bottom: 10px;
 
     .navbar-sage-brand {
       display: block;
@@ -74,13 +73,11 @@ body.side-nav-open {
     }
 
     ul {
-      float: right;
-
       > li {
         float: left;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: normal;
-        margin-right: 20px;
+        margin-right: 36px;
 
         i {
           margin-left: 10px;
@@ -172,22 +169,13 @@ body.side-nav-open {
 
 @media(max-width: $screen-sm-max) {
   #ux2_side_nav {
-    @include linear-v-gradient(rgba($ux2-slate, 1.0), rgba($ux2-slate-light, 1.0));
+    @include linear-v-gradient(rgba($ux2-slate, 0.95), rgba($ux2-slate-light, 0.95));
     transform: scaleY(1);
     transform: scaleX(0);
     transform-origin: left;
 
-    ul li a {
-      display: block;
-      padding: 6px 52px;
-    }
-
     .header {
       border-bottom: 1px solid $ux2-azul-light;
-
-      ul {
-        display: none;
-      }
     }
 
     .body {
@@ -196,6 +184,11 @@ body.side-nav-open {
       margin: 0;
       position: static;
       height: auto;
+
+      ul li a {
+        display: block;
+        padding: 6px 52px;
+      }
 
       .top {
         padding: 0;
