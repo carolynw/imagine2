@@ -6,7 +6,6 @@
     color: $ux2-white;
 
     .inner {
-      @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
       position: absolute;
       top: 0;
       left: 0;
@@ -19,10 +18,11 @@
       }
 
       .action-bar {
+        @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
+
         .title {
           margin-top: 20px;
           font-size: 32px;
-          font-weight: bold;
         }
 
         .actions {
@@ -39,36 +39,56 @@
             &.button-white-solid-invert {
               color: $ux2-fuchsia;
             }
+
+            &:last-child {
+              margin-right: 0;
+            }
           }
         }
       }
 
       .nav-bar {
-        border-top: 1px solid $ux2-fuchsia-lighter;
+        background: #f0f0f0;
 
-        a {
-          display: inline-block;
-          position:relative;
-          color:$ux2-white;
-          padding:3px 12px;
-          margin-right:10px;
+        ul{
+          margin:0;
 
-          &:after{
-            content:"";
-            border-right: 2px solid $ux2-white;
-            position: absolute;
-            top: 20%;
-            right: -9px;
-            height: 60%;
-          }
+          li{
+            float:left;
+            position:relative;
+            margin-right:50px;
 
-          &:last-child:after{
-            border:none;
-          }
+            &:after {
+              content: "";
+              border-right: 2px solid $ux2-black;
+              position: absolute;
+              top: 20%;
+              right:-26px;
+              height: 60%;
+            }
 
-          &:hover{
-            text-decoration: none;
-            background-color:transparentize($ux2-fuchsia-lighter, 0.8)
+            &:last-child {
+              margin-right: 0;
+
+              &:after {
+                border: none
+              }
+            }
+
+            a {
+              display: inline-block;
+              position: relative;
+              color: $ux2-black;
+              padding: 3px 0px;
+              margin-bottom: 3px;
+
+              &:hover {
+                color:$ux2-fuchsia;
+                text-decoration: none;
+                margin-bottom: 1px;
+                border-bottom: 2px solid $ux2-fuchsia;
+              }
+            }
           }
         }
       }

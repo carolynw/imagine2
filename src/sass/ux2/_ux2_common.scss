@@ -1,0 +1,32 @@
+﻿@import '_ux2_colours';
+@import '../../../node_modules/font-awesome/scss/_variables.scss';
+
+a.external-link {
+  color: $ux2-green-dark;
+  text-decoration: underline;
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    font-family: FontAwesome;
+    color: $ux2-black;
+    content: $fa-var-external-link;
+    text-decoration: none;
+    display: inline-block;
+    height: 100%;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    color: $ux2-green;
+
+    &:before{
+      color:$ux2-grey-dark;
+    }
+  }
+}
