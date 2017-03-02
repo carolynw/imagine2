@@ -11,13 +11,13 @@ sageApp.modules.register("ux2Nav", function ($) {
 
     $body.on("click", "[data-sidenav='open']", function(event){
       event.preventDefault();
-      $body.addClass("no-scroll");
+      $body.addClass("side-nav-open");
       $sideNav.addClass("open");
     });
 
     $body.on("click", "[data-sidenav='close']", function(event){
       event.preventDefault();
-      $body.removeClass("no-scroll");
+      $body.removeClass("side-nav-open");
       $sideNav.removeClass("open");
     });
 

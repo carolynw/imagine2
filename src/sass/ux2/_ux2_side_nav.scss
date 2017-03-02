@@ -18,12 +18,16 @@
   background: url('/images/sample_content_images/icon_close_white.svg') no-repeat;
 }
 
-.no-scroll {
+body.side-nav-open {
   overflow: hidden;
+
+  #page_main, #page_header, #page_section, #page_footer{
+    filter:blur(5px);
+  }
 }
 
 #ux2_side_nav {
-  @include linear-v-gradient(rgba($ux2-slate-light, 1.0), rgba($ux2-slate, 1.0));
+  @include linear-v-gradient(rgba($ux2-slate-light, 0.95), rgba($ux2-slate, 0.95));
   @include stretch-fit;
   z-index: 9999;
   overflow: hidden;
