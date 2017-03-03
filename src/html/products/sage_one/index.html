@@ -23,13 +23,25 @@
     <div id="page_header_nav" class="navbar-sage">
         @@include("../../_common/_header_nav.html")
         @@include("../../_common/_header_nav_call_to_action.html", {
-        "title" : "Sage One"
+            "title" : "Sage One",
+            "theme" : "fuchsia",
+            "nav" : [
+                {"title":"Explore Sage One", "class":"active"},
+                {"title":"Customer stories"},
+                {"title":"Switching to Sage"},
+                {"title":"Inventory management"},
+                {"title":"Pegg"}
+            ]
         })
     </div>
 
     <header id="page_header">
         <div id="page_header_content">
-            @@include("./_index/_hero_banner.html")
+            @@include("../../_common/_widgets/_hero_banner_static.html", {
+                "title":"Sage One Accounting",
+                "img":"/images/sample_content_images/hero_banner_sage_one.jpg",
+                "desc":"Simple and secure online accounting from just $10 per week, with no fixed term contract."
+            })
         </div>
     </header>
 

@@ -1,4 +1,4 @@
-﻿<div class="call-to-action" data-sticky-container>
+﻿<div class="call-to-action @@theme" data-sticky-container>
     <div class="inner" data-sticky>
         <div class="container-fluid with-max-width">
             <div class="row action-bar">
@@ -13,11 +13,9 @@
 
             <div class="row nav-bar">
                 <ul class="col-sm-12 list-unstyled">
-                    <li><a href="#" class="active">Explore Sage One</a></li>
-                    <li><a href="#">Customer stories</a></li>
-                    <li><a href="#">Switching to Sage</a></li>
-                    <li><a href="#">Inventory management</a></li>
-                    <li><a href="#">Pegg</a></li>
+                    @@for(var i=0; i < nav.length; i++) {
+                        <li><a href="#" class="`+nav[i].class+`">`+nav[i].title+`</a></li>
+                    }
                 </ul>
             </div>
         </div>
