@@ -29,14 +29,22 @@
     }
 
     function activateAll() {
+      // Bootstrap all modules in turn
       $.each(registeredModules, function (name, module) {
-        var bootstrapped = module($);
-
         try {
-          if (typeof bootstrapped.init === "function")
-            bootstrapped.init();
+          activeModules[name] = module($);
+        } catch (error) {
+          sageApp.logger.logError(error);
+        }
+      });
 
-          activeModules[name] = bootstrapped;
+      // Now execute each module's init function. This happens after all bootstrapping is complete in order to allow for
+      // module inter-dependencies to work without worrying about load ordering.
+      $.each(activeModules, function (name, module) {
+        try {
+          if (typeof module.init === "function") {
+            module.init();
+          }
         } catch (error) {
           sageApp.logger.logError(error);
         }
