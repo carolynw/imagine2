@@ -4,145 +4,173 @@
 /*global sageApp */
 
 sageApp.modules.register("productFilter", function ($) {
-    "use strict";
+  "use strict";
 
-    var moduleClass = "filter-module-content:not(.partners)",
-        filterButtonsClass = "product-filter-icon-wrapper",
-        activeClass = "active",
-        activeFiltersArray = [],
-        productsArray = [],
-        sageCompareControl;
+  var moduleClass = "filter-module-content:not(.partners)",
+    filterButtonsClass = "product-filter-icon-wrapper",
+    activeClass = "active",
+    activeFiltersArray = [],
+    productsArray = [],
+    filteredProductArray = [],
+    mostPopularOriginal = "";
 
-    function init() {
-        //bind all events to document for delagation to traget product-filter-icon-wrapper
-          $(document).on("click", "." + moduleClass + " ." + filterButtonsClass, function (e) {
-              e.preventDefault();
-              filterIconClicked(e.currentTarget);
-          });
+  function init() {
+    //bind all events to document for delagation to traget product-filter-icon-wrapper
+    $(document).on("click", "." + moduleClass + " ." + filterButtonsClass, function (e) {
+      e.preventDefault();
+      filterIconClicked(e.currentTarget);
+    });
 
-          $(document).on("click", "." + moduleClass + " ." + "product-select-icon", function (e) {
-              e.preventDefault();
-              updateCompare(e.currentTarget);
-          });
+    $(document).on("click", "." + moduleClass + " ." + "product-select-icon", function (e) {
+      e.preventDefault();
+      updateCompare();
+    });
 
-          setTimeout(initProdSlider, 700);
+    //TODO remove in prod not needed when not loading content with angular!
+    setTimeout(initProdSlider, 200);
 
+  }
+
+  function filterIconClicked(clickedItem) {
+    var clickedFilter = $(clickedItem).attr("data-filter-attribute");
+    if (clickedFilter) {
+      $(clickedItem).toggleClass(activeClass);
+      updateFilters(clickedFilter);
     }
+  }
 
-    function filterIconClicked(clickedItem) {
-        var clickedFilter = $(clickedItem).attr("data-filter-attribute");
-        if (clickedFilter) {
-            $(clickedItem).toggleClass(activeClass);
-            updateFilters(clickedFilter);
-        }  
+  function updateFilters(clickedFilter) {
+    var positionInArray = $.inArray(clickedFilter, activeFiltersArray);
+    if (positionInArray === -1) {
+      activeFiltersArray.push(clickedFilter);
+    } else {
+      activeFiltersArray.splice(positionInArray, 1);
     }
+    updateProducts();
+  }
 
-    function updateFilters(clickedFilter) {
-        var positionInArray = $.inArray(clickedFilter, activeFiltersArray);
-        if (positionInArray === -1) {
-            activeFiltersArray.push(clickedFilter);
-        } else {
-            activeFiltersArray.splice(positionInArray, 1);
+  function updateCompare() {
+    $("." + moduleClass + " .product-panel").toggleClass(activeClass);
+    $("." + moduleClass + " .product-panel").find(".icon-select-text, .product-select-icon").toggleClass(activeClass);
+  }
+
+  function drawProducts() {
+    var tmpScore = filteredProductArray[0].score,
+      recomended = filteredProductArray[0].id,
+      mostPopular = mostPopularOriginal,
+      exaxtMatch = true;
+
+    //find most popular product from class most-popular
+    for (var i = productsArray.length; i--;) {
+      if (productsArray[i].mostPopular) {
+        if (mostPopular === "") {
+          mostPopular = productsArray[i].id;
+          mostPopularOriginal = mostPopular;
         }
-        updateProducts();
+      }
     }
 
-    function updateCompare(clickedItem) {
-        $(clickedItem).toggleClass(activeClass);
-        $(clickedItem).closest(".product-panel").toggleClass(activeClass);
-        $(clickedItem).closest(".panel").next(".icon-select-text").toggleClass(activeClass);
+    //if no most popular default to first product
+    if (mostPopular === "") {
+      mostPopular = productsArray[0].id;
     }
 
+    //remove most popular and recomended product classes
+    $("." + moduleClass + " .product-panel .panel-pre-heading").html("");
+    $("." + moduleClass + " [data-mob-prod-id]").removeClass("most-popular recommended");
+    $("." + moduleClass + " [data-desktop-prod-id]").removeClass("most-popular recommended");
 
-    function drawProducts() {
-        var tmpScore = 0,
-            recomended = 0,
-            mostPopular = 0,
-            exaxtMatch = true;
-        //Identify product wth highest score and render as recomended 
-        console.log(productsArray[0].id + " : " + productsArray[0].score + " - " + productsArray[1].id + " : " + productsArray[1].score + " - " + productsArray[2].id + " : " + productsArray[2].score);
-        for (var i = productsArray.length; i--;) {
-            if (productsArray[i].score !== Math.round(productsArray[i].score)) {
-                mostPopular = i;
-            }
-            if (productsArray[i].score > tmpScore) {
-                tmpScore = productsArray[i].score;
-                recomended = i;
-            } else if (productsArray[i].score === tmpScore) {
-                tmpScore = productsArray[i].score;
-                recomended = i;
-                exaxtMatch = false; 
-            }
-        }
-
-        $("." + moduleClass + " .product-panel .panel-pre-heading").html("");
-        $("." + moduleClass + " [data-mob-prod-id]").removeClass("most-popular recommended");
-        $("." + moduleClass + " [data-desktop-prod-id]").removeClass("most-popular recommended");
-        if (tmpScore <= 0.5) {
-            $("." + moduleClass + " [data-desktop-prod-id=" + productsArray[mostPopular].id + "]").addClass("most-popular");
-            $("." + moduleClass + " [data-mob-prod-id=" + productsArray[mostPopular].id + "]").addClass("most-popular");
-            $("." + moduleClass + " .product-panel[data-mob-prod-id=" + productsArray[mostPopular].id + "] .panel-pre-heading").html("Most popular");
-        } else {
-            $("." + moduleClass + " [data-desktop-prod-id=" + productsArray[recomended].id + "]").addClass("recommended");
-            $("." + moduleClass + " [data-mob-prod-id=" + productsArray[recomended].id + "]").addClass("recommended");
-            $("." + moduleClass + " .product-panel[data-mob-prod-id=" + productsArray[recomended].id + "] .panel-pre-heading").html("Recommended");
-        }
-
-        console.log("mostPopular: " + productsArray[mostPopular].id);
-        console.log("recomended:" + productsArray[recomended].id);
-        
+    //add most popular and recomended product classes as appropriate
+    if (tmpScore < 1) {
+      $("." + moduleClass + " [data-desktop-prod-id=" + mostPopular + "]").addClass("most-popular");
+      $("." + moduleClass + " [data-mob-prod-id=" + mostPopular + "]").addClass("most-popular");
+      $("." + moduleClass + " .product-panel[data-mob-prod-id=" + mostPopular + "] .panel-pre-heading").html("Most popular");
+    } else {
+      $("." + moduleClass + " [data-desktop-prod-id=" + recomended + "]").addClass("recommended");
+      $("." + moduleClass + " [data-mob-prod-id=" + recomended + "]").addClass("recommended");
+      $("." + moduleClass + " .product-panel[data-mob-prod-id=" + recomended + "] .panel-pre-heading").html("Recommended");
     }
 
-    function calculateProductScore(tempFeaturesArray) {
-        var score = 0;
-        //console.log("clicked filter: " + activeFiltersArray);
-        //console.log("features: " + tempFeaturesArray);
-        //console.log("tmpLength: " + activeFiltersArray.length);
-        for (var i = activeFiltersArray.length; i--;) {
-            if (tempFeaturesArray.indexOf(activeFiltersArray[i]) !== -1) {
-                score++;
-            }
-        }
-        //console.log("score: " + score);
-        return score;
-    }
+  }
 
-    function updateProducts() {
-        productsArray = [];
-        $("." + moduleClass + " .product-panel").each(function () {
-            var tmpFeatures = $(this).attr("data-filter-attributes").split("|");
-            productsArray.push(
-            {
-                "id": $(this).attr("data-mob-prod-id"),
-                "score": Number($(this).attr("data-filter-product-score")) + calculateProductScore(tmpFeatures),
-                "features": tmpFeatures
-            });
+  function calculateProductScore(tempFeaturesArray) {
+    var score = 0;
+    for (var i = activeFiltersArray.length; i--;) {
+      if (tempFeaturesArray.indexOf(activeFiltersArray[i]) !== -1) {
+        score++;
+      }
+    }
+    return score;
+  }
+
+  function updateProducts() {
+    productsArray = [];
+    filteredProductArray = [];
+
+    //push products into productsArray with calculated scores
+    $("." + moduleClass + " .product-panel").each(function () {
+      var tmpFeatures = $(this).attr("data-filter-attributes").split("|"),
+        tmpScore =  calculateProductScore(tmpFeatures);
+      productsArray.push(
+        {
+          "id": $(this).attr("data-mob-prod-id"),
+          "score": tmpScore,
+          "price": $(this).attr("data-price"),
+          "mostPopular": $(this).hasClass("most-popular"),
+          "features": tmpFeatures
         });
-        drawProducts();
+    });
+
+    //sorts products in productsArray with highest scores first
+    productsArray.sort(function (a, b) {
+      return b.score - a.score;
+    });
+
+    //push high scored products with the same score into filteredProductsArray
+    var tmpHighScore = productsArray[0].score;
+    filteredProductArray.push(productsArray[0]);
+    for (var i = 1; i <= productsArray.length-1; i++) {
+      if (productsArray[i].score === tmpHighScore) {
+        filteredProductArray.push(productsArray[i]);
+      } else {
+        break;
+      }
     }
 
-    function initProdSlider() {
-        $(".filter-module-results-list").slick({
-          dots: false,
-          infinite: false,
-          speed: 300,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          arrows: false,
-          responsive: [
-            {
-              breakpoint: 767,
-              settings: {
-                focusOnSelect: true,
-                centerMode: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 1
-              }
-            }
-          ]
-        });
+    //sorts products in filteredProductsArray with lowest price first if more than one
+    if (filteredProductArray.length > 1) {
+      filteredProductArray.sort(function (a, b) {
+        return a.price - b.price;
+      });
     }
+
+    drawProducts();
+  }
+
+  function initProdSlider() {
+    $(".filter-module-results-list")
+      .slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              focusOnSelect: true,
+              centerMode: true,
+              centerPadding: "20px",
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 1
+            }
+          }
+        ]
+      });
+  }
 
   return {
     init: init

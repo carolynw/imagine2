@@ -47,6 +47,7 @@
     scripts: [
       "node_modules/jquery/dist/jquery.js",
       "node_modules/bootstrap/dist/js/bootstrap.js",
+      "node_modules/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js",
       "node_modules/slick-carousel/slick/slick.js",
       "node_modules/waypoints/lib/jquery.waypoints.js",
       "node_modules/waypoints/lib/shortcuts/inview.js"

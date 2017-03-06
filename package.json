@@ -19,6 +19,7 @@
     "gulp-uglify": "^2.0.1",
     "gulp-watch": "^4.3.11",
     "jquery": "^3.1.1",
+    "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.6.0",
     "waypoints": "^4.0.1"
   }

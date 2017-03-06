@@ -138,9 +138,54 @@
 
 
                     .filter-module-results {
+                        .filter-module-results-list {
+                            .slick-slider {
+                            
+                            }
+                        }
+                        
                         .product-panel {
                             margin: 0 1.5%;
+                            position:relative;
+                            perspective: 2000px;
+                            height:690px;
+                            padding-top:30px;
+                            .card {
+                                position:absolute;
+                                transition: all ease 1s;
+                                backface-visibility: hidden;
+                                transform-style: preserve-3d;
+                                -ms-transition: none;
+                                width:100%;
+                                
+                            }
 
+                            .back {
+                                -ms-transform: rotateY( -180deg );
+                                transform: rotateY( -180deg );
+                                .panel {
+                                    &.panel-default {
+                                        .panel-heading {
+                                            height: 100px;
+                                        }
+                                        .panel-body {
+                                            padding: 50px 10px 5px 10px;
+                                            h5 {
+                                                font-size: 12px;
+                                                margin:5px 0;
+                                            }
+                                            p {
+                                                font-size: 12px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .front {
+                                -ms-transform: rotateY( 0deg );
+                                transform: rotateY( 0deg );
+                            }
+                            
                             @media (max-width: $screen-sm-max) {
                                 margin: 0 1%;
                             }
@@ -156,6 +201,7 @@
 
 
                                     .with-tick {
+                                        font-size:0.9em;
                                         li:before {
                                             color: $brand-azul;
                                         }
@@ -172,16 +218,13 @@
                                     }
 
                                     .panel-heading {
+                                        padding:10px 5px;
                                         color: $brand-white;
                                         border: none;
                                         transition: $default-transition-time ease;
                                         background-color: transparent;
-                                        height: 260px;
+                                        height: 240px;
                                         overflow: hidden;
-
-                                        @media (max-width:$screen-xxs-max) {
-                                            height: 300px;
-                                        }
 
                                         p {
                                             line-height: 1.4em;
@@ -266,18 +309,18 @@
 
                                     .panel-body {
                                         border-radius: 0 0 5px 5px;
-                                        padding: 65px 15px 15px 15px;
+                                        padding: 50px 10px 5px 10px;
                                         background-color: transparent;
                                         border: 0 none;
-                                        background-image: url("/images/cardCurve.svg");
-                                        background-position: top center;
-                                        background-size: cover;
-
-                                        
+                                        background-repeat:no-repeat;
+                                        background-image: url("/images/cardCurve.png");
+                                        background-position: 0 0;
+                                        background-size: 100%;
 
                                         ul {
-                                            height: 180px;
+                                            height: 150px;
                                             overflow: hidden;
+                                            line-height:1.5em;
                                         }
 
                                         p {
@@ -302,13 +345,18 @@
                                         }
 
                                         .panel-heading {
+                                            padding:3px 5px 0 5px;
                                             p {
                                                 &.h1 {
+                                                    margin-top: 5px;
                                                     font-weight: bold;
+
                                                 }
                                             }
                                         }
-
+                                        .panel-body {
+                                            padding: 40px 10px 5px 10px;  
+                                        }
                                         .button-learnmore {
                                             border-color: $brand-light-azul;
                                             background-color: $brand-light-azul;
@@ -318,10 +366,6 @@
                                 }
 
                                 .product-select-icon {
-                                    margin: 20px auto 0 auto;
-                                    width: 32px;
-                                    cursor: pointer;
-
                                     .icon {
                                         &.select {
                                             background-color: $brand-light-azul;
@@ -345,13 +389,17 @@
                                         }
 
                                         .panel-heading {
+                                            padding:3px 5px 0 5px;
                                             p {
                                                 &.h1 {
+                                                    margin-top: 5px;
                                                     font-weight: bold;
                                                 }
                                             }
                                         }
-
+                                        .panel-body {
+                                            padding: 40px 10px 5px 10px;  
+                                        }
                                         .button-learnmore {
                                             border-color: $brand-dark-green;
                                             background-color: $brand-dark-green;
@@ -361,10 +409,6 @@
                                 }
 
                                 .product-select-icon {
-                                    margin: 20px auto 0 auto;
-                                    width: 32px;
-                                    cursor: pointer;
-
                                     .icon {
                                         &.select {
                                             background-color: $brand-dark-green;
@@ -376,7 +420,7 @@
 
 
                             .product-select-icon {
-                                margin: 20px auto 0 auto;
+                                margin: 15px auto 25px auto;
                                 width: 32px;
                                 cursor: pointer;
 
@@ -393,7 +437,7 @@
                                             margin: 0;
                                             padding: 0;
                                             transition: $default-transition-time ease;
-                                            font-size: 32px;
+                                            font-size: 18px;
                                             line-height: 32px;
                                             font-family: Arial, Helvetica, sans-serif;
                                         }
@@ -442,10 +486,25 @@
                                     }
                                 }
                             }
+
+                            &.active {
+
+                                .back {
+                                        -ms-transform: rotateY( 0deg );
+                                        transform: rotateY( 0deg );
+                                        
+                                }
+                                .front {
+                                        -ms-transform: rotateY( 180deg );
+                                        transform: rotateY( 180deg );
+                                        
+                                }
+
+                            }
                         }
+                        
                     }
 
-                    .filter-module-results-table {
                         .as-compare-slide {
                             .call-button {
                                 hr {
@@ -455,12 +514,6 @@
                                 a {
                                     margin: 20px 0;
                                 }
-                            }
-                        }
-
-                        a {
-                            &.button-learnmore {
-                                max-width: 300px;
                             }
                         }
 
@@ -480,13 +533,20 @@
                                 &:last-child {
                                     .as-table-cell {
                                         border-bottom: none;
-                                        padding: 0 15px;
+                                        padding: 0 5px 5px 5px;
                                     }
                                 }
                             }
 
                             .as-table-cell {
                                 width: 50%;
+                                padding: 0 5px;
+                                &:first-child {
+                                    width: 60%;
+                                }
+                                &:last-child {
+                                    width: 40%;
+                                }
                             }
                             &.active {
                                 display:block;
@@ -643,7 +703,6 @@
                                 @include linear-h-gradient($brand-dark-green, $brand-light-green-AA);
                             }
                         }
-                    }
                 }
             }
         }

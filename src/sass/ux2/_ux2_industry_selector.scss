@@ -3,8 +3,8 @@
 @import '_ux2_colours';
 
 .content-widget.industries {
-  .section{
-    margin-top:40px;
+  .section {
+    margin-top: 40px;
   }
 
   .industry-info {
@@ -12,7 +12,7 @@
     border: 1px solid $ux2-azul;
     text-align: center;
     padding: 30px 20%;
-    height:430px; // temp hack
+    height: 430px; // temp hack
 
     &:hover {
       background: $ux2-white;
@@ -44,9 +44,6 @@
         position: absolute;
         top: 0;
         left: 25%;
-      }
-
-      > li {
       }
     }
   }
