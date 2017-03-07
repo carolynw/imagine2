@@ -129,10 +129,10 @@
     var vendorContent = gulp.src([out._root + out.scripts + "sage.vendor.min.js", out._root + out.styles + "sage.vendor.css"], {read: false});
 
     return gulp.src(src.html)
-      .pipe(inject(vendorContent, {name: "vendor", ignorePath: out._root}))
-      .pipe(inject(sageContent, {name: "sage", ignorePath: out._root}))
       .pipe(fileInclude({prefix: "@@", basepath: '@file'}))
       .pipe(replace(/[\u200B-\u200D\uFEFF]/g, "")) // works around a bug in fileInclude
+      .pipe(inject(vendorContent, {name: "vendor", ignorePath: out._root}))
+      .pipe(inject(sageContent, {name: "sage", ignorePath: out._root}))
       .pipe(gulp.dest(out._root + out.html));
   });
 
