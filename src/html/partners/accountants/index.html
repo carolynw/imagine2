@@ -1,21 +1,21 @@
-﻿@@include("../_common/_html_start.html" {
+﻿@@include("../../_common/_html_start.html" {
     "title" : "Accountants"
 })
 
 <body>
-@@include("../_common/_side_nav.html")
+@@include("../../_common/_side_nav.html")
 
 <div id="page_main">
     <div id="page_header_nav" class="navbar-sage">
-        @@include("../_common/_header_nav.html")
-        @@include("../_common/_header_nav_call_to_action.html", {
+        @@include("../../_common/_header_nav.html")
+        @@include("../../_common/_header_nav_call_to_action.html", {
             "title" : "Partners",
             "theme" : "azul",
             "leadIn" : "",
             "button" :{"text":"Join the partner network", "href":"#"},
             "nav" : [
-                {"title":"Overview", "href":"/html/partners/index.html"},
-                {"title":"Accountants", "href":"/html/accountants/index.html", "class":"active"},
+                {"title":"Overview", "href":"/html/partners/overview/index.html"},
+                {"title":"Accountants", "href":"/html/partners/accountants/index.html", "class":"active"},
                 {"title":"Case studies"},
                 {"title":"Community"},
                 {"title":"Partner programme"}
@@ -25,7 +25,7 @@
 
     <header id="page_header">
         <div id="page_header_content">
-            @@include("../_common/_widgets/_hero_banner_static.html", {
+            @@include("../../_common/_widgets/_hero_banner_static.html", {
                 "title":"Become a Sage partner",
                 "img":"/images/sample_content_images/hero_banner_partners.jpg",
                 "desc":"Sage offers a range of cloud and mobility-based solutions to help your customers transform their business, anytime, anywhere"
@@ -36,15 +36,15 @@
     <section id="page_section">
         <div id="page_section_content">
             @@include("./_index/_content.html")
-            @@include("../_common/_widgets/_live_chat.html")
-            @@include("../_common/_widgets/_customer_stories.html")
-            @@include("../_common/_widgets/_generic_3_col_content.html")
+            @@include("../../_common/_widgets/_live_chat.html")
+            @@include("../../_common/_widgets/_customer_stories.html")
+            @@include("../../_common/_widgets/_generic_3_col_content.html")
             @@include("./_index/_form.html")
         </div>
     </section>
 
-    @@include("../_common/_footer.html")
+    @@include("../../_common/_footer.html")
 </div>
 </body>
 
-@@include("../_common/_html_end.html")
+@@include("../../_common/_html_end.html")
