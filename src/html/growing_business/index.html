@@ -1,0 +1,35 @@
+@@include("../_common/_html_start.html" {
+    "title" : "Grow Your Business"
+})
+
+<body>
+@@include("../_common/_side_nav.html")
+
+<div id="page_main">
+    <div id="page_header_nav" class="navbar-sage">
+        @@include("../_common/_header_nav.html")
+    </div>
+
+    <header id="page_header">
+        <div id="page_header_content">
+            @@include("../_common/_widgets/_hero_banner_static.html", {
+                "title":"Grow on your terms",
+                "img":"/images/sample_content_images/hero_banner_growing_business.jpg",
+                "desc":"Get the full picture with solutions that help you manage the growth of your business."
+            })
+        </div>
+    </header>
+
+    <section id="page_section">
+        <div id="page_section_content">
+            @@include("./_index/_generic_tabs.html")
+            @@include("./_index/_articles.html")
+            @@include("../_common/_widgets/_customer_stories.html")
+        </div>
+    </section>
+
+    @@include("../_common/_footer.html")
+</div>
+</body>
+
+@@include("../_common/_html_end.html")
