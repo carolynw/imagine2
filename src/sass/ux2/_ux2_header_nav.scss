@@ -5,9 +5,15 @@
     position: relative;
     color: $ux2-white;
 
-    &.plum {
+    &.amethyst {
       .inner {
-        @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
+        @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
+      }
+    }
+
+    &.azul {
+      .inner{
+        @include linear-h-gradient(rgba($ux2-azul-dark, 1.0), rgba($ux2-azul, 1.0));
       }
     }
 
@@ -17,9 +23,9 @@
       }
     }
 
-    &.amethyst {
+    &.plum {
       .inner {
-        @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
+        @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
       }
     }
 

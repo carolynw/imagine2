@@ -6,15 +6,15 @@
                     @@title
                 </div>
                 <div class="col-sm-9 actions">
-                    <span class="from">From <span>$10.00</span> /month</span>
-                    <a href="/Content/Sage/HTML/Pages/Free_trial/index.html" class="button-white button-inline">Buy now</a>
+                    @@leadIn
+                    <a href="@@button.href" class="button-white button-inline">@@button.text</a>
                 </div>
             </div>
 
             <div class="row nav-bar">
                 <ul class="col-sm-12 list-unstyled">
                     @@for(var i=0; i < nav.length; i++) {
-                        <li><a href="#" class="`+nav[i].class+`">`+nav[i].title+`</a></li>
+                        <li><a href="`+(nav[i].href || '#')+`" class="`+nav[i].class+`">`+nav[i].title+`</a></li>
                     }
                 </ul>
             </div>
