@@ -115,7 +115,7 @@
 
   gulp.task("copyImages", function () {
     return gulp.src(vendorSrc.images.concat(src.images))
-      .pipe(gulp.dest(out._root + out.fonts));
+      .pipe(gulp.dest(out._root + out.images));
   });
 
   gulp.task("moveRedirect", ["compileHtml"], function () {
