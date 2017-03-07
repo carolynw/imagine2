@@ -7,7 +7,6 @@
     connect = require("gulp-connect"),
     del = require("del"),
     fileInclude = require("gulp-file-include"),
-    inject = require("gulp-inject"),
     merge = require("gulp-merge"),
     rename = require("gulp-rename"),
     replace = require("gulp-replace"),
@@ -19,7 +18,7 @@
     _root: "src/",
     html: [
       "src/html/**/*.html",
-      "!src/html/**/_*.html" // excludes partials
+      "!src/html/**/_*.html" // exclude 'partial' HTML files which should be handled by fileInclude
     ],
     fonts: [
       "src/fonts/**/*.{ttf,woff,woff2,eot,svg}"
@@ -65,7 +64,7 @@
   };
 
   gulp.task("default", ["rebuild", "startLocalWebServer", "watch"]);
-  gulp.task("rebuild", ["cleanOutput", "compileScripts", "compileSass", "compileHtml", "copyFonts", "copyImages", "moveRedirect"]);
+  gulp.task("rebuild", ["cleanOutput", "compileSass", "compileScripts", "compileHtml", "copyFonts", "copyImages", "copyRedirect"]);
 
   gulp.task("cleanOutput", function () {
     return del.sync(out._root + "**");
@@ -95,16 +94,10 @@
       .pipe(gulp.dest(out._root + out.scripts));
   });
 
-  // Sass and scripts must be compiled before this is executed in order to be dynamically injected
-  gulp.task("compileHtml", ["compileScripts", "compileSass"], function () {
-    var sageContent = gulp.src([out._root + out.scripts + "sage.min.js", out._root + out.styles + "sage.css"], {read: false});
-    var vendorContent = gulp.src([out._root + out.scripts + "sage.vendor.min.js", out._root + out.styles + "sage.vendor.css"], {read: false});
-
+  gulp.task("compileHtml", function () {
     return gulp.src(src.html)
       .pipe(fileInclude({prefix: "@@", basepath: '@file'}))
       .pipe(replace(/[\u200B-\u200D\uFEFF]/g, "")) // works around a bug in fileInclude
-      .pipe(inject(vendorContent, {name: "vendor", ignorePath: out._root}))
-      .pipe(inject(sageContent, {name: "sage", ignorePath: out._root}))
       .pipe(gulp.dest(out._root + out.html));
   });
 
@@ -118,7 +111,7 @@
       .pipe(gulp.dest(out._root + out.images));
   });
 
-  gulp.task("moveRedirect", ["compileHtml"], function () {
+  gulp.task("copyRedirect", ["compileHtml"], function () {
     return gulp.src(out._root + out.html + "index.html")
       .pipe(gulp.dest(out._root));
   });

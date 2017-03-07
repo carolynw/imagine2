@@ -12,7 +12,6 @@
     "gulp-concat-util": "^0.5.5",
     "gulp-connect": "^5.0.0",
     "gulp-file-include": "^1.0.0",
-    "gulp-inject": "^4.2.0",
     "gulp-merge": "^0.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
