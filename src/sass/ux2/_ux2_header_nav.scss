@@ -32,15 +32,14 @@
     .inner {
       @include linear-h-gradient(rgba($ux2-grey-darker, 1.0), rgba($ux2-grey, 1.0));
 
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
       z-index: 9000;
       overflow: visible;
 
       &.sticky {
         position: fixed;
+        top: 0;
+        left: 0;
+        right:0;
       }
 
       .action-bar {
