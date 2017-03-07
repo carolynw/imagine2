@@ -1,5 +1,5 @@
-﻿@@include("../../_common/_html_start.html" {
-    "title" : "Sage One"
+@@include("../../_common/_html_start.html" {
+    "title" : "Sage Live"
 })
 
 <body>
@@ -9,16 +9,15 @@
     <div id="page_header_nav" class="navbar-sage">
         @@include("../../_common/_header_nav.html")
         @@include("../../_common/_header_nav_call_to_action.html", {
-            "title" : "Sage One",
-            "theme" : "fuchsia",
+            "title" : "Sage Live",
+            "theme" : "",
             "leadIn" : "<span class='from'>From <span>$10.00</span> /month</span>",
             "button" :{"text":"Buy now", "href":"/Content/Sage/HTML/Pages/Free_trial/index.html"},
             "nav" : [
-                {"title":"Explore Sage One", "class":"active"},
+                {"title":"Explore Sage Live", "class":"active"},
                 {"title":"Customer stories"},
                 {"title":"Switching to Sage"},
-                {"title":"Inventory management"},
-                {"title":"Pegg"}
+                {"title":"Inventory management"}
             ]
         })
     </div>
@@ -26,9 +25,9 @@
     <header id="page_header">
         <div id="page_header_content">
             @@include("../../_common/_widgets/_hero_banner_static.html", {
-                "title":"Sage One Accounting",
-                "img":"/images/sample_content_images/hero_banner_sage_one.jpg",
-                "desc":"Simple and secure online accounting from just $10 per week, with no fixed term contract."
+                "title":"Sage Live",
+                "img":"/images/sample_content_images/hero_banner_live.jpg",
+                "desc":"Your whole business working in real-time from the palm of your hand.<br/> Contact us to book a one-to-one demo or buy Sage Live."
             })
         </div>
     </header>
@@ -36,9 +35,13 @@
     <section id="page_section">
         <div id="page_section_content">
             @@include("./_index/_product_features.html")
+            @@include("./_index/_free_trial_banner.html")
             @@include("./_index/_video_tabs.html")
-            @@include("./_index/_solutions.html")
+            @@include("./_index/_switch.html")
             @@include("../../_common/_widgets/_live_chat.html")
+            <!--todo: pricing options-->
+            @@include("./_index/_ecosystem.html")
+            @@include("./_index/_form.html")
             @@include("../../_common/_widgets/_customer_stories.html")
             @@include("../../_common/_widgets/_generic_3_col_content.html")
         </div>

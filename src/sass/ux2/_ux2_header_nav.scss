@@ -30,7 +30,7 @@
     }
 
     .inner {
-      @include linear-h-gradient(rgba($ux2-grey-darker, 1.0), rgba($ux2-grey, 1.0));
+      @include linear-h-gradient(rgba($ux2-grey-darker, 1.0), rgba($ux2-grey-light, 1.0));
 
       z-index: 9000;
       overflow: visible;

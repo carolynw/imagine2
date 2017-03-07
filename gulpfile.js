@@ -8,6 +8,7 @@
     del = require("del"),
     fileInclude = require("gulp-file-include"),
     inject = require("gulp-inject"),
+    merge = require("gulp-merge"),
     rename = require("gulp-rename"),
     replace = require("gulp-replace"),
     sass = require("gulp-sass"),
@@ -64,7 +65,7 @@
   };
 
   gulp.task("default", ["buildAll", "startLocalWebServer", "watch"]);
-  gulp.task("buildAll", ["cleanOutput", "compileAllScripts", "compileSass", "compileHtml", "copyAllFonts", "copyAllImages", "moveRedirect"]);
+  gulp.task("buildAll", ["cleanOutput", "compileScripts", "compileSass", "compileHtml", "copyFonts", "copyAllImages", "moveRedirect"]);
 
   gulp.task("cleanOutput", function () {
     return del.sync(out._root + "**");
@@ -76,41 +77,33 @@
       .pipe(gulp.dest(out._root + out.styles));
   });
 
-  gulp.task("compileVendorScripts", function () {
-    return gulp.src(vendorSrc.scripts)
-      .pipe(concat("sage.vendor.js"))
-      .pipe(gulp.dest(out._root + out.scripts))
-      .pipe(uglify())
-      .pipe(rename({
-        suffix: ".min"
-      }))
+  gulp.task("compileScripts", function () {
+    return merge(
+      gulp.src(vendorSrc.scripts)
+        .pipe(concat("sage.vendor.js"))
+        .pipe(gulp.dest(out._root + out.scripts))
+        .pipe(uglify())
+        .pipe(rename({
+          suffix: ".min"
+        })),
+      gulp.src(src.scripts)
+        .pipe(concat("sage.js"))
+        .pipe(gulp.dest(out._root + out.scripts))
+        .pipe(uglify())
+        .pipe(rename({
+          suffix: ".min"
+        }))
+    )
       .pipe(gulp.dest(out._root + out.scripts));
   });
 
-  gulp.task("compileSrcScripts", function () {
-    return gulp.src(src.scripts)
-      .pipe(concat("sage.js"))
-      .pipe(gulp.dest(out._root + out.scripts))
-      .pipe(uglify())
-      .pipe(rename({
-        suffix: ".min"
-      }))
-      .pipe(gulp.dest(out._root + out.scripts));
-  });
-
-  gulp.task("compileAllScripts", ["compileVendorScripts", "compileSrcScripts"]);
-
-  gulp.task("copyVendorFonts", function () {
-    return gulp.src(vendorSrc.fonts)
+  gulp.task("copyFonts", function () {
+    return merge(
+      gulp.src(vendorSrc.fonts),
+      gulp.src(src.fonts)
+    )
       .pipe(gulp.dest(out._root + out.fonts));
   });
-
-  gulp.task("copySrcFonts", function () {
-    return gulp.src(src.fonts)
-      .pipe(gulp.dest(out._root + out.fonts));
-  });
-
-  gulp.task("copyAllFonts", ["copyVendorFonts", "copySrcFonts"]);
 
   gulp.task("copyVendorImages", function () {
     return gulp.src(vendorSrc.images)
@@ -124,7 +117,7 @@
 
   gulp.task("copyAllImages", ["copyVendorImages", "copySrcImages"]);
 
-  gulp.task("compileHtml", ["compileAllScripts", "compileSass"], function () {
+  gulp.task("compileHtml", ["compileScripts", "compileSass"], function () {
     var sageContent = gulp.src([out._root + out.scripts + "sage.min.js", out._root + out.styles + "sage.css"], {read: false});
     var vendorContent = gulp.src([out._root + out.scripts + "sage.vendor.min.js", out._root + out.styles + "sage.vendor.css"], {read: false});
 
@@ -152,9 +145,9 @@
   gulp.task("watch", function () {
     gulp.watch([src._root + "html/**/*.html"], ["compileHtml", refreshWebServer]);
     gulp.watch([src._root + "sass/**/*.scss"], ["compileSass", refreshWebServer]);
-    gulp.watch([vendorSrc.scripts, src.scripts], ["compileAllScripts", refreshWebServer]);
+    gulp.watch([vendorSrc.scripts, src.scripts], ["compileScripts", refreshWebServer]);
     gulp.watch([vendorSrc.images, src.images], ["copyAllImages", refreshWebServer]);
-    gulp.watch([vendorSrc.fonts, src.fonts], ["copyAllFonts", refreshWebServer]);
+    gulp.watch([vendorSrc.fonts, src.fonts], ["copyFonts", refreshWebServer]);
 
     function refreshWebServer() {
       return gulp.src(out._root)
