@@ -8,3 +8,18 @@
     }
   }
 }
+
+.content-widget.solution-explorer .content-widget-inner .wrapper {
+  .solution-item {
+    cursor: default;
+  }
+
+  a.solution-item {
+    display: block;
+    cursor: pointer !important;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

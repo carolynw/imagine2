@@ -1,73 +1,59 @@
-﻿<div class="content-widget solution-explorer">
-    <div class="content-widget-inner">
-        <div class="wrapper">
-            <div class="solution-item" data-href="#" data-href-target="_self">
-                <div class="solution-item-inner">
-                    <div class="solution-item-inner-right">
-                        <div class="follow-link icon icon-xs"></div>
-                    </div>
-                    <div class="solution-item-inner-left">
-                        <div class="inner-solution-image">
-                            <img class="img-responsive" src="/images/sample_content_images/icon_accounting.svg" alt="accounting" />
-                        </div>
-                        <div class="inner-solution-button">
-                            <h2 class="heading h3">Accounting</h2>
-                            <p class="summary">Master your finances, grow your business.</p>
+﻿<div class="container-fluid with-max-width">
+    <div class="row indent indent-top-xs">
+        <div class="col-md-4 col-md-offset-1 widget-placeholder">
+            <div class="widget-placeholder-inner">
+                <div class="content-widget generic-content">
+                    <div class="content-widget-inner">
+                        <div class="wrapper">
+                            <div class="header">
+                                <h1 class="text-xxxlg">How can we help you today?</h1>
+                            </div>
+                            <div class="section">
+                                <p class="h3">We've got software and solutions for businesses big and small.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="solution-item" data-href="#" data-href-target="_self">
-                <div class="solution-item-inner">
-                    <div class="solution-item-inner-right">
-                        <div class="follow-link icon icon-xs"></div>
-                    </div>
-                    <div class="solution-item-inner-left">
-                        <div class="inner-solution-image">
-                            <img class="img-responsive" src="/images/sample_content_images/icon_payments.svg" alt="Payments" />
-                        </div>
-                        <div class="inner-solution-button">
-                            <h2 class="heading h3">Payments</h2>
-                            <p class="summary">That 'just got paid' feeling all the time, everywhere.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="solution-item" data-href="#" data-href-target="_self">
-                <div class="solution-item-inner">
-                    <div class="solution-item-inner-right">
-                        <div class="follow-link icon icon-xs"></div>
-                    </div>
-                    <div class="solution-item-inner-left">
-                        <div class="inner-solution-image">
-                            <img class="img-responsive" src="/images/sample_content_images/icon_payroll.svg" alt="Payroll" />
-                        </div>
-                        <div class="inner-solution-button">
-                            <h2 class="heading h3">HR & payroll</h2>
-                            <p class="summary">Get hiring, managing and paying your people right.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="solution-item" data-href="#" data-href-target="_self">
-                <div class="solution-item-inner">
-                    <div class="solution-item-inner-right">
-                        <div class="follow-link icon icon-xs"></div>
-                    </div>
-                    <div class="solution-item-inner-left">
-                        <div class="inner-solution-image">
-                            <img class="img-responsive" src="/images/sample_content_images/icon_management.svg" alt="Business management" />
-                        </div>
-                        <div class="inner-solution-button">
-                            <h2 class="heading h3">Business management</h2>
-                            <p class="summary">Big business without the big headaches. It's time to work different.</p>
+        </div>
+        <div class="col-md-offset-1 col-md-6 widget-placeholder">
+            <div class="widget-placeholder-inner">
+                <div class="content-widget tab-control-new text-center">
+                    <div class="content-widget-inner ">
+                        <div class="wrapper">
+                            <div class="section">
+                                <div class="tab-control-id" id="the_tab_guid_home">
+                                    <ul class="nav nav-tabs centered" role="tablist">
+                                        <li class="navigation btnPrevious"><span class="arrow-left icon icon-xs"></span></li>
+                                        <li role="presentation" class="active">
+                                            <a href="#i_need_help" aria-controls="i_need_help" role="tab" data-toggle="tab">I need help on where to<br /><strong>start</strong></a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#i_am_looking" aria-controls="i_am_looking" role="tab" data-toggle="tab">I am looking for<br /><strong>particular product</strong></a>
+                                        </li>
+                                        <li class="navigation btnNext"><span class="arrow-right icon icon-xs"></span></li>
+                                    </ul>
+                                    <div class="tab-content brand-black-fg">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="i_need_help">
+                                            <div class="widget-placeholder-inner text-left">
+                                                @@include("_solution_explorer_overview.html")
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="i_am_looking">
+                                            <div class="widget-placeholder-inner text-left">
+                                                @@include("_solution_explorer_links.html")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer brand-black-fg"></div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+

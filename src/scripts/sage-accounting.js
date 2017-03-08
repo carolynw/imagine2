@@ -12,7 +12,7 @@ sageApp.modules.register("accounting", function ($) {
     var controller = new ScrollMagic.Controller();
     var scene = new ScrollMagic.Scene({
       triggerElement: '#phone_fan_trigger'//, // starting scene, when reaching this element
-    }).setClassToggle("#phone_fan, .accounting-module", "open");
+    }).setClassToggle("#phone_fan", "open");
 
     // Add Scene to ScrollMagic Controller
     controller.addScene(scene);

@@ -3,6 +3,14 @@
 @import '../partials/sage_bootstrap_variables';
 @import '../partials/common_mixins';
 
+// Offset these to counteract sticky header vertical space
+a.anchor:before{
+  content:"";
+  display:block;
+  height:90px;
+  margin:-90px 0 0;
+}
+
 a.external-link {
   color: $ux2-green-dark;
   text-decoration: underline;
