@@ -5,28 +5,20 @@
     position: relative;
     color: $ux2-white;
 
-    &.amethyst {
-      .inner {
-        @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
-      }
+    &.amethyst .inner {
+      @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
     }
 
-    &.azul {
-      .inner{
-        @include linear-h-gradient(rgba($ux2-azul-dark, 1.0), rgba($ux2-azul, 1.0));
-      }
+    &.azul .inner {
+      @include linear-h-gradient(rgba($ux2-azul-dark, 1.0), rgba($ux2-azul, 1.0));
     }
 
-    &.fuchsia {
-      .inner {
-        @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
-      }
+    &.fuchsia .inner {
+      @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
     }
 
-    &.plum {
-      .inner {
-        @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
-      }
+    &.plum .inner {
+      @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
     }
 
     .inner {
@@ -39,7 +31,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        right:0;
+        right: 0;
       }
 
       .action-bar {

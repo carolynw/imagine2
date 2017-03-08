@@ -1,0 +1,51 @@
+﻿@import '_ux2_colours';
+
+.content-widget.info-boxes {
+  margin: 40px 0;
+
+  .widget-header {
+    text-align: center;
+
+    .action{
+      margin-top:20px;
+      color: $ux2-azul;
+    }
+  }
+
+  .row{
+    margin-top:40px;
+
+    a.info-box {
+      display: block;
+
+      &:hover {
+        text-decoration: none;
+        background-color: #eee;
+      }
+    }
+
+    .info-box {
+      text-align: center;
+      border-top: 1px solid $ux2-grey-lighter;
+      border-bottom: 1px solid $ux2-grey-lighter;
+      padding: 40px 20px;
+      margin: 0 10px;
+      height: 300px; //todo: hack
+
+      img {
+        width: 85px;
+        height: 85px;
+      }
+
+      .title {
+        font-weight: bold;
+        color: $ux2-azul;
+        margin-top: 14px;
+      }
+
+      .desc {
+        color: $ux2-grey-darker;
+      }
+    }
+  }
+}
