@@ -14,10 +14,10 @@
             "leadIn" : "<span class='from'>From <span>$10.00</span> /month</span>",
             "button" :{"text":"Buy now", "href":"/Content/Sage/HTML/Pages/Free_trial/index.html"},
             "nav" : [
-                {"title":"Explore Sage One", "href":"/html/products/sage_one/index.html", "class":"active"},
+                {"title":"Explore Sage One", "href":"/html/products/sage_one/index.html"},
                 {"title":"Customer stories"},
                 {"title":"Switching to Sage"},
-                {"title":"Sage One for Accountants", "href":"/html/products/sage_one/for_accountants.html"},
+                {"title":"Sage One for Accountants", "href":"/html/products/sage_one/for_accountants.html", "class":"active"},
                 {"title":"Pegg"}
             ]
         })
@@ -26,18 +26,19 @@
     <header id="page_header">
         <div id="page_header_content">
             @@include("../../_common/_widgets/_hero_banner_static.html", {
-                "title":"Sage One Accounting",
-                "img":"/images/sample_content_images/hero_banner_sage_one.jpg",
-                "desc":"Simple and secure online accounting from just $10 per week, with no fixed term contract."
+                "title":"Sage One for Accountants and Bookkeepers",
+                "img":"/images/sample_content_images/live_generic_content.jpg",
+                "desc":"With Sage One Accountant Edition, stay connected to your clients finances"
             })
         </div>
     </header>
 
     <section id="page_section">
         <div id="page_section_content">
-            @@include("_index/_product_features.html")
-            @@include("_index/_video_tabs.html")
-            @@include("_index/_solutions.html")
+            @@include("_for_accountants/_content.html")
+            @@include("_for_accountants/_work_online.html")
+            @@include("_for_accountants/_partner_banner.html")
+            @@include("_for_accountants/_contact_form.html")
             @@include("../../_common/_widgets/_live_chat.html")
             @@include("../../_common/_widgets/_customer_stories.html")
             @@include("../../_common/_widgets/_generic_3_col_content.html")
