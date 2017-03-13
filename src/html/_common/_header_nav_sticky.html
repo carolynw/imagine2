@@ -2,17 +2,17 @@
     <div class="inner" data-sticky>
         <div class="container-fluid with-max-width">
             <div class="row action-bar">
-                <div class="col-sm-3 title">
+                <div class="col-xs-4 col-sm-3 title">
                     @@title
                 </div>
-                <div class="col-sm-9 actions">
+                <div class="col-xs-8 col-sm-9 actions">
                     @@leadIn
                     <a href="@@button.href" class="button-white button-inline">@@button.text</a>
                 </div>
             </div>
 
-            <div class="row nav-bar">
-                <ul class="col-sm-12 list-unstyled">
+            <div class="nav-bar">
+                <ul class="list-unstyled">
                     @@for(var i=0; i < nav.length; i++) {
                         <li><a href="`+(nav[i].href || '#')+`" class="`+nav[i].class+`">`+nav[i].title+`</a></li>
                     }

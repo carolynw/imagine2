@@ -1,0 +1,44 @@
+﻿@import '_ux2_colours';
+
+.content-widget.quote {
+  font-style: italic;
+
+  blockquote {
+    padding: 20px 10px;
+    margin: 0 0 20px;
+
+    p {
+      position: relative;
+      margin: 20px 0 35px;
+
+      &:before, &:after {
+        position: absolute;
+        content: '"';
+        font-size: 60px;
+        font-weight: bold;
+        color: $ux2-fuchsia;
+      }
+
+      &:before {
+        top: -8px;
+        left: -26px;
+      }
+
+      &:after {
+        bottom: -45px;
+        left: -4px;
+      }
+    }
+
+    footer {
+      margin-top: 45px;
+      &:before {
+        content: ""
+      }
+    }
+  }
+}
+
+.indent-more .content-widget.quote .row {
+  padding: 0 20%;
+}

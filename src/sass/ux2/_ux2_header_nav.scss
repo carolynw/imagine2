@@ -1,4 +1,5 @@
 ﻿@import '_ux2_colours';
+@import '../partials/sage_bootstrap_variables';
 
 #page_header_nav {
   .call-to-action {
@@ -35,7 +36,7 @@
       }
 
       .action-bar {
-        margin-top: 16px;
+        margin-top: 12px;
 
         .title {
           font-size: 30px;
@@ -46,10 +47,10 @@
 
           .from {
             display: inline-block;
-            font-size: 18px;
+            font-size: 14px;
 
             > span {
-              font-size: 30px;
+              font-size: 24px;
             }
           }
 
@@ -69,8 +70,14 @@
         margin-top: 2px;
 
         ul {
-          margin: 0;
+          margin: 0 0 3px;
           font-size: 13px;
+
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
 
           li {
             float: left;
@@ -90,7 +97,7 @@
               margin-right: 0;
 
               &:after {
-                border: none
+                border: none;
               }
             }
 
@@ -98,19 +105,20 @@
               display: inline-block;
               position: relative;
               color: #eee;
-              padding: 1px 0px;
-              margin-bottom: 2px;
+              margin-bottom: 3px;
+              line-height: normal;
+              padding-bottom: 2px;
 
               &.active {
                 margin-bottom: 0px;
-                border-bottom: 2px solid #eee;
+                border-bottom: 3px solid #eee;
               }
 
               &:hover {
                 color: $ux2-white;
                 text-decoration: none;
                 margin-bottom: 0px;
-                border-bottom: 2px solid $ux2-white;
+                border-bottom: 3px solid $ux2-white;
               }
             }
           }
@@ -131,6 +139,20 @@
 
       i {
         margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media(max-width: $screen-xs-max) {
+  #page_header_nav .call-to-action {
+    .inner {
+      .action-bar {
+        .actions {
+          a {
+            width: auto;
+          }
+        }
       }
     }
   }

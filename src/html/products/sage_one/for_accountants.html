@@ -8,17 +8,16 @@
 <div id="page_main">
     <div id="page_header_nav" class="navbar-sage">
         @@include("../../_common/_header_nav.html")
-        @@include("../../_common/_header_nav_call_to_action.html", {
+        @@include("../../_common/_header_nav_sticky.html", {
             "title" : "Sage One",
             "theme" : "fuchsia",
-            "leadIn" : "<span class='from'>From <span>$10.00</span> /month</span>",
-            "button" :{"text":"Buy now", "href":"/Content/Sage/HTML/Pages/Free_trial/index.html"},
+            "leadIn" : "",
+            "button" :{"text":"Join our partner network", "href":"#"},
             "nav" : [
                 {"title":"Explore Sage One", "href":"/html/products/sage_one/index.html"},
                 {"title":"Customer stories"},
                 {"title":"Switching to Sage"},
-                {"title":"Sage One for Accountants", "href":"/html/products/sage_one/for_accountants.html", "class":"active"},
-                {"title":"Pegg"}
+                {"title":"Sage One for Accountants", "href":"/html/products/sage_one/for_accountants.html", "class":"active"}
             ]
         })
     </div>
@@ -37,6 +36,7 @@
         <div id="page_section_content">
             @@include("_for_accountants/_content.html")
             @@include("_for_accountants/_work_online.html")
+            @@include("../../_common/_widgets/_generic_quote_row.html")
             @@include("_for_accountants/_partner_banner.html")
             @@include("_for_accountants/_contact_form.html")
             @@include("../../_common/_widgets/_live_chat.html")
