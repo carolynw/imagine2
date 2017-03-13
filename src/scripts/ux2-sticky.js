@@ -23,16 +23,18 @@ sageApp.modules.register("ux2Sticky", function ($) {
 
     function updateStickyHeader() {
         var $stickyHeader = $("[data-sticky-header]");
+        var $stickyContainer = $stickyHeader.parent();
 
-        var top = $stickyHeader
-            .parent()[0]
+        var top = $stickyContainer[0]
             .getBoundingClientRect()
             .top;
 
         if (top <= 0) {
             $stickyHeader.addClass("sticky");
+            $stickyContainer.height($stickyHeader.height());
         } else {
             $stickyHeader.removeClass("sticky");
+            $stickyContainer.height("auto");
         }
     }
 

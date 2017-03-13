@@ -5,7 +5,7 @@
   .sticky-header {
     position: relative;
     color: $ux2-white;
-    height: 79px;
+    z-index: 100;
 
     &.amethyst .sticky-row {
       @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
@@ -28,7 +28,6 @@
     }
 
     .inner {
-      z-index: 9000;
       overflow: visible;
 
       &.sticky {
@@ -148,9 +147,28 @@
 @media(max-width: $screen-xs-max) {
   #page_header_nav {
     .sticky-header {
-      height: 58px;
+      height: auto;
       overflow: visible;
-      z-index: 1;
+
+      &.amethyst .actions {
+        @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
+      }
+
+      &.azul .actions {
+        @include linear-h-gradient(rgba($ux2-azul-dark, 1.0), rgba($ux2-azul, 1.0));
+      }
+
+      &.fuchsia .actions {
+        @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
+      }
+
+      &.plum .actions {
+        @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
+      }
+
+      .actions {
+        @include linear-h-gradient(rgba($ux2-grey-darker, 1.0), rgba($ux2-grey-light, 1.0));
+      }
 
       .inner {
         &.sticky {
@@ -190,12 +208,35 @@
           }
 
           .actions {
-            display: none;
+            position:fixed;
+            bottom:0;
+            left:0;
+            right:0;
+            padding:3px 15px;
+
+            a{
+              width:auto;
+              padding:2px 40px 2px 8px;
+
+              &:before{
+                width:0;
+                top:2px;
+                bottom:10px;
+              }
+
+              &:after{
+                width:8px;
+                height:8px;
+                right:10px;
+              }
+            }
           }
         }
 
         .nav-bar {
-          height: 0;
+          position:absolute;
+          left:0;
+          right:0;
           transform: scaleY(0);
           transform-origin: top;
           margin: 0;
@@ -203,7 +244,6 @@
           transition: all 0.5s ease-out;
 
           &.open {
-            height: auto;
             transform: scaleY(1);
             overflow: visible;
           }

@@ -29,7 +29,7 @@ body.side-nav-open {
 #ux2_side_nav {
   @include linear-v-gradient(rgba($ux2-slate-light, 0.95), rgba($ux2-slate, 0.95));
   @include stretch-fit;
-  z-index: 9999;
+  z-index: 9000;
   overflow: hidden;
   height: 100%;
   width: 100%;
