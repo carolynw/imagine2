@@ -12,12 +12,7 @@
     border: 1px solid $ux2-azul;
     text-align: center;
     padding: 30px 20%;
-    height: 430px; // temp hack
 
-    &:hover {
-      background: $ux2-white;
-      border-color: $ux2-azul-light;
-    }
 
     img {
       width: 70px;
@@ -36,6 +31,8 @@
       padding-top: 20px;
       color: $ux2-grey-darker;
       font-size: 15px;
+      height: 200px; // todo: temp hack
+
 
       &:before {
         content: '';

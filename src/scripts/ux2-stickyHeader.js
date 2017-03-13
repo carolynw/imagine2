@@ -26,16 +26,19 @@ sageApp.modules.register("stickyHeader", function ($) {
     }
 
     function initHiders() {
-        $("[data-sticky-header-hider]").each(function (i, element) {
-            new Waypoint.Inview({
-                element: element,
-                entered: function () {
-                    $("[data-sticky-header]").addClass("ns");
-                },
-                exited: function () {
-                    $("[data-sticky-header]").removeClass("ns");
-                }
-            });
+        var $hider = $("[data-sticky-header-hider]");
+
+        if (!$hider.length)
+            return;
+
+        new Waypoint.Inview({
+            element: $hider[0],
+            entered: function () {
+                $("[data-sticky-header]").addClass("ns");
+            },
+            exited: function () {
+                $("[data-sticky-header]").removeClass("ns");
+            }
         });
     }
 
