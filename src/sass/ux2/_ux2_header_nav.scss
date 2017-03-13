@@ -30,6 +30,10 @@
     .inner {
       overflow: visible;
 
+      &.ns {
+        visibility: hidden;
+      }
+
       &.sticky {
         position: fixed;
         top: 0;

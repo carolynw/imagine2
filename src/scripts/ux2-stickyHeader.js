@@ -2,17 +2,21 @@
 /*jslint jquery: true*/
 /*global sageApp */
 
-sageApp.modules.register("ux2Sticky", function ($) {
+sageApp.modules.register("stickyHeader", function ($) {
     "use strict";
 
     function init() {
-        initStickyHeader();
+        if (!$("[data-sticky-header]").length)
+            return;
+
+        updateStickiness();
+        attachEvents();
+        initHiders();
     }
 
-    function initStickyHeader() {
-        $(window).resize(updateStickyHeader);
-        $(window).scroll(updateStickyHeader);
-        updateStickyHeader();
+    function attachEvents() {
+        $(window).resize(updateStickiness);
+        $(window).scroll(updateStickiness);
 
         $("[data-sticky-header]").on("click", "[data-toggle-nav-bar]", function (event) {
             event.preventDefault();
@@ -21,7 +25,21 @@ sageApp.modules.register("ux2Sticky", function ($) {
         });
     }
 
-    function updateStickyHeader() {
+    function initHiders() {
+        $("[data-sticky-header-hider]").each(function (i, element) {
+            new Waypoint.Inview({
+                element: element,
+                entered: function () {
+                    $("[data-sticky-header]").addClass("ns");
+                },
+                exited: function () {
+                    $("[data-sticky-header]").removeClass("ns");
+                }
+            });
+        });
+    }
+
+    function updateStickiness() {
         var $stickyHeader = $("[data-sticky-header]");
         var $stickyContainer = $stickyHeader.parent();
 
