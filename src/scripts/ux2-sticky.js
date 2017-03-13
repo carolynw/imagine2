@@ -3,33 +3,40 @@
 /*global sageApp */
 
 sageApp.modules.register("ux2Sticky", function ($) {
-  "use strict";
+    "use strict";
 
-  function init() {
-    // todo: ideally we want to switch over to using bootstrap affix but that seemed buggy...
-    $(window).resize(stickify);
-    $(window).scroll(stickify);
-    stickify();
-  }
+    function init() {
+        initStickyHeader();
+    }
 
-  function stickify() {
-    $("[data-sticky-container]").each(function () {
-      var $stickyContainer = $(this);
-      var $sticky = $stickyContainer.find("[data-sticky]");
+    function initStickyHeader() {
+        $(window).resize(updateStickyHeader);
+        $(window).scroll(updateStickyHeader);
+        updateStickyHeader();
 
-      $stickyContainer.height($sticky.height());
+        $("[data-sticky-header]").on("click", "[data-toggle-nav-bar]", function (event) {
+            event.preventDefault();
+            $(event.delegateTarget).find("[data-nav-bar]").toggleClass("open");
+            $(event.target).toggleClass("open");
+        });
+    }
 
-      var top = this.getBoundingClientRect().top;
+    function updateStickyHeader() {
+        var $stickyHeader = $("[data-sticky-header]");
 
-      if (top <= 0) {
-        $sticky.addClass("sticky");
-      } else {
-        $sticky.removeClass("sticky");
-      }
-    });
-  }
+        var top = $stickyHeader
+            .parent()[0]
+            .getBoundingClientRect()
+            .top;
 
-  return {
-    init: init
-  }
+        if (top <= 0) {
+            $stickyHeader.addClass("sticky");
+        } else {
+            $stickyHeader.removeClass("sticky");
+        }
+    }
+
+    return {
+        init: init
+    }
 });
