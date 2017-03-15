@@ -38,7 +38,7 @@
         _root: "src/",
         html: [
             "src/html/**/*.html",
-            "!src/html/**/_*.html" // exclude 'partial' HTML files which should be handled by fileInclude
+            "!src/html/**/_*.html" // exclude partial HTML files which should be handled by fileInclude
         ],
         fonts: [
             "src/fonts/**/*.{ttf,woff,woff2,eot,svg}"
@@ -101,8 +101,9 @@
             .pipe(gulp.dest(out._root));
 
         return gulp.src(src.html)
-            .pipe(fileInclude({prefix: "@@", basepath: '@file'}))
-            .pipe(replace(/[\u200B-\u200D\uFEFF]/g, "")) // works around a bug in fileInclude
+            .pipe(fileInclude({prefix: "@@", basepath: "@file"})) // note that fileInclude doesn't directly support nested @@include statements
+            .pipe(fileInclude({prefix: "@@", basepath: "@file"})) // so we run it twice to process the first nested level
+            .pipe(replace(/[\u200B-\u200D\uFEFF]/g, "")) // strip out file BOMs left by fileInclude as it leads to whitespace issues
             .pipe(gulp.dest(out._root + out.html));
     });
 

@@ -1,0 +1,31 @@
+<div class="content-widget accordion @@class">
+    <div class="content-widget-inner">
+        <div class="wrapper">
+            <div class="header text-center">
+                <h1 class="h1">@@title</h1>
+                <p class="h5">@@subtitle</p>
+            </div>
+            <div class="section">
+                <div class="panel-group" id="accordion" data-accordion>
+                    @@for(var i=0; i < items.length; i++) {
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title text-center">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse`+i+`">
+                                        `+items[i].title+`
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse`+i+`" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    @@include("`+items[i].include+`")
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</div>
