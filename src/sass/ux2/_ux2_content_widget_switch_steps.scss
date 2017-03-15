@@ -1,0 +1,23 @@
+﻿@import '_ux2_colours';
+
+.content-widget.switch-steps {
+  .switch-step {
+    .step-title{
+      line-height:75px;
+
+      .step-number{
+        display:inline-block;
+        width:75px;
+        height:75px;
+        background: $ux2-green-dark;
+        border-radius:50%;
+        text-align:center;
+        color:$ux2-white;
+        font-size:40px;
+        font-weight:bold;
+        float:left;
+        margin-right:20px;
+      }
+    }
+  }
+}

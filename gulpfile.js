@@ -5,6 +5,7 @@
     var gulp = require("gulp"),
         concat = require("gulp-concat-util"),
         connect = require("gulp-connect"),
+        cssmin = require("gulp-cssmin"),
         del = require("del"),
         fileInclude = require("gulp-file-include"),
         merge = require("gulp-merge"),
@@ -73,38 +74,54 @@
     gulp.task("compileSass", function () {
         return gulp.src(src.sass)
             .pipe(sass().on("error", sass.logError))
+            .pipe(cssmin())
+            .pipe(rename({suffix: ".min"}))
             .pipe(gulp.dest(out._root + out.styles));
     });
 
     gulp.task("compileScripts", function () {
-        var streams = [
-            gulp.src(vendorSrc.scripts)
+        return merge(compileVendorScripts(), compileScripts())
+            .pipe(gulp.dest(out._root + out.scripts));
+
+        function compileVendorScripts() {
+            return gulp.src(vendorSrc.scripts)
                 .pipe(concat("sage.vendor.js"))
                 .pipe(uglify())
-                .pipe(rename({
-                    suffix: ".min"
-                })),
-            gulp.src(src.scripts)
-                .pipe(concat("sage.js"))
+                .pipe(rename({suffix: ".min"}));
+        }
+
+        function compileScripts() {
+            // The concats wrap the entire output .js in a single "use strict" statement and removes the redundant nested ones
+            return gulp.src(src.scripts)
+                .pipe(concat("sage.js", {process: stripUseStrictStatements}))
+                .pipe(concat.header("(function() { \n  \"use strict\";\n\n"))
+                .pipe(concat.footer("\n}());"))
                 .pipe(uglify())
                 .pipe(rename({
                     suffix: ".min"
-                }))
-        ];
+                }));
 
-        return merge(streams)
-            .pipe(gulp.dest(out._root + out.scripts));
+            function stripUseStrictStatements(src) {
+                return src.replace(/\s*(?:"|')use strict(?:"|');\s*\n/g, "\n");
+            }
+        }
     });
 
     gulp.task("compileHtml", function () {
-        gulp.src(src._root + src.html + "index.html")
-            .pipe(gulp.dest(out._root));
+        return merge(copyRedirect(), compileHtml());
 
-        return gulp.src(src.html)
-            .pipe(fileInclude({prefix: "@@", basepath: "@file"})) // note that fileInclude doesn't directly support nested @@include statements
-            .pipe(fileInclude({prefix: "@@", basepath: "@file"})) // so we run it twice to process the first nested level
-            .pipe(replace(/[\u200B-\u200D\uFEFF]/g, "")) // strip out file BOMs left by fileInclude as it leads to whitespace issues
-            .pipe(gulp.dest(out._root + out.html));
+        function copyRedirect() {
+            return gulp.src(src._root + "html/index.html")
+                .pipe(gulp.dest(out._root));
+        }
+
+        function compileHtml() {
+            return gulp.src(src.html)
+                .pipe(fileInclude({prefix: "@@", basepath: "@file"})) // note that fileInclude doesn't directly support nested @@include statements
+                .pipe(fileInclude({prefix: "@@", basepath: "@file"})) // so we run it twice to process the first nested level
+                .pipe(replace(/[\u200B-\u200D\uFEFF]/g, "")) // strip out file BOMs left by fileInclude as it leads to whitespace issues
+                .pipe(gulp.dest(out._root + out.html));
+        }
     });
 
     gulp.task("copyFonts", function () {
