@@ -1,0 +1,12 @@
+﻿@import '_ux2_colours';
+
+.content-widget.skinny-hero {
+  @include radial-cc-gradient($ux2-grey, $ux2-grey-dark);
+  color: $ux2-white;
+
+  .wrapper-content {
+    h1 {
+      margin: 75px 0;
+    }
+  }
+}

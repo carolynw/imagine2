@@ -44,25 +44,19 @@ sageApp.modules.register("stickyHeader", function ($) {
 
     function updateStickiness() {
         var $stickyHeader = $("[data-sticky-header]");
+        var stickyHeight = $stickyHeader.height();
+        $("body").data("top-offset", stickyHeight);
 
         var top = $stickyHeader.parent()[0]
             .getBoundingClientRect()
             .top;
 
-        if (top <= 0) {
+        if (top < 0) {
             $stickyHeader.addClass("sticky");
+            $stickyHeader.parent().height(stickyHeight);
         } else {
             $stickyHeader.removeClass("sticky");
-        }
-
-        // Set and record height offsets
-        if ($stickyHeader.css("position") === "fixed") {
-            var stickyHeight = $stickyHeader.height();
-            $stickyHeader.parent().height(stickyHeight);
-            $("body").data("top-offset", stickyHeight)
-        } else {
             $stickyHeader.parent().height("auto");
-            $("body").data("top-offset", 0)
         }
     }
 
