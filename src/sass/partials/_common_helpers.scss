@@ -25,11 +25,11 @@
         height: auto;
 
         &.aspect-4-3 {
-            content: url("/images/trans_4_3_rectangle.gif") !important;
+            content: url("/Content/images/trans_4_3_rectangle.gif") !important;
         }
 
         &.aspect-16-9 {
-            content: url("/images/trans_16_9_rectangle.gif") !important;
+            content: url("/Content/images/trans_16_9_rectangle.gif") !important;
         }
     }
 }

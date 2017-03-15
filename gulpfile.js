@@ -58,10 +58,10 @@
     var out = {
         _root: "dist/",
         html: "html/",
-        fonts: "fonts/",
-        images: "images/",
-        scripts: "scripts/",
-        styles: "styles/"
+        fonts: "Content/fonts/",
+        images: "Content/images/",
+        scripts: "Content/scripts/",
+        styles: "Content/styles/"
     };
 
     gulp.task("default", ["rebuild", "startLocalWebServer"]);
