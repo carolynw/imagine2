@@ -1,4 +1,10 @@
-﻿
+﻿.row {
+  &.indent-m-md {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+
 .content-widget.hero-banner.static {
   .hero-banner-content {
     .generic-content-hero {

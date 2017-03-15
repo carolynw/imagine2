@@ -1,5 +1,10 @@
 ﻿@import '_ux2_colours';
 
+//todo: improve this
+.indent-more .content-widget.quote .row {
+  padding: 0 20%;
+}
+
 .content-widget.quote {
   font-style: italic;
 
@@ -37,8 +42,4 @@
       }
     }
   }
-}
-
-.indent-more .content-widget.quote .row {
-  padding: 0 20%;
 }

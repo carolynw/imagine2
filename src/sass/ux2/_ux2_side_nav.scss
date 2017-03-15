@@ -170,7 +170,6 @@ body.side-nav-open {
 @media(max-width: $screen-sm-max) {
   #ux2_side_nav {
     @include linear-v-gradient(rgba($ux2-slate, 0.95), rgba($ux2-slate-light, 0.95));
-    transform: scaleY(1);
     transform: scaleX(0);
     transform-origin: left;
 

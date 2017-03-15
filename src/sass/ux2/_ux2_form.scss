@@ -7,13 +7,13 @@ form.ux2form {
   legend {
     border: none;
     color: $ux2-fuchsia;
-    margin-bottom:40px;
+    margin-bottom: 40px;
   }
 
   label {
     position: relative;
     margin-bottom: 40px;
-    text-transform:uppercase;
+    text-transform: uppercase;
 
     &.focus-within {
       color: $ux2-fuchsia;
@@ -79,16 +79,21 @@ form.ux2form {
     }
   }
 
-  .pre-existing {
+  button[type="submit"] {
+    @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
+    color: $ux2-white;
+    font-weight: bold;
+  }
+
+  a {
+    display: inline-block;
+    color: $ux2-slate-light;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .link-options {
     line-height: 50px;
     text-align: right;
-
-    a {
-      display: block;
-      margin: auto 0;
-      color: $ux2-slate-light;
-      text-decoration: underline;
-      font-weight: bold;
-    }
   }
 }
