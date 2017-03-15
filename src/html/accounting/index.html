@@ -24,7 +24,14 @@
         <div id="page_section_content">
             @@include("_index/_phone_fan.html")
             @@include("_index/_products.html")
-            @@include("../_common/_widgets/_generic_2_col_content.html")
+            @@include("../_common/_widgets/_2_col_links.html", {
+                "title" : "Need a solution for your entire business?",
+                "subtitle" : "",
+                "desc" : "Sage X3 is a fast, easy to use and flexible solution for every area of your business. It's not your typical ERP.",
+                "items" : [
+                    {"title" : "Discover Sage X3", "href" : "/html/products/sage_x3/index.html"}
+                ]
+            })
             @@include("../_common/_widgets/_live_chat.html")
         </div>
     </section>

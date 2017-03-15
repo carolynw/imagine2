@@ -8,17 +8,22 @@
                             <div class="row indent row-eq-height xs-flex-block center-block">
                                 <div class="col-sm-6 xs-flex-block row-eq-height-middle divider-right">
                                     <div class="header">
-                                        <h2 class="h1 serif">Need a solution for your entire business?</h2>
+                                        <h2 class="h1 serif">@@title</h2>
+                                        @@if(subtitle){
+                                            <p>@@subtitle</p>
+                                        }
                                     </div>
                                 </div>
-                                <div class="col-sm-6 xs-flex-block row-eq-height-middle flex-row-wrap">
+                                <div class="col-sm-6">
                                     <div class="section">
-                                        <p>Sage X3 is a fast, easy to use and flexible solution for every area of your business. It's not your typical ERP.</p>
+                                        <p>@@desc</p>
                                     </div>
-                                    <div class="footer">
-                                        <p>
-                                            <a href="/html/products/sage_x3/index.html" class="button-white-block">Discover Sage X3</a>
-                                        </p>
+                                    <div class="footer xs-flex-block row-eq-height-middle flex-row-wrap">
+                                        @@for(var i=0; i < items.length; i++) {
+                                            <p>
+                                                <a href="`+items[i].href+`" class="button-white-block">`+items[i].title+`</a>
+                                            </p>
+                                        }
                                     </div>
                                 </div>
                             </div>

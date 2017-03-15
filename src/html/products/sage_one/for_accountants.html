@@ -37,7 +37,14 @@
             @@include("_for_accountants/_content.html")
             @@include("_for_accountants/_work_online.html")
             @@include("../../_common/_widgets/_generic_quote_row.html")
-            @@include("_for_accountants/_partner_banner.html")
+            @@include("../../_common/_widgets/_2_col_links.html", {
+                "title" : "Join the partner network",
+                "subtitle" : "Start using Accounting and Payroll for all your clients",
+                "desc" : "Access your free software now",
+                "items" : [
+                    {"title" : "Sign up, it's free", "href" : "#"}
+                ]
+            })
             @@include("_for_accountants/_contact_form.html")
             @@include("../../_common/_widgets/_live_chat.html")
             @@include("../../_common/_widgets/_customer_stories.html")
