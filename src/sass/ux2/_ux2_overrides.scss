@@ -1,7 +1,40 @@
-﻿.row {
+﻿@import '_ux2_colours';
+
+.button-black, .button-black-block, .button-blue, .button-blue-block, .button-green, .button-green-block, .button-pink, .button-pink-block, .button-white, .button-white-block {
+  padding: 6px 70px 6px 20px;
+
+  &:before {
+    width: 20px;
+  }
+}
+
+.row {
   &.indent-m-md {
     margin-left: 8%;
     margin-right: 8%;
+  }
+}
+
+#page_header_nav.navbar-sage {
+  .navbar-sage-brand {
+    height:34px;
+    margin-top:19px;
+  }
+
+  .nav-pills-sage.header-right li a {
+    color: $ux2-slate-dark;
+    font-family: AdelleSansSAGE;
+  }
+
+  .nav-pills-sage li {
+    a {
+      color: $ux2-slate-dark;
+      font-family: AdelleSansSAGE;
+
+      i {
+        margin-left: 10px;
+      }
+    }
   }
 }
 

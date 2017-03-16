@@ -65,10 +65,8 @@
               .panel-body {
                 border-radius: 0 0 5px 5px;
                 padding: 65px 15px 15px 15px;
-                background-color: transparent;
                 border: 0 none;
-                background-image: url("/Content/images/cardCurve.svg");
-                background-position: top center;
+                background: transparent url("/Content/images/cardCurve.svg") top center;
                 background-size: cover;
 
                 ul {

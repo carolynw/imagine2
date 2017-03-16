@@ -2,22 +2,37 @@
 
 .content-widget.switch-steps {
   .switch-step {
-    .step-title{
-      line-height:75px;
+    &:first-child{
+      margin-top:0;
+    }
+    margin-top:20px;
 
-      .step-number{
-        display:inline-block;
-        width:75px;
-        height:75px;
+    .step-title {
+      line-height: 50px;
+
+      .step-number {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
         background: $ux2-green-dark;
-        border-radius:50%;
-        text-align:center;
-        color:$ux2-white;
-        font-size:40px;
-        font-weight:bold;
-        float:left;
-        margin-right:20px;
+        border-radius: 50%;
+        text-align: center;
+        color: $ux2-white;
+        font-size: 24px;
+        float: left;
+        margin-right: 20px;
       }
+    }
+
+    .video {
+      position: relative;
+      text-align: center;
+      background: #000;
+      height: 150px;
+      line-height: 150px;
+      font-size: 55px;
+      color: #fff;
     }
   }
 }

@@ -1,9 +1,39 @@
 ﻿@import '_ux2_colours';
 
 .content-widget.accordion {
-  .panel-heading {
-    a {
-      display: block;
+  padding:0 10%;
+
+  .panel-group{
+    margin-top:40px;
+  }
+
+  .panel {
+    border-radius:0;
+    border-color:#ccc;
+
+    .panel-heading {
+      background:#ccc;
+      border-radius:0;
+
+      &:hover{
+        background:$ux2-grey-darker;
+        color:#fff;
+      }
+
+      a {
+        display: block;
+
+        &:hover,&:visited,&:focus{
+          text-decoration: none;
+        }
+      }
+    }
+
+    .panel-body {
+      ol,ul{
+        margin:0 0 14px;
+        padding:0 0 0 14px;
+      }
     }
   }
 }

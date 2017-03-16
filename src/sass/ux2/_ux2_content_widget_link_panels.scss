@@ -1,0 +1,68 @@
+﻿@import '../partials/sage_bootstrap_variables';
+@import '../partials/common_mixins';
+@import '_ux2_colours';
+
+.content-widget.link-panels {
+  .section {
+    margin-top: 40px;
+  }
+
+  .link-panel {
+    display: block;
+    color: $ux2-grey-dark;
+    background: $ux2-white;
+    border: 1px solid #dcddde;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 30px 10% 80px;
+
+    &:visited, &:focus {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background: #fcfcfc;
+    }
+
+    .link-panel-header {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .title {
+        color: $ux2-azul;
+        margin-top: 14px;
+        font-size: 20px;
+      }
+    }
+
+    .link-panel-body {
+      ul {
+        position: relative;
+        margin-top: 20px;
+        padding-top: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+
+        &:before {
+          content: '';
+          border-top: 1px solid $ux2-black;
+          width: 50%;
+          position: absolute;
+          top: 0;
+          left: 25%;
+        }
+      }
+    }
+
+    .link-panel-footer {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+    }
+  }
+}
