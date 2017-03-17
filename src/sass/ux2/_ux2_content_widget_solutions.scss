@@ -7,6 +7,12 @@
   .content-widget-inner {
     .filter-module-content {
       .filter-module-results {
+
+        //todo: hack
+        &.center .slick-track{
+          margin:auto;
+        }
+
         .product-panel {
           margin: 0 1.5%;
 
@@ -19,6 +25,15 @@
 
             &.panel-default {
               background-color: $brand-azul;
+
+              &.plum {
+                @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
+
+                .button-learnmore {
+                  @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
+                }
+              }
+
               @include linear-h-gradient(rgba($brand-dark-azul, 1.0), rgba($brand-light-azul, 1.0));
               @include default-shadow;
               border-radius: 6px;
@@ -69,13 +84,8 @@
                 background: transparent url("/Content/images/cardCurve.svg") top center;
                 background-size: cover;
 
-                ul {
-                  height: 180px;
-                  overflow: hidden;
-                }
-
                 p {
-                  margin: 0;
+                  margin-bottom: 20px;
                 }
               }
             }

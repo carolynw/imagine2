@@ -1,22 +1,19 @@
-﻿<div class="sticky-header @@theme">
-    <div class="inner" data-sticky-header>
+﻿<div class="sticky-header @@theme" data-sticky-header>
+    <div class="inner">
         <div class="sticky-row action-bar">
             <div class="container-fluid with-max-width">
-                <div class="row">
-                    <div class="col-sm-3 title" data-toggle-nav-bar>
-                        @@title
-                        <span class="chevron-down"></span>
-                    </div>
-                    <div class="col-sm-9 actions">
-                        @@leadIn
-                        <a href="@@button.href" class="button-white button-inline">@@button.text</a>
-                    </div>
+                <div class="title" data-toggle-nav-bar>
+                    @@title
+                </div>
+                <div class="actions">
+                    @@leadIn
+                    <a href="@@button.href" class="button-white button-inline">@@button.text</a>
                 </div>
             </div>
         </div>
         <div class="sticky-row nav-bar" data-nav-bar>
             <div class="container-fluid with-max-width">
-                <ul class="list-unstyled">
+                <ul>
                     @@for(var i=0; i < nav.length; i++) {
                         <li><a href="`+(nav[i].href || '#')+`" class="`+nav[i].class+`">`+nav[i].title+`</a></li>
                     }

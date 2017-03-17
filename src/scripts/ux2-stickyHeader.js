@@ -34,29 +34,32 @@ sageApp.modules.register("stickyHeader", function ($) {
         new Waypoint.Inview({
             element: $hider[0],
             entered: function () {
-                $("[data-sticky-header]").addClass("ns");
+                $("[data-sticky-header]").addClass("no-vis");
             },
             exited: function () {
-                $("[data-sticky-header]").removeClass("ns");
+                $("[data-sticky-header]").removeClass("no-vis");
             }
         });
     }
 
     function updateStickiness() {
         var $stickyHeader = $("[data-sticky-header]");
-        var stickyHeight = $stickyHeader.height();
-        $("body").data("top-offset", stickyHeight);
+        var $inner = $stickyHeader.find(">:first-child");
+        var innerHeight = $inner.height();
+        $("body").data("top-offset", innerHeight);
 
-        var top = $stickyHeader.parent()[0]
+        var top = $stickyHeader[0]
             .getBoundingClientRect()
             .top;
 
         if (top < 0) {
-            $stickyHeader.addClass("sticky");
-            $stickyHeader.parent().height(stickyHeight);
+            $stickyHeader
+                .addClass("sticky")
+                .height(innerHeight);
         } else {
-            $stickyHeader.removeClass("sticky");
-            $stickyHeader.parent().height("auto");
+            $stickyHeader
+                .removeClass("sticky")
+                .height("auto");
         }
     }
 

@@ -8,6 +8,7 @@
         cssmin = require("gulp-cssmin"),
         del = require("del"),
         fileInclude = require("gulp-file-include"),
+        htmlhint = require("gulp-htmlhint"),
         merge = require("gulp-merge"),
         rename = require("gulp-rename"),
         replace = require("gulp-replace"),
@@ -120,6 +121,8 @@
                 .pipe(fileInclude({prefix: "@@", basepath: "@file"})) // note that fileInclude doesn't directly support nested @@include statements
                 .pipe(fileInclude({prefix: "@@", basepath: "@file"})) // so we run it twice to process the first nested level
                 .pipe(replace(/[\u200B-\u200D\uFEFF]/g, "")) // strip out file BOMs left by fileInclude as it leads to whitespace issues
+                .pipe(htmlhint("./htmlhint.json"))
+                .pipe(htmlhint.reporter())
                 .pipe(gulp.dest(out._root + out.html));
         }
     });

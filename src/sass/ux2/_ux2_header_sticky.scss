@@ -26,84 +26,91 @@
     @include linear-h-gradient(rgba($ux2-grey-darker, 1.0), rgba($ux2-grey-light, 1.0));
   }
 
-  .inner {
-    overflow: visible;
-
-    &.ns {
-      visibility: hidden;
-    }
-
-    &.sticky {
+  &.sticky {
+    .inner {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
     }
+  }
 
-    .action-bar {
-      padding-top: 6px;
+  &.no-vis {
+    visibility: hidden;
+  }
 
-      .title {
-        font-size: 30px;
+  .inner {
+    overflow: visible;
+  }
+
+  .action-bar {
+    padding-top: 6px;
+
+    .title {
+      float: left;
+      font-size: 30px;
+    }
+
+    .actions {
+      float: right;
+      text-align: right;
+
+      .from {
+        display: inline-block;
+        font-size: 14px;
+
+        > span {
+          font-size: 24px;
+        }
       }
 
-      .actions {
-        text-align: right;
+      a {
+        padding: 4px 70px 4px 25px;
+        margin: 0 20px;
+        vertical-align: bottom;
 
-        .from {
-          display: inline-block;
-          font-size: 14px;
-
-          > span {
-            font-size: 24px;
-          }
-        }
-
-        a {
-          padding: 4px 70px 4px 25px;
-          margin: 0 20px;
-          vertical-align: bottom;
-
-          &:last-child {
-            margin-right: 0;
-          }
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
+  }
 
-    .nav-bar {
-      border-bottom: 1px solid $ux2-white;
-      padding-bottom: 6px;
+  .nav-bar {
+    border-bottom: 1px solid $ux2-white;
+    padding-bottom: 6px;
+    transform-origin: top;
 
-      ul {
-        margin: 0;
-        font-size: 13px;
+    ul {
+      margin: 0;
+      font-size: 13px;
+      padding: 0;
+      list-style: none;
 
-        &:after {
-          content: "";
-          display: block;
-          clear: both;
-        }
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
 
-        li {
-          float: left;
-          margin-right: 12px;
+      li {
+        float: left;
+        margin-right: 12px;
 
-          a {
-            display: inline-block;
-            color: #eee;
-            line-height: normal;
-            padding: 5px 16px;
-            border-radius: 4px;
+        a {
+          display: inline-block;
+          color: #eee;
+          line-height: normal;
+          padding: 5px 16px;
+          border-radius: 4px;
 
-            &.active, &:hover {
-              background: rgba(255, 255, 255, 0.15);
-              margin-bottom: 0;
-              border: 1px solid rgba(255, 255, 255, 0.25);
-              padding: 4px 15px;
-              color: $ux2-white;
-              text-decoration: none;
-            }
+          &.active, &:hover {
+            background: rgba(255, 255, 255, 0.15);
+            margin-bottom: 0;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 4px 15px;
+            color: $ux2-white;
+            text-decoration: none;
           }
         }
       }
@@ -136,99 +143,100 @@
       @include linear-h-gradient(rgba($ux2-grey-darker, 1.0), rgba($ux2-grey-light, 1.0));
     }
 
-    .inner {
-      &.sticky {
+    &.sticky {
+      .inner {
         position: static;
       }
+    }
 
-      .action-bar {
-        border-bottom: 1px solid $ux2-white;
-        padding: 0;
+    .action-bar {
+      border-bottom: 1px solid $ux2-white;
+      padding: 0;
 
-        .title {
-          position: relative;
-          padding: 15px;
-          font-size: 24px;
-          cursor: pointer;
+      .title {
+        float: none;
+        position: relative;
+        padding: 15px;
+        font-size: 24px;
+        cursor: pointer;
 
-          &:after {
-            content: "";
-            height: 15px;
-            width: 15px;
-            display: block;
-            border-right: 1px solid $ux2-white;
-            border-bottom: 1px solid $ux2-white;
-            transform: rotate(45deg);
-            position: absolute;
-            right: 25px;
-            top: 30%;
-          }
-
-          &.open {
-            &:after {
-              transform: rotate(225deg);
-              bottom: 30%;
-              top: initial;
-            }
-          }
+        &:after {
+          content: "";
+          height: 15px;
+          width: 15px;
+          display: block;
+          border-right: 1px solid $ux2-white;
+          border-bottom: 1px solid $ux2-white;
+          transform: rotate(45deg);
+          position: absolute;
+          right: 25px;
+          top: 30%;
         }
 
-        .actions {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          padding-top: 3px;
-          padding-bottom: 3px;
-
-          a {
-            width: auto;
-            padding: 0 33px 0 8px;
-            margin:5px 0;
-
-            &:before {
-              width: 0;
-              top: 2px;
-              bottom: 10px;
-            }
-
-            &:after {
-              width: 8px;
-              height: 8px;
-              right: 10px;
-            }
+        &.open {
+          &:after {
+            transform: rotate(225deg);
+            bottom: 30%;
+            top: initial;
           }
         }
       }
 
-      .nav-bar {
-        position: absolute;
+      .actions {
+        position: fixed;
+        float: none;
+        bottom: 0;
         left: 0;
         right: 0;
-        transform: scaleY(0);
-        transform-origin: top;
-        margin: 0;
-        overflow: hidden;
-        transition: all 0.5s ease-out;
+        padding-top: 3px;
+        padding-bottom: 3px;
 
-        &.open {
-          transform: scaleY(1);
-          overflow: visible;
+        a {
+          width: auto;
+          padding: 0 33px 0 8px;
+          margin: 5px 0;
+
+          &:before {
+            width: 0;
+            top: 2px;
+            bottom: 10px;
+          }
+
+          &:after {
+            width: 8px;
+            height: 8px;
+            right: 10px;
+          }
         }
+      }
+    }
 
-        ul {
-          padding: 15px 15px 20px;
+    .nav-bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      transform: scaleY(0);
+      margin: 0;
+      overflow: hidden;
+      transition: all 0.5s ease-out;
 
-          li {
-            float: none;
-            margin-right: 0;
-            padding: 9px 0;
-            font-size: 16px;
+      &.open {
+        transform: scaleY(1);
+        overflow: visible;
+      }
 
-            &:after {
-              content: none;
-              border: none;
-            }
+      ul {
+        padding: 15px 15px 20px;
+
+        li {
+          float: none;
+          margin-right: 0;
+          padding: 9px 0;
+          font-size: 16px;
+
+          &:after {
+            content: none;
+            border: none;
           }
         }
       }
