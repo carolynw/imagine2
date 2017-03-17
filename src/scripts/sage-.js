@@ -2,84 +2,84 @@
 /*jslint jquery: true*/
 
 (function (window) {
-  "use strict";
+    "use strict";
 
-  var sageApp = window.sageApp = (window.sageApp ? window.sageApp : {});
-  var $ = window.jQuery;
+    var sageApp = window.sageApp = (window.sageApp ? window.sageApp : {});
+    var $ = window.jQuery;
 
-  sageApp.init = function () {
-    sageApp.modules.activateAll();
-  };
+    sageApp.init = function () {
+        sageApp.modules.activateAll();
+    };
 
-  sageApp.modules = (function () {
-    var registeredModules = {};
-    var activeModules = {};
+    sageApp.modules = (function () {
+        var registeredModules = {};
+        var activeModules = {};
 
-    function register(name, bootStrapper) {
-      name = $.trim(name);
+        function register(name, bootStrapper) {
+            name = $.trim(name);
 
-      if (registeredModules[name] !== void 0)
-        throw "Module with name '" + name + "' already registered";
+            if (registeredModules[name] !== void 0)
+                throw "Module with name '" + name + "' already registered";
 
-      registeredModules[name] = bootStrapper;
-    }
-
-    function unRegister(name) {
-      delete registeredModules[name];
-    }
-
-    function activateAll() {
-      // Bootstrap all modules in turn
-      $.each(registeredModules, function (name, module) {
-        try {
-          activeModules[name] = module($);
-        } catch (error) {
-          sageApp.logger.logError(error);
+            registeredModules[name] = bootStrapper;
         }
-      });
 
-      // Now execute each module's init function. This happens after all bootstrapping is complete in order to allow for
-      // module inter-dependencies to work without worrying about load ordering.
-      $.each(activeModules, function (name, module) {
-        try {
-          if (typeof module.init === "function") {
-            module.init();
-          }
-        } catch (error) {
-          sageApp.logger.logError(error);
+        function unRegister(name) {
+            delete registeredModules[name];
         }
-      });
-    }
 
-    return {
-      register: register,
-      unRegister: unRegister,
-      registered: registeredModules,
-      activateAll: activateAll,
-      active: activeModules
-    }
-  }());
+        function activateAll() {
+            // Bootstrap all modules in turn
+            $.each(registeredModules, function (name, moduleCreator) {
+                try {
+                    activeModules[name] = moduleCreator($);
+                } catch (error) {
+                    sageApp.logger.logError(error);
+                }
+            });
 
-  sageApp.logger = (function () {
-    function logInfo(message) {
-      console.log(message);
-      // todo: remote logging
-    }
+            // Now execute each module's init function. This happens after all bootstrapping is complete in order to allow for
+            // module inter-dependencies to work without worrying about load ordering.
+            $.each(activeModules, function (name, moduleFuncs) {
+                try {
+                    if (moduleFuncs && typeof moduleFuncs.init === "function") {
+                        moduleFuncs.init();
+                    }
+                } catch (error) {
+                    sageApp.logger.logError(error);
+                }
+            });
+        }
 
-    function logWarn(message) {
-      console.warn(message);
-      // todo: remote logging
-    }
+        return {
+            register: register,
+            unRegister: unRegister,
+            registered: registeredModules,
+            activateAll: activateAll,
+            active: activeModules
+        }
+    }());
 
-    function logError(message) {
-      console.error(message);
-      // todo: remote logging
-    }
+    sageApp.logger = (function () {
+        function logInfo(message) {
+            console.log(message);
+            // todo: remote logging
+        }
 
-    return {
-      logInfo: logInfo,
-      logWarn: logWarn,
-      logError: logError
-    }
-  }());
+        function logWarn(message) {
+            console.warn(message);
+            // todo: remote logging
+        }
+
+        function logError(message) {
+            console.error(message);
+            // todo: remote logging
+        }
+
+        return {
+            logInfo: logInfo,
+            logWarn: logWarn,
+            logError: logError
+        }
+    }());
 }(window));

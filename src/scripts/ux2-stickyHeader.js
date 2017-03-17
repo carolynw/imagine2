@@ -5,45 +5,44 @@
 sageApp.modules.register("stickyHeader", function ($) {
     "use strict";
 
+    var $stickyHeader;
+
     function init() {
-        if (!$("[data-sticky-header]").length)
+        $stickyHeader = $("[data-sticky-header]");
+
+        if (!$stickyHeader.length)
             return;
 
-        updateStickiness();
+        update();
         attachEvents();
-        initHiders();
     }
 
     function attachEvents() {
-        $(window).resize(updateStickiness);
-        $(window).scroll(updateStickiness);
+        $(window).resize(update);
+        $(window).scroll(update);
 
-        $("[data-sticky-header]").on("click", "[data-toggle-nav-bar]", function (event) {
+        $stickyHeader.on("click", "[data-toggle-nav-bar]", function (event) {
             event.preventDefault();
             $(event.delegateTarget).find("[data-nav-bar]").toggleClass("open");
             $(event.target).toggleClass("open");
         });
     }
 
-    function initHiders() {
-        var $hider = $("[data-sticky-header-hider]");
+    function update() {
+        updateVisibility();
+        updateStickiness();
+    }
 
-        if (!$hider.length)
-            return;
+    function updateVisibility() {
+        var shouldStickyHeaderBeVisible = $("[data-sticky-header-hider]:inPartialView").length > 0;
 
-        new Waypoint.Inview({
-            element: $hider[0],
-            entered: function () {
-                $("[data-sticky-header]").addClass("no-vis");
-            },
-            exited: function () {
-                $("[data-sticky-header]").removeClass("no-vis");
-            }
-        });
+        if (shouldStickyHeaderBeVisible)
+            $stickyHeader.addClass("no-vis");
+        else
+            $stickyHeader.removeClass("no-vis");
     }
 
     function updateStickiness() {
-        var $stickyHeader = $("[data-sticky-header]");
         var $inner = $stickyHeader.find(">:first-child");
         var innerHeight = $inner.height();
         $("body").data("top-offset", innerHeight);

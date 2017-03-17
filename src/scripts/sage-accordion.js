@@ -15,10 +15,9 @@ sageApp.modules.register("accordion", function ($) {
     }
 
     function maybeScrollToPanel(event) {
-        var $panel = $(event.target).parent(".panel");
+        var $panel = $(event.target).parent(".panel").not(":inView");
 
-        // We'll only scroll to the panel if the content is not entirely within view
-        if (isElementInView($panel))
+        if (!$panel.length)
             return;
 
         var topOffset = $("body").data("top-offset") || 0;
@@ -27,12 +26,6 @@ sageApp.modules.register("accordion", function ($) {
         $("html,body").animate({
             scrollTop: $panel.offset().top - topOffset
         }, 500);
-    }
-
-    function isElementInView($element) {
-        var rect = $element[0].getBoundingClientRect();
-        var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-        return rect.top >= 0 && rect.bottom < viewHeight;
     }
 
     return {

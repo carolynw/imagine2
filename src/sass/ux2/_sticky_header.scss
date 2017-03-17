@@ -1,10 +1,12 @@
-﻿@import '_ux2_colours';
-@import '../partials/sage_bootstrap_variables';
+﻿@import '../partials/sage_bootstrap_variables';
+@import '../partials/common_mixins';
+@import 'colours';
 
 .sticky-header {
   position: relative;
   color: $ux2-white;
   z-index: 100;
+  transition:all 0.5s ease-out;
 
   &.amethyst .sticky-row {
     @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
@@ -36,7 +38,8 @@
   }
 
   &.no-vis {
-    visibility: hidden;
+    opacity:0;
+    pointer-events:none;
   }
 
   .inner {
