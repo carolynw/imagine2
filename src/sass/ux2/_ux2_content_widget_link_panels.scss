@@ -16,6 +16,8 @@
   }
 
   .link-panel-row.show-3 {
+    padding:0 12%;
+
     .link-panel {
       width: 32%;
       margin: 0.5%;
@@ -29,7 +31,17 @@
     }
   }
 
+  @media (max-width: $screen-md-max) {
+    .link-panel-row.show-3{
+      padding:0 8%;
+    }
+  }
+
   @media (max-width: $screen-sm-max) {
+    .link-panel-row.show-3{
+      padding:0 5%;
+    }
+
     .link-panel-row.show-3, .link-panel-row.show-4 {
       .link-panel {
         width: 48%;
@@ -38,7 +50,17 @@
     }
   }
 
+  @media (max-width: $screen-xs-max) {
+    .link-panel-row.show-3{
+      padding:0;
+    }
+  }
+
   @media (max-width: $screen-xxs-max) {
+    .link-panel-row.show-3{
+      padding:0;
+    }
+
     .link-panel-row.show-3, .link-panel-row.show-4 {
       .link-panel {
         width: 100%;
@@ -65,6 +87,7 @@
     &:hover {
       text-decoration: none;
       background: #fcfcfc;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
     }
 
     .link-panel-header {
