@@ -166,38 +166,38 @@ a {
         @include linear-h-gradient($brand-azul-dark, $brand-azul-light);
     }
 
-    &.button-pink {
-        border-color: $brand-fuchsia;
+    &.button-plum {
+        border-color: $brand-plum;
         background-color: transparent;
-        color: $brand-fuchsia;
+        color: $brand-plum;
     }
 
-    &.button-pink-block {
-        border-color: $brand-fuchsia;
+    &.button-plum-block {
+        border-color: $brand-plum;
         background-color: transparent;
-        color: $brand-fuchsia;
+        color: $brand-plum;
     }
 
-    &.button-pink-back {
-        border-color: $brand-fuchsia;
+    &.button-plum-back {
+        border-color: $brand-plum;
         background-color: transparent;
-        color: $brand-fuchsia;
+        color: $brand-plum;
     }
 
-    &.button-pink-block-back {
-        border-color: $brand-fuchsia;
+    &.button-plum-block-back {
+        border-color: $brand-plum;
         background-color: transparent;
-        color: $brand-fuchsia;
+        color: $brand-plum;
     }
 
-    &.button-pink-solid-invert {
+    &.button-plum-solid-invert {
         color: $brand-white;
-        @include linear-h-gradient($brand-fuchsia-dark, $brand-fuchsia);
+        @include linear-h-gradient($brand-plum-dark, $brand-plum);
     }
 
-    &.button-pink-solid-block-invert {
+    &.button-plum-solid-block-invert {
         color: $brand-white;
-        @include linear-h-gradient($brand-fuchsia-dark, $brand-fuchsia);
+        @include linear-h-gradient($brand-plum-dark, $brand-plum);
     }
 }
 
