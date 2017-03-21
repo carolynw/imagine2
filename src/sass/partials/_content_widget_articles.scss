@@ -98,8 +98,8 @@
                         .panel {
                             border-left: none;
                             border-right: none;
-                            border-top: 10px solid $brand-light-azul;
-                            border-bottom: 1px solid $brand-light-azul;
+                            border-top: 10px solid $brand-azul-light;
+                            border-bottom: 1px solid $brand-azul-light;
                             border-radius: 0;
                             text-align: left;
                             margin: 0 15px;
@@ -111,7 +111,7 @@
                             @media (max-width:$screen-xs-max)and (min-width:$screen-xs-min) {
                                
                                 margin: 0 20px;
-                                border-bottom: 1px solid $brand-light-azul;
+                                border-bottom: 1px solid $brand-azul-light;
                                 
                             }
 
@@ -137,7 +137,7 @@
                                         line-height: inherit;
                                         font-weight: normal;
                                         font-size: 1.1em;
-                                        color: $brand-light-azul;
+                                        color: $brand-azul-light;
                                     }
                                 }
                             }
@@ -152,7 +152,7 @@
                                 }
 
                                 a {
-                                    color: $brand-light-azul;
+                                    color: $brand-azul-light;
                                     text-decoration: underline;
                                     font-size: 0.9em;
                                     font-weight: bold;

@@ -1,9 +1,9 @@
-﻿@import 'colours';
+﻿@import '../partials/common_colours';
 @import '../partials/common_mixins';
 
 .content-widget.skinny-hero {
-  @include radial-cc-gradient($ux2-grey, $ux2-grey-dark);
-  color: $ux2-white;
+  @include radial-cc-gradient($brand-med-grey, $brand-med-dark-grey);
+  color: $brand-white;
 
   .wrapper-content {
     h1 {

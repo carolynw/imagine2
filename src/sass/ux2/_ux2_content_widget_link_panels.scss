@@ -1,6 +1,6 @@
 ﻿@import '../partials/sage_bootstrap_variables';
 @import '../partials/common_mixins';
-@import 'colours';
+@import '../partials/common_colours';
 
 .content-widget.link-panels {
   .section {
@@ -50,8 +50,8 @@
   .link-panel {
     display: block;
     position: relative;
-    color: $ux2-grey-dark;
-    background: $ux2-white;
+    color: $brand-med-dark-grey;
+    background: $brand-white;
     border: 1px solid #dcddde;
     border-radius: 4px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -74,7 +74,7 @@
       }
 
       .title {
-        color: $ux2-azul;
+        color: $brand-azul;
         margin-top: 14px;
         font-size: 20px;
       }
@@ -85,7 +85,7 @@
 
       &:after {
         content: '';
-        border-top: 1px solid $ux2-black;
+        border-top: 1px solid $brand-black;
         width: 50%;
         position: absolute;
         top: 0;

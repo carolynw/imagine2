@@ -1,35 +1,35 @@
-﻿@import '../partials/sage_bootstrap_variables';
-@import '../partials/common_mixins';
-@import 'colours';
+﻿@import "sage_bootstrap_variables";
+@import "common_colours";
+@import "common_mixins";
 
 .sticky-header {
   position: relative;
-  color: $ux2-white;
+  color: $brand-white;
   z-index: 100;
-  transition:all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 
   &.amethyst .sticky-row {
-    @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
+    @include linear-h-gradient(rgba($brand-amethyst, 1.0), rgba($brand-amethyst-light, 1.0));
   }
 
   &.azul .sticky-row {
-    @include linear-h-gradient(rgba($ux2-azul-dark, 1.0), rgba($ux2-azul, 1.0));
+    @include linear-h-gradient(rgba($brand-azul-dark, 1.0), rgba($brand-azul, 1.0));
   }
 
   &.fuchsia .sticky-row {
-    @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
+    @include linear-h-gradient(rgba($brand-fuchsia-dark, 1.0), rgba($brand-fuchsia, 1.0));
   }
 
   &.plum .sticky-row {
-    @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
+    @include linear-h-gradient(rgba($brand-plum-dark, 1.0), rgba($brand-plum, 1.0));
   }
 
   .sticky-row {
-    @include linear-h-gradient(rgba($ux2-grey-darker, 1.0), rgba($ux2-grey-light, 1.0));
+    @include linear-h-gradient(rgba($brand-dark-grey, 1.0), rgba($brand-light-grey, 1.0));
   }
 
   &.sticky {
-    .inner {
+    .sticky-header-content {
       position: fixed;
       top: 0;
       left: 0;
@@ -38,12 +38,17 @@
   }
 
   &.no-vis {
-    opacity:0;
-    pointer-events:none;
+    opacity: 0;
+    pointer-events: none;
   }
 
-  .inner {
+  .sticky-header-content {
     overflow: visible;
+
+    .sticky-row:last-child {
+      padding-bottom: 6px;
+      border-bottom: 1px solid $brand-white;
+    }
   }
 
   .action-bar {
@@ -58,12 +63,13 @@
       float: right;
       text-align: right;
 
-      .from {
+      .lead-in {
         display: inline-block;
         font-size: 14px;
 
-        > span {
+        > em {
           font-size: 24px;
+          font-style: normal;
         }
       }
 
@@ -80,8 +86,6 @@
   }
 
   .nav-bar {
-    border-bottom: 1px solid $ux2-white;
-    padding-bottom: 6px;
     transform-origin: top;
 
     ul {
@@ -112,7 +116,7 @@
             margin-bottom: 0;
             border: 1px solid rgba(255, 255, 255, 0.25);
             padding: 4px 15px;
-            color: $ux2-white;
+            color: $brand-white;
             text-decoration: none;
           }
         }
@@ -127,33 +131,39 @@
     overflow: visible;
 
     &.amethyst .actions {
-      @include linear-h-gradient(rgba($ux2-amethyst, 1.0), rgba($ux2-amethyst-light, 1.0));
+      @include linear-h-gradient(rgba($brand-amethyst, 1.0), rgba($brand-amethyst-light, 1.0));
     }
 
     &.azul .actions {
-      @include linear-h-gradient(rgba($ux2-azul-dark, 1.0), rgba($ux2-azul, 1.0));
+      @include linear-h-gradient(rgba($brand-azul-dark, 1.0), rgba($brand-azul, 1.0));
     }
 
     &.fuchsia .actions {
-      @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
+      @include linear-h-gradient(rgba($brand-fuchsia-dark, 1.0), rgba($brand-fuchsia, 1.0));
     }
 
     &.plum .actions {
-      @include linear-h-gradient(rgba($ux2-plum-dark, 1.0), rgba($ux2-plum, 1.0));
+      @include linear-h-gradient(rgba($brand-plum-dark, 1.0), rgba($brand-plum, 1.0));
     }
 
     .actions {
-      @include linear-h-gradient(rgba($ux2-grey-darker, 1.0), rgba($ux2-grey-light, 1.0));
+      @include linear-h-gradient(rgba($brand-dark-grey, 1.0), rgba($brand-light-grey, 1.0));
     }
 
     &.sticky {
-      .inner {
+      .sticky-header-content {
         position: static;
       }
     }
 
+    &.no-nav {
+      .action-bar .title:after {
+        display: none;
+      }
+    }
+
     .action-bar {
-      border-bottom: 1px solid $ux2-white;
+      border-bottom: 1px solid $brand-white;
       padding: 0;
 
       .title {
@@ -168,8 +178,8 @@
           height: 15px;
           width: 15px;
           display: block;
-          border-right: 1px solid $ux2-white;
-          border-bottom: 1px solid $ux2-white;
+          border-right: 1px solid $brand-white;
+          border-bottom: 1px solid $brand-white;
           transform: rotate(45deg);
           position: absolute;
           right: 25px;

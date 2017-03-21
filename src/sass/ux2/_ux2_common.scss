@@ -1,4 +1,4 @@
-﻿@import 'colours';
+﻿@import '../partials/common_colours';
 @import '../../../node_modules/font-awesome/scss/_variables.scss';
 @import '../partials/sage_bootstrap_variables';
 @import '../partials/common_mixins';
@@ -12,16 +12,16 @@ a.anchor:before {
 }
 
 a.external-link {
-  color: $ux2-azul;
+  color: $brand-azul;
   text-decoration: underline;
   position: relative;
   display: inline-block;
 
   &:hover {
-    color: $ux2-azul-dark;
+    color: $brand-azul-dark;
 
     &:before {
-      color: $ux2-grey-dark;
+      color: $brand-med-dark-grey;
     }
   }
 }
@@ -49,7 +49,7 @@ a.button-back {
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  color: $ux2-fuchsia;
+  color: $brand-fuchsia;
 
   @media(max-width: $screen-xs-max) {
     font-size: 0.9em;

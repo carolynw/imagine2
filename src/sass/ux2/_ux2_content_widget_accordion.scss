@@ -1,4 +1,4 @@
-﻿@import 'colours';
+﻿@import '../partials/common_colours';
 
 .content-widget.accordion {
   padding:0 10%;
@@ -16,7 +16,7 @@
       border-radius:0;
 
       &:hover{
-        background:$ux2-grey-darker;
+        background:$brand-dark-grey;
         color:#fff;
       }
 

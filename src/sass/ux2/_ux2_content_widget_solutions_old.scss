@@ -30,7 +30,7 @@
 
                 &.panel-default {
                   background-color: $brand-azul;
-                  @include linear-h-gradient(rgba($brand-dark-azul, 1.0), rgba($brand-light-azul, 1.0));
+                  @include linear-h-gradient(rgba($brand-azul-dark, 1.0), rgba($brand-azul-light, 1.0));
                   @include default-shadow;
                   border-radius: 6px;
 
@@ -73,7 +73,7 @@
                     }
 
                     .discount-block {
-                      background-color: $brand-lightest-grey;
+                      background-color: $brand-light-grey;
                       padding: 10px;
                       font-weight: bold;
 
@@ -198,7 +198,7 @@
 
               &.recommended {
                 hr {
-                  border-color: $ux2-green !important;
+                  border-color: $brand-brilliant-green !important;
                 }
 
                 .panel {
@@ -206,11 +206,11 @@
 
                   &.panel-default {
                     background-color: $brand-dark-green;
-                    @include linear-h-gradient(rgba($brand-dark-green, 1.0), rgba($brand-light-green-AA, 1.0));
+                    @include linear-h-gradient(rgba($brand-dark-green, 1.0), rgba($brand-brilliant-green-AA, 1.0));
 
                     .with-tick {
                       li:before {
-                        color: $brand-light-green-AA;
+                        color: $brand-brilliant-green-AA;
                       }
                     }
 
@@ -225,7 +225,7 @@
                     .button-learnmore {
                       border-color: $brand-dark-green;
                       background-color: $brand-dark-green;
-                      @include linear-h-gradient($brand-dark-green, $brand-light-green-AA);
+                      @include linear-h-gradient($brand-dark-green, $brand-brilliant-green-AA);
                     }
                   }
                 }
@@ -252,7 +252,7 @@
                   &.select {
                     position: absolute;
                     border-radius: 49%;
-                    background-color: $brand-dark-azul;
+                    background-color: $brand-azul-dark;
                     text-align: center;
                     color: $brand-white;
                     transition: $default-transition-time ease;
@@ -270,7 +270,7 @@
 
                 &.active {
                   .icon {
-                    @include radial-tl-gradient(rgba($brand-dark-grey, 1.0), rgba($brand-lightest-grey, 1.0));
+                    @include radial-tl-gradient(rgba($brand-dark-grey, 1.0), rgba($brand-light-grey, 1.0));
                     margin: 0;
                     padding: 0;
 
@@ -411,7 +411,7 @@
                   display: block;
 
                   .slider-nav-item {
-                    border-bottom: 6px solid $brand-light-green-AA;
+                    border-bottom: 6px solid $brand-brilliant-green-AA;
                   }
                 }
               }
@@ -475,35 +475,35 @@
             .recommended {
               .product-title {
                 &.h2 {
-                  color: $brand-light-azul;
+                  color: $brand-azul-light;
                 }
               }
               .fa {
                 &.fa-check {
-                  color: $brand-light-azul;
+                  color: $brand-azul-light;
                 }
               }
               .button-learnmore {
                 border-color: $brand-azul;
                 background-color: $brand-azul;
-                @include linear-h-gradient($brand-azul, $brand-lightest-azul);
+                @include linear-h-gradient($brand-azul, $brand-azul-ultralight);
               }
             }
             .recommended {
               .product-title {
                 &.h2 {
-                  color: $brand-light-green-AA;
+                  color: $brand-brilliant-green-AA;
                 }
               }
               .fa {
                 &.fa-check {
-                  color: $brand-light-green-AA;
+                  color: $brand-brilliant-green-AA;
                 }
               }
               .button-learnmore {
                 border-color: $brand-dark-green;
                 background-color: $brand-dark-green;
-                @include linear-h-gradient($brand-dark-green, $brand-light-green-AA);
+                @include linear-h-gradient($brand-dark-green, $brand-brilliant-green-AA);
               }
             }
           }
@@ -533,7 +533,7 @@
               line-height: 2.5em;
 
               &.fa-check {
-                color: $brand-dark-plum;
+                color: $brand-plum-dark;
               }
             }
 

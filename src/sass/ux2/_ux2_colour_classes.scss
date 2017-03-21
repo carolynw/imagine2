@@ -1,9 +1,9 @@
-﻿@import 'colours';
+﻿@import '../partials/common_colours';
 
 .ux2-slate-light-bg {
-  background-color: $ux2-slate-light;
+  background-color: $brand-slate-light;
 }
 
 .ux2-plum-fg {
-  color: $ux2-plum;
+  color: $brand-plum;
 }

@@ -1,4 +1,4 @@
-﻿@import 'colours';
+﻿@import '../partials/common_colours';
 
 .content-widget.info-boxes {
   margin: 40px 0;
@@ -8,7 +8,7 @@
 
     .action{
       margin-top:20px;
-      color: $ux2-azul;
+      color: $brand-azul;
     }
   }
 
@@ -26,8 +26,8 @@
 
     .info-box {
       text-align: center;
-      border-top: 1px solid $ux2-grey-lighter;
-      border-bottom: 1px solid $ux2-grey-lighter;
+      border-top: 1px solid $brand-light-grey;
+      border-bottom: 1px solid $brand-light-grey;
       padding: 40px 20px;
       margin: 0 10px;
       height: 300px; //todo: hack
@@ -39,12 +39,12 @@
 
       .title {
         font-weight: bold;
-        color: $ux2-azul;
+        color: $brand-azul;
         margin-top: 14px;
       }
 
       .desc {
-        color: $ux2-grey-darker;
+        color: $brand-dark-grey;
       }
     }
   }

@@ -32,7 +32,7 @@
                             opacity: 0.5;
 
                             &:focus {
-                                border-bottom: 1px solid $brand-dark-pink;
+                                border-bottom: 1px solid $brand-fuchsia-dark;
                                 opacity: 0.5;
                             }
                         }
@@ -63,7 +63,7 @@
                     select:focus + label,
                     input:focus + label + label,
                     select:focus + label + label {
-                        color: $brand-dark-pink;
+                        color: $brand-fuchsia-dark;
                         opacity: 1;
                     }
 
@@ -124,7 +124,7 @@
                         margin-bottom: 10px;
 
                         &:focus {
-                            border-bottom: 1px solid $brand-dark-pink;
+                            border-bottom: 1px solid $brand-fuchsia-dark;
                             opacity: 1;
                         }
 
@@ -162,13 +162,13 @@
 
                         label.onFocus {
                             opacity: 1;
-                            color: $brand-dark-pink !important;
+                            color: $brand-fuchsia-dark !important;
                         }
 
                         input.onFocus,
                         select.onFocus {
                             opacity: 1;
-                            border-bottom-color: $brand-dark-pink !important;
+                            border-bottom-color: $brand-fuchsia-dark !important;
                         }
 
                         &.halfAvailableWidth {
@@ -183,7 +183,7 @@
                                 opacity: 1;
 
                                 &:focus {
-                                    border-bottom: 1px solid rgba($brand-dark-pink,0.5);
+                                    border-bottom: 1px solid rgba($brand-fuchsia-dark,0.5);
                                 }
                             }
 
@@ -211,7 +211,7 @@
                         select:focus + label,
                         input:focus + label + label,
                         select:focus + label + label {
-                            color: $brand-dark-pink;
+                            color: $brand-fuchsia-dark;
                             opacity: 1;
                         }
 
@@ -325,7 +325,7 @@
                             margin-bottom: 10px;
 
                             &:focus {
-                                border-bottom: 1px solid $brand-dark-pink;
+                                border-bottom: 1px solid $brand-fuchsia-dark;
                                 opacity: 1;
                             }
                         }

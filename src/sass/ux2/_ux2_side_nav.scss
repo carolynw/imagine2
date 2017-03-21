@@ -1,6 +1,6 @@
 ﻿@import '../partials/sage_bootstrap_variables';
 @import '../partials/common_mixins';
-@import 'colours';
+@import '../partials/common_colours';
 
 @mixin stretch-fit {
   position: absolute;
@@ -27,7 +27,7 @@ body.side-nav-open {
 }
 
 #ux2_side_nav {
-  @include linear-v-gradient(rgba($ux2-slate-light, 0.95), rgba($ux2-slate, 0.95));
+  @include linear-v-gradient(rgba($brand-slate-light, 0.95), rgba($brand-slate, 0.95));
   @include stretch-fit;
   z-index: 9000;
   overflow: hidden;
@@ -125,7 +125,7 @@ body.side-nav-open {
 
       &:after {
         content: "";
-        border-left: 2px solid $ux2-slate-dark;
+        border-left: 2px solid $brand-slate-dark;
         position: absolute;
         left: 0;
         top: 0;
@@ -145,7 +145,7 @@ body.side-nav-open {
         padding-top: 7px;
         border-radius: 50%;
         background: #f5f5f5;
-        color: $ux2-slate;
+        color: $brand-slate;
       }
 
       .copyright {
@@ -168,12 +168,12 @@ body.side-nav-open {
 
 @media(max-width: $screen-sm-max) {
   #ux2_side_nav {
-    @include linear-v-gradient(rgba($ux2-slate, 0.95), rgba($ux2-slate-light, 0.95));
+    @include linear-v-gradient(rgba($brand-slate, 0.95), rgba($brand-slate-light, 0.95));
     transform: scaleX(0);
     transform-origin: left;
 
     .header {
-      border-bottom: 1px solid $ux2-azul-light;
+      border-bottom: 1px solid $brand-azul-light;
     }
 
     .body {
@@ -216,8 +216,8 @@ body.side-nav-open {
 
               content: "";
               display: block;
-              border-top: 2px solid $ux2-azul-light;
-              border-right: 2px solid $ux2-azul-light;
+              border-top: 2px solid $brand-azul-light;
+              border-right: 2px solid $brand-azul-light;
               transform: rotate(45deg);
               width: 13px;
               height: 13px;
@@ -231,7 +231,7 @@ body.side-nav-open {
             left: 0;
             top: 0;
             width: 180px;
-            border-top: 1px solid $ux2-slate-lighter;
+            border-top: 1px solid $brand-slate-ultralight;
           }
 
           &:last-child {
@@ -281,7 +281,7 @@ body.side-nav-open {
               left: 0;
               top: 0;
               width: 165px;
-              border-top: 2px solid $ux2-azul-light;
+              border-top: 2px solid $brand-azul-light;
             }
           }
 
@@ -294,7 +294,7 @@ body.side-nav-open {
               left: 0;
               bottom: 0;
               width: 165px;
-              border-bottom: 2px solid $ux2-azul-light;
+              border-bottom: 2px solid $brand-azul-light;
             }
           }
         }

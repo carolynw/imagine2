@@ -1,12 +1,12 @@
 ﻿@import '../partials/common_mixins';
-@import 'colours';
+@import '../partials/common_colours';
 
 form.ux2form {
   margin: 50px 0;
 
   legend {
     border: none;
-    color: $ux2-fuchsia;
+    color: $brand-fuchsia;
     margin-bottom: 40px;
   }
 
@@ -16,7 +16,7 @@ form.ux2form {
     text-transform: uppercase;
 
     &.focus-within {
-      color: $ux2-fuchsia;
+      color: $brand-fuchsia;
     }
 
     input[type="text"], input[type="password"] {
@@ -25,11 +25,11 @@ form.ux2form {
       border-top: none;
       border-left: none;
       border-right: none;
-      border-bottom: 2px solid $ux2-grey-lighter;
+      border-bottom: 2px solid $brand-light-grey;
 
       &:focus {
         outline: none;
-        border-bottom-color: $ux2-fuchsia;
+        border-bottom-color: $brand-fuchsia;
       }
     }
 
@@ -53,7 +53,7 @@ form.ux2form {
         position: absolute;
         width: 26px;
         height: 26px;
-        background: $ux2-fuchsia;
+        background: $brand-fuchsia;
         border-radius: 15%;
       }
 
@@ -65,12 +65,12 @@ form.ux2form {
         width: 10px;
         height: 20px;
         transform: rotate(45deg);
-        border-bottom: 3px solid $ux2-fuchsia-dark;
-        border-right: 3px solid $ux2-fuchsia-dark;
+        border-bottom: 3px solid $brand-fuchsia-dark;
+        border-right: 3px solid $brand-fuchsia-dark;
       }
 
       &:checked + i:after {
-        border-color: $ux2-white;
+        border-color: $brand-white;
       }
     }
 
@@ -80,14 +80,14 @@ form.ux2form {
   }
 
   button[type="submit"] {
-    @include linear-h-gradient(rgba($ux2-fuchsia-dark, 1.0), rgba($ux2-fuchsia, 1.0));
-    color: $ux2-white;
+    @include linear-h-gradient(rgba($brand-fuchsia-dark, 1.0), rgba($brand-fuchsia, 1.0));
+    color: $brand-white;
     font-weight: bold;
   }
 
   a {
     display: inline-block;
-    color: $ux2-slate-light;
+    color: $brand-slate-light;
     text-decoration: underline;
     font-weight: bold;
   }

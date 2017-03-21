@@ -1,7 +1,10 @@
 /*jslint jquery: true*/
+/*global sageApp*/
 
 (function () {
-  $(function(){
-    sageApp.init();
-  });
+    "use strict";
+
+    $(function(){
+        sageApp.init();
+    });
 }());

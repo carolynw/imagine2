@@ -63,7 +63,7 @@
 @import './partials/_page_header_nav_content';
 @import './partials/_page_header_nav_sub_content';
 @import './partials/_page_header_nav_sub_call_to_action.scss';
-//@import './partials/_page_header_content';
+@import './partials/_page_sticky_header';
 
 /*Content Section*/
 @import './partials/_page_section_content';
@@ -75,13 +75,11 @@
 @import './partials/_page_experience_editor';
 
 /* UX2 styles */
-@import 'ux2/_colours';
 @import 'ux2/_ux2_colour_classes';
 @import 'ux2/_ux2_common';
 @import 'ux2/_ux2_form';
 @import 'ux2/_ux2_footer_nav';
 @import 'ux2/_ux2_side_nav';
-@import 'ux2/_sticky_header';
 
 @import 'ux2/_ux2_content_widget_accordion';
 @import 'ux2/_ux2_content_widget_explore';

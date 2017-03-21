@@ -1,4 +1,4 @@
-﻿@import 'colours';
+﻿@import '../partials/common_colours';
 
 .content-widget.switch-steps {
   .switch-step {
@@ -15,10 +15,10 @@
         width: 50px;
         height: 50px;
         line-height: 50px;
-        background: $ux2-green-dark;
+        background: $brand-brilliant-green-AA;
         border-radius: 50%;
         text-align: center;
-        color: $ux2-white;
+        color: $brand-white;
         font-size: 24px;
         float: left;
         margin-right: 20px;

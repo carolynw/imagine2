@@ -1,42 +1,39 @@
-﻿/*Base colors*/
-$brand-azul: #004089;
-$brand-light-azul: #156E96;
-$brand-lightest-azul: lighten($brand-light-azul, 25%);
-$brand-dark-azul: #003261;
+﻿$brand-white: #fff;
+$brand-light-grey: #a7a8aa;
+$brand-med-light-grey: #97999b;
+$brand-med-grey: #888b8d;
+$brand-med-dark-grey: #75787b;
+$brand-dark-grey: #63666a;
+$brand-black: #2c2a29;
 
-$brand-slate: #243741;
-$brand-light-slate: #2E4950;
-$brand-dark-slate: #16242C;
+$brand-slate-ultralight: #8ab7c2;
+$brand-slate-light: #177286;
+$brand-slate: #003349;
+$brand-slate-dark: #021e26;
 
-$brand-fuchsia: #C8006E;
-$brand-light-fuchsia: #D53E9C;
-$brand-dark-fuchsia: #990069;
+$brand-azul-ultralight: #92d0ec;
+$brand-azul-light: #28a3da;
+$brand-azul: #004b87;
+$brand-azul-dark: #073460;
 
-$brand-plum: #64006E;
-$brand-light-plum: #882E82;
-$brand-dark-plum: #46004A;
+$brand-amethyst-ultralight: #493062;
+$brand-amethyst-light: #483ba7;
+$brand-amethyst: #250e62;
+$brand-amethyst-dark: #03012d;
 
-$brand-amethyst: #37215A;
-$brand-light-amethyst: #493062;
-$brand-dark-amethyst: #1e173a;
+$brand-plum-ultralight: #cfbdf2;
+$brand-plum-light: #ab86dc;
+$brand-plum: #8246af;
+$brand-plum-dark: #4b2d7a;
+
+$brand-fuchsia-ultralight: #f4abd0;
+$brand-fuchsia-light: #f180d1;
+$brand-fuchsia: #ce0058;
+$brand-fuchsia-dark: #a40769;
 
 $brand-brilliant-green: #00dc00;
 $brand-brilliant-green-AA: #41A940;
-
-
-$brand-dark-grey: #51534A;
-$brand-med-grey: #858780;
-$brand-light-grey: #CBCBC9;
-$brand-lightest-grey: lighten($brand-dark-grey, 65%);
-$brand-dark-blue: $brand-dark-azul;
-$brand-med-blue: $brand-light-azul;
-$brand-white: #ffffff;
-$brand-black: #231F20;
-$brand-light-green: $brand-brilliant-green;
-$brand-dark-green: darken($brand-light-green, 20%);
-$brand-pink: $brand-fuchsia;
-$brand-dark-pink: $brand-dark-fuchsia;
-$brand-light-green-AA: $brand-brilliant-green-AA;
+$brand-dark-green: darken($brand-brilliant-green, 20%);
 
 $brand-facebook: #3b5998;
 $brand-twitter: #1da1f2;
@@ -50,12 +47,12 @@ $brand-pinterest: #bd081c;
 $page-background-color: $brand-white;
 $page-section-background-color: $brand-white;
 $page-foreground-color: $brand-dark-grey;
-$page-side-nav-background-color: $brand-dark-blue;
-$page-side-nav-foreground-color: $brand-light-grey;
+$page-side-nav-background-color: $brand-azul-dark;
+$page-side-nav-foreground-color: $brand-med-light-grey;
 
 $page-header-nav-background-color: $brand-white;
-$page-header-nav-sub-content-background-color: $brand-light-grey;
-$page-header-nav-sub-call-to-action-background-color: $brand-pink;
+$page-header-nav-sub-content-background-color: $brand-med-light-grey;
+$page-header-nav-sub-call-to-action-background-color: $brand-fuchsia;
 $page-footer-content-background-color:$brand-dark-grey;
 $page-header-nav-color: $brand-dark-grey;
 $page-footer-content-background-color:$brand-dark-grey;

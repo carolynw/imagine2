@@ -458,7 +458,7 @@
 
 
 .chevron-link-pink {
-    color: $brand-pink;
+    color: $brand-fuchsia;
 }
 
 .chevron-link {
@@ -501,10 +501,10 @@
 
 //feature specific buttons
 .button-learnmore {
-    border-color: $brand-med-blue;
-    background-color: $brand-med-blue;
+    border-color: $brand-azul-light;
+    background-color: $brand-azul-light;
     color: $brand-white;
-    @include linear-h-gradient($brand-dark-blue, $brand-med-blue);
+    @include linear-h-gradient($brand-azul-dark, $brand-azul-light);
 }
 
 // font-family: "FontAwesome";

@@ -11,9 +11,9 @@
         li {
             &.active {
                 a {
-                    color: $brand-light-green-AA;
+                    color: $brand-brilliant-green-AA;
                     font-weight: bold;
-                    border-top: 5px solid $brand-light-green-AA;
+                    border-top: 5px solid $brand-brilliant-green-AA;
                     background: transparent;
                 }
 
@@ -33,7 +33,7 @@
                 border-radius: 0 0 0 0;
 
                 &:hover {
-                    border-top: 5px solid $brand-light-green-AA;
+                    border-top: 5px solid $brand-brilliant-green-AA;
                     background: transparent;
                 }
             }
@@ -60,7 +60,7 @@
 
 
     .tab-content {
-        background: $brand-light-green-AA;
+        background: $brand-brilliant-green-AA;
         color:$brand-white;
         margin: 0 auto;
         padding: 5%;

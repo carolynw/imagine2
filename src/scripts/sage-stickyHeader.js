@@ -43,9 +43,8 @@ sageApp.modules.register("stickyHeader", function ($) {
     }
 
     function updateStickiness() {
-        var $inner = $stickyHeader.find(">:first-child");
-        var innerHeight = $inner.height();
-        $("body").data("top-offset", innerHeight);
+        var contentsHeight = $stickyHeader.find(">.sticky-header-content").height();
+        $("body").data("top-offset", contentsHeight);
 
         var top = $stickyHeader[0]
             .getBoundingClientRect()
@@ -54,7 +53,7 @@ sageApp.modules.register("stickyHeader", function ($) {
         if (top < 0) {
             $stickyHeader
                 .addClass("sticky")
-                .height(innerHeight);
+                .height(contentsHeight);
         } else {
             $stickyHeader
                 .removeClass("sticky")

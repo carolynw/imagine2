@@ -1,4 +1,4 @@
-﻿@import 'colours';
+﻿@import '../partials/common_colours';
 
 .button-black, .button-black-block, .button-blue, .button-blue-block, .button-green, .button-green-block, .button-pink, .button-pink-block, .button-white, .button-white-block {
   padding: 6px 70px 6px 20px;
@@ -22,13 +22,13 @@
   }
 
   .nav-pills-sage.header-right li a {
-    color: $ux2-slate-dark;
+    color: $brand-slate-dark;
     font-family: AdelleSansSAGE;
   }
 
   .nav-pills-sage li {
     a {
-      color: $ux2-slate-dark;
+      color: $brand-slate-dark;
       font-family: AdelleSansSAGE;
 
       i {

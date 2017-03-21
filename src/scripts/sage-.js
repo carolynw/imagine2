@@ -29,10 +29,10 @@
         }
 
         function activateAll() {
-            // Bootstrap all modules in turn
-            $.each(registeredModules, function (name, moduleCreator) {
+            // Create all modules in turn
+            $.each(registeredModules, function (name, bootStrapper) {
                 try {
-                    activeModules[name] = moduleCreator($);
+                    activeModules[name] = bootStrapper($) || {};
                 } catch (error) {
                     sageApp.logger.logError(error);
                 }

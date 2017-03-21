@@ -9,41 +9,64 @@
         @include reset-bootstrap-margin($bootstrap-margin-reset);
         background-color: transparent;
         color: $brand-white;
+        height: 420px;
+        overflow: hidden;
 
-        .hero-banner-content {
-            padding: 150px 15% 100px 15%;
+        .content-widget {
+            &.generic-content-hero {
+                .content-widget-inner {
+                    padding-top: 5%;
+                    padding-bottom: 5%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    display: table;
+                    width: 100%;
+                    margin: 0 auto;
+                    max-width: 1360px;
 
-            @media(max-width: $screen-xs-max) {
-                padding: 200px 15% 50px 15%;
+                    .wrapper {
+                        
+                        display: table-cell;
+                        vertical-align: middle;
+
+                        .wrapper-content {
+                            header, .header {
+                            }
+
+                            section, .section {
+                            }
+
+                            footer, .footer {
+                            }
+                        }
+                    }
+                }
+
+                &.with-back-image {
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
             }
-        }
 
-        .bubble {
-            position: relative;
-            color: white;
-            font-size: 15px;
-            font-weight: 100;
-            font-style: italic;
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 13px 1px;
-            background-color: transparent;
-            border: 1px solid white;
-            border-radius: 4px;
+            .active & {
+                .content-widget-inner {
+                    padding-top: 5%;
+                    padding-bottom: 5%;
 
-            &:before {
-                content: '';
-                position: absolute;
-                left: 20%;
-                width: 0;
-                height: 0;
-                border-width: 10px 10px 0 10px;
-                border-style: solid;
-            }
+                    .wrapper {
+                        .wrapper-content {
+                            header, .header {
+                            }
 
-            &:before {
-                bottom: -10px;
-                border-color: white transparent transparent transparent;
+                            section, .section {
+                            }
+
+                            footer, .footer {
+                            }
+                        }
+                    }
+                }
             }
         }
     }

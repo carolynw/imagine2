@@ -6,6 +6,11 @@
 
 body {
     &.IsPageEditor {
+        .carousel-inner{
+            >.item{
+                display:block;
+            }
+        }
 
         .carousel-cover-item {
             position: absolute;
@@ -22,7 +27,9 @@ body {
         .content-widget {
             &.hero-banner {
                 &.hero-tabs {
+                     height:auto;
                     .hero-banner-content {
+                        height:auto;
                         background-color: rgba($brand-black, 0.5);
 
                         .carousel-indicators {
@@ -32,33 +39,37 @@ body {
 
                         .carousel {
                             &.fade {
+                                height:auto;
                                 .carousel-inner {
+                                    height:auto;
                                     .scLooseFrameZone {
                                         position: relative;
                                         display: block;
                                     }
 
                                     .item {
+                                        height:auto;
                                         opacity: 1;
                                         position: relative;
                                         display: block;
+                                        pointer-events: auto;
 
                                         .content-widget {
                                             padding-top: 0;
                                             padding-bottom: 0;
 
                                             .content-widget-inner {
+                                                height:auto;
                                                 padding-top: 0;
                                                 padding-bottom: 0;
                                                 opacity: 1;
-                                                transform: scale(0.60,0.60) translate(0, 0);
-                                            }
-                                        }
+                                                transform: translate(0, 0);
+                                                display:block;
+                                                .wrapper {
+                                                    display:block;
+                                                    .wrapper-content {
 
-                                        &:active {
-                                            .content-widget {
-                                                .content-widget-inner {
-                                                    transform: scale(0.60,0.60) translate(0, 0);
+                                                    }
                                                 }
                                             }
                                         }
@@ -106,7 +117,8 @@ body {
                 }
             }
         }
-    }
+    
+        }
 
     &.IsPreview {
         #page_section_content {

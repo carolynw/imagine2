@@ -1,16 +1,16 @@
 ﻿@import '../partials/sage_bootstrap_variables';
 @import '../partials/common_mixins';
-@import 'colours';
+@import '../partials/common_colours';
 
 .content-widget.product-features {
   h1, h2 {
-    color: $ux2-plum;
+    color: $brand-plum;
   }
 
   .section {
     .row {
       padding: 30px 0 40px;
-      border-bottom: 1px solid $ux2-grey-lighter;
+      border-bottom: 1px solid $brand-light-grey;
     }
 
     .learn-more {
@@ -25,12 +25,12 @@
   margin-top:30px;
 
   h1 {
-    color: $ux2-plum;
+    color: $brand-plum;
   }
 
   .row.indent-m-md {
     margin-bottom:30px;
     padding-bottom:50px;
-    border-bottom:2px solid $ux2-grey-lighter;
+    border-bottom:2px solid $brand-light-grey;
   }
 }

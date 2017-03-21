@@ -1,4 +1,4 @@
-﻿@import 'colours';
+﻿@import '../partials/common_colours';
 
 //todo: improve this
 .indent-more .content-widget.quote .row {
@@ -21,7 +21,7 @@
         content: '"';
         font-size: 60px;
         font-weight: bold;
-        color: $ux2-fuchsia;
+        color: $brand-fuchsia;
       }
 
       &:before {

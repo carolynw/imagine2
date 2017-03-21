@@ -258,7 +258,7 @@ body {
     }
 
     hr {
-        border-color: $brand-light-grey;
+        border-color: $brand-med-light-grey;
         margin-top: 30px;
         margin-bottom: 30px;
 
@@ -413,7 +413,7 @@ body {
         height: 8.4px;
         cursor: pointer;
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-        background: $brand-light-grey;
+        background: $brand-med-light-grey;
         border-radius: 0px;
         border: 0px solid #ffffff;
     }
@@ -432,7 +432,7 @@ body {
     }
 
     input[type=range]:focus::-webkit-slider-runnable-track {
-        background: $brand-light-grey;
+        background: $brand-med-light-grey;
     }
 
     input[type=range]::-moz-range-track {
@@ -440,7 +440,7 @@ body {
         height: 8.4px;
         cursor: pointer;
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-        background: $brand-light-grey;
+        background: $brand-med-light-grey;
         border-radius: 0px;
         border: 0px solid #ffffff;
     }
@@ -466,14 +466,14 @@ body {
     }
 
     input[type=range]::-ms-fill-lower {
-        background: $brand-light-grey;
+        background: $brand-med-light-grey;
         border: 0px solid #ffffff;
         border-radius: 0px;
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     }
 
     input[type=range]::-ms-fill-upper {
-        background: $brand-lightest-grey;
+        background: $brand-light-grey;
         border: 0px solid #ffffff;
         border-radius: 0px;
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
@@ -495,7 +495,7 @@ body {
     }
 
     input[type=range]:focus::-ms-fill-upper {
-        background: $brand-light-grey;
+        background: $brand-med-light-grey;
     }
    
     /* One radio button per line */
