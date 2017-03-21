@@ -16,7 +16,7 @@
   }
 
   .link-panel-row.show-3 {
-    padding:0 12%;
+    padding: 0 10%;
 
     .link-panel {
       width: 32%;
@@ -32,14 +32,14 @@
   }
 
   @media (max-width: $screen-md-max) {
-    .link-panel-row.show-3{
-      padding:0 8%;
+    .link-panel-row.show-3 {
+      padding: 0 8%;
     }
   }
 
   @media (max-width: $screen-sm-max) {
-    .link-panel-row.show-3{
-      padding:0 5%;
+    .link-panel-row.show-3 {
+      padding: 0 5%;
     }
 
     .link-panel-row.show-3, .link-panel-row.show-4 {
@@ -51,14 +51,14 @@
   }
 
   @media (max-width: $screen-xs-max) {
-    .link-panel-row.show-3{
-      padding:0;
+    .link-panel-row.show-3 {
+      padding: 0;
     }
   }
 
   @media (max-width: $screen-xxs-max) {
-    .link-panel-row.show-3{
-      padding:0;
+    .link-panel-row.show-3 {
+      padding: 0;
     }
 
     .link-panel-row.show-3, .link-panel-row.show-4 {
@@ -94,17 +94,18 @@
       img {
         width: 50px;
         height: 50px;
+        margin-bottom: 14px;
       }
 
-      .title {
+      .title, em {
         color: $brand-azul;
-        margin-top: 14px;
         font-size: 20px;
+        font-style:normal;
       }
     }
 
     .link-panel-body {
-      position:relative;
+      position: relative;
 
       &:after {
         content: '';
@@ -133,6 +134,61 @@
       .c2a {
         white-space: nowrap !important;
       }
+    }
+  }
+}
+
+.content-widget.link-panels.products {
+  .link-panel {
+    text-align: left;
+    padding: 30px 20px 80px 70px;
+
+    &:before {
+      content: "";
+      background: $brand-azul;
+      width: 25px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top-left-radius: 4px;
+    }
+
+    &:after {
+      content: "";
+      background: $brand-azul;
+      width: 25px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      left: 25px;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+
+    .link-panel-header {
+      margin: 0;
+      min-height:70px;
+
+      .title {
+        font-size: 22px;
+      }
+    }
+
+    .link-panel-body {
+      &:after {
+        content: none;
+        border: none;
+      }
+
+      ul {
+        padding: 0 0 0 20px;
+        margin: 15px 0 10px;
+      }
+    }
+
+    .link-panel-footer {
+      text-align: center;
     }
   }
 }
