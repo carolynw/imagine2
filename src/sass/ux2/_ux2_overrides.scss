@@ -1,11 +1,47 @@
 ﻿@import '../partials/common_colours';
 
-.button-black, .button-black-block, .button-blue, .button-blue-block, .button-green, .button-green-block, .button-plum, .button-plum-block, .button-white, .button-white-block {
+.button-black, .button-black-block, .button-blue, .button-blue-block, .button-green, .button-green-block, .button-pink, .button-pink-block, .button-white, .button-white-block {
   padding: 6px 70px 6px 20px;
   font-size:14px;
 
   &:before {
     width: 20px;
+  }
+}
+
+a{
+  &.button-pink {
+    border-color: $brand-plum;
+    background-color: transparent;
+    color: $brand-plum;
+  }
+
+  &.button-pink-block {
+    border-color: $brand-plum;
+    background-color: transparent;
+    color: $brand-plum;
+  }
+
+  &.button-pink-back {
+    border-color: $brand-plum;
+    background-color: transparent;
+    color: $brand-plum;
+  }
+
+  &.button-pink-block-back {
+    border-color: $brand-plum;
+    background-color: transparent;
+    color: $brand-plum;
+  }
+
+  &.button-pink-solid-invert {
+    color: $brand-white;
+    @include linear-h-gradient($brand-plum-dark, $brand-plum);
+  }
+
+  &.button-pink-solid-block-invert {
+    color: $brand-white;
+    @include linear-h-gradient($brand-plum-dark, $brand-plum);
   }
 }
 
