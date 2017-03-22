@@ -14,7 +14,7 @@
                     padding-top:60px;
                     .the-switcher-nav {
                         text-align: center;
-                        border-bottom: solid 1px $brand-med-grey;
+                        border-bottom: solid 1px $off-brand-grey;
 
                         ul {
                             display: none;
@@ -78,7 +78,7 @@
                                     border: none;
                                     display: block;
                                     padding: 5px 0 10px 0;
-                                    color:$brand-med-grey;
+                                    color:$off-brand-grey;
 
                                     &:hover,
                                     &:focus {
@@ -116,7 +116,7 @@
                         .the-switcher-nav-left{
                             
                              @media (max-width:$screen-sm-max){
-                                border-top: solid 1px $brand-med-grey;
+                                border-top: solid 1px $off-brand-grey;
                                 padding-top:0;
                              }
                             ul{

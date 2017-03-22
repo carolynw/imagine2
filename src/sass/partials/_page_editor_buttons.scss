@@ -50,12 +50,12 @@ a {
 
     &.button-black-solid-invert {
         color: $brand-white;
-        @include linear-h-gradient($brand-black, $brand-dark-grey);
+        @include linear-h-gradient($brand-black, $off-brand-grey-dark);
     }
 
     &.button-black-solid-block-invert {
         color: $brand-white;
-        @include linear-h-gradient($brand-black, $brand-dark-grey);
+        @include linear-h-gradient($brand-black, $off-brand-grey-dark);
     }
 
     &.button-white {
@@ -166,38 +166,38 @@ a {
         @include linear-h-gradient($brand-azul-dark, $brand-azul-light);
     }
 
-    &.button-plum {
-        border-color: $brand-plum;
+    &.button-pink {
+        border-color: $brand-fuchsia;
         background-color: transparent;
-        color: $brand-plum;
+        color: $brand-fuchsia;
     }
 
-    &.button-plum-block {
-        border-color: $brand-plum;
+    &.button-pink-block {
+        border-color: $brand-fuchsia;
         background-color: transparent;
-        color: $brand-plum;
+        color: $brand-fuchsia;
     }
 
-    &.button-plum-back {
-        border-color: $brand-plum;
+    &.button-pink-back {
+        border-color: $brand-fuchsia;
         background-color: transparent;
-        color: $brand-plum;
+        color: $brand-fuchsia;
     }
 
-    &.button-plum-block-back {
-        border-color: $brand-plum;
+    &.button-pink-block-back {
+        border-color: $brand-fuchsia;
         background-color: transparent;
-        color: $brand-plum;
+        color: $brand-fuchsia;
     }
 
-    &.button-plum-solid-invert {
+    &.button-pink-solid-invert {
         color: $brand-white;
-        @include linear-h-gradient($brand-plum-dark, $brand-plum);
+        @include linear-h-gradient($brand-fuchsia-dark, $brand-fuchsia);
     }
 
-    &.button-plum-solid-block-invert {
+    &.button-pink-solid-block-invert {
         color: $brand-white;
-        @include linear-h-gradient($brand-plum-dark, $brand-plum);
+        @include linear-h-gradient($brand-fuchsia-dark, $brand-fuchsia);
     }
 }
 

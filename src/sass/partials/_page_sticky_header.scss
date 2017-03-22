@@ -25,7 +25,7 @@
   }
 
   .sticky-row {
-    @include linear-h-gradient(rgba($brand-dark-grey, 1.0), rgba($brand-light-grey, 1.0));
+    @include linear-h-gradient(rgba($off-brand-grey-dark, 1.0), rgba($off-brand-grey, 1.0));
   }
 
   &.sticky {
@@ -147,7 +147,7 @@
     }
 
     .actions {
-      @include linear-h-gradient(rgba($brand-dark-grey, 1.0), rgba($brand-light-grey, 1.0));
+      @include linear-h-gradient(rgba($off-brand-grey-dark, 1.0), rgba($off-brand-grey, 1.0));
     }
 
     &.sticky {

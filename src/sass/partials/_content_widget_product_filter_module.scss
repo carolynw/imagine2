@@ -81,7 +81,7 @@
                                 width: 46%;
                             }
 
-                            background-color: $brand-light-grey;
+                            background-color: $off-brand-grey-ultralight;
                             color: $brand-black;
                             text-align: center;
                             border-bottom: 3px solid $brand-azul;
@@ -97,8 +97,8 @@
                             .product-filter-icon-img {
                                 height: 42px;
                                 width: 42px;
-                                stroke: $brand-med-grey;
-                                fill: $brand-med-grey;
+                                stroke: $off-brand-grey;
+                                fill: $off-brand-grey;
                             }
 
                             .product-filter-icon-text {
@@ -113,7 +113,7 @@
                                 @include default-shadow-active();
 
                                 .product-filter-select {
-                                    @include radial-tl-gradient(rgba($brand-dark-grey, 1.0), rgba($brand-light-grey, 1.0));
+                                    @include radial-tl-gradient(rgba($off-brand-grey-dark, 1.0), rgba($off-brand-grey, 1.0));
 
                                     &:after {
                                         -ms-transform: rotate(45deg);
@@ -237,7 +237,7 @@
                                         }
 
                                         .discount-block {
-                                            background-color: $brand-light-grey;
+                                            background-color: $off-brand-grey-ultralight;
                                             padding: 10px;
                                             font-weight: bold;
 
@@ -446,7 +446,7 @@
 
                                 &.active {
                                     .icon {
-                                        @include radial-tl-gradient(rgba($brand-dark-grey, 1.0), rgba($brand-light-grey, 1.0));
+                                        @include radial-tl-gradient(rgba($off-brand-grey-dark, 1.0), rgba($off-brand-grey, 1.0));
                                         margin: 0;
                                         padding: 0;
 
@@ -526,7 +526,7 @@
                             .as-table-row {
                                 &:nth-last-child(-n+2) {
                                     .as-table-cell {
-                                        border-bottom: 1px dashed $brand-med-grey;
+                                        border-bottom: 1px dashed $off-brand-grey;
                                     }
                                 }
 
@@ -555,8 +555,8 @@
 
                         .mobile-table-header {
                             padding: 0;
-                            border-top: 1px solid $brand-med-grey;
-                            border-bottom: 1px solid $brand-med-grey;
+                            border-top: 1px solid $off-brand-grey;
+                            border-bottom: 1px solid $off-brand-grey;
 
                             .navigation {
                                 display: none;
@@ -596,7 +596,7 @@
                                     padding: 20px 10px;
                                     margin: 0 auto;
                                     width: 200px;
-                                    color: $brand-med-grey;
+                                    color: $off-brand-grey;
                                     border-bottom: 6px solid transparent;
                                     cursor: pointer;
                                 }
@@ -617,7 +617,7 @@
                         .as-table-row {
                             &:nth-last-child(-n+2) {
                                 .as-table-cell {
-                                    border-bottom: 1px solid $brand-med-grey;
+                                    border-bottom: 1px solid $off-brand-grey;
                                 }
                             }
 
@@ -629,7 +629,7 @@
                         }
 
                         .as-table-cell {
-                            border-bottom: 1px dashed $brand-med-grey;
+                            border-bottom: 1px dashed $off-brand-grey;
                             font-size: $default-font-size-xs;
                             padding: 0 15px;
                             width: 25%;
@@ -642,8 +642,8 @@
                         .table-header {
                             .as-table-cell {
                                 padding: 20px 0;
-                                border-top: 1px solid $brand-med-grey;
-                                border-bottom: 1px solid $brand-med-grey;
+                                border-top: 1px solid $off-brand-grey;
+                                border-bottom: 1px solid $off-brand-grey;
                             }
                         }
                         .fa {
@@ -652,7 +652,7 @@
                             }
 
                             &.fa-times {
-                                color: $brand-med-light-grey;
+                                color: $off-brand-grey-light;
                             }
                         }
 
@@ -735,8 +735,8 @@
 
                         .tab-control-new {
                             .nav {
-                                border-top: 1px solid $brand-med-grey;
-                                border-bottom: 1px solid $brand-med-grey;
+                                border-top: 1px solid $off-brand-grey;
+                                border-bottom: 1px solid $off-brand-grey;
                             }
 
                             .tab-pane {
@@ -744,13 +744,13 @@
                                     .as-table-row {
                                         &:nth-last-child(-n+2) {
                                             .as-table-cell {
-                                                border-bottom: 1px dashed $brand-med-grey;
+                                                border-bottom: 1px dashed $off-brand-grey;
                                             }
                                         }
 
                                         &:last-child {
                                             .as-table-cell {
-                                                border-bottom: 1px solid $brand-med-grey;
+                                                border-bottom: 1px solid $off-brand-grey;
                                             }
                                         }
                                     }
@@ -759,7 +759,7 @@
                                 .learn-more {
                                     text-align: center;
                                     padding: 30px 15px;
-                                    border-bottom: 1px solid $brand-med-grey;
+                                    border-bottom: 1px solid $off-brand-grey;
 
                                     a {
                                         &.button-black-block-no-icon {

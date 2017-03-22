@@ -258,7 +258,7 @@ body {
     }
 
     hr {
-        border-color: $brand-med-light-grey;
+        border-color: $off-brand-grey-light;
         margin-top: 30px;
         margin-bottom: 30px;
 
@@ -413,14 +413,14 @@ body {
         height: 8.4px;
         cursor: pointer;
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-        background: $brand-med-light-grey;
+        background: $off-brand-grey-light;
         border-radius: 0px;
         border: 0px solid #ffffff;
     }
 
     input[type=range]::-webkit-slider-thumb {
         box-shadow: 2px 2px 4px rgba(133, 135, 128, 0.5), 0px 0px 2px rgba(146, 147, 141, 0.5);
-        border: 1px solid $brand-dark-grey;
+        border: 1px solid $off-brand-grey-dark;
         height: 28px;
         width: 36px;
         border-radius: 3px;
@@ -432,7 +432,7 @@ body {
     }
 
     input[type=range]:focus::-webkit-slider-runnable-track {
-        background: $brand-med-light-grey;
+        background: $off-brand-grey-light;
     }
 
     input[type=range]::-moz-range-track {
@@ -440,14 +440,14 @@ body {
         height: 8.4px;
         cursor: pointer;
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-        background: $brand-med-light-grey;
+        background: $off-brand-grey-light;
         border-radius: 0px;
         border: 0px solid #ffffff;
     }
 
     input[type=range]::-moz-range-thumb {
         box-shadow: 2px 2px 4px rgba(133, 135, 128, 0.5), 0px 0px 2px rgba(146, 147, 141, 0.5);
-        border: 1px solid $brand-dark-grey;
+        border: 1px solid $off-brand-grey-dark;
         height: 28px;
         width: 36px;
         border-radius: 3px;
@@ -466,14 +466,14 @@ body {
     }
 
     input[type=range]::-ms-fill-lower {
-        background: $brand-med-light-grey;
+        background: $off-brand-grey-light;
         border: 0px solid #ffffff;
         border-radius: 0px;
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     }
 
     input[type=range]::-ms-fill-upper {
-        background: $brand-light-grey;
+        background: $off-brand-grey-ultralight;
         border: 0px solid #ffffff;
         border-radius: 0px;
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
@@ -481,7 +481,7 @@ body {
 
     input[type=range]::-ms-thumb {
         box-shadow: 2px 2px 4px rgba(133, 135, 128, 0.5), 0px 0px 2px rgba(146, 147, 141, 0.5);
-        border: 1px solid $brand-dark-grey;
+        border: 1px solid $off-brand-grey-dark;
         height: 28px;
         width: 36px;
         border-radius: 3px;
@@ -491,11 +491,11 @@ body {
     }
 
     input[type=range]:focus::-ms-fill-lower {
-        background: $brand-med-grey;
+        background: $off-brand-grey;
     }
 
     input[type=range]:focus::-ms-fill-upper {
-        background: $brand-med-light-grey;
+        background: $off-brand-grey-light;
     }
    
     /* One radio button per line */

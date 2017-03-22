@@ -58,7 +58,7 @@
                     .video-chapters {
                         display: block;
                         padding: 5px 10px;
-                        background-color: $brand-light-grey;
+                        background-color: $off-brand-grey-ultralight;
                         text-transform:uppercase;
                         font-weight:bold;
                         @media(max-width:$screen-xs-max) {
@@ -77,7 +77,7 @@
                                 cursor:default;
                             }
                             &.played {
-                                color:$brand-med-grey;
+                                color:$off-brand-grey;
                             }
                         } 
                     }

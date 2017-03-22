@@ -63,24 +63,33 @@
 
         .slick-track {
             display: flex;
-            padding-bottom:6px;
+            padding-bottom: 6px;
 
             .slick-slide {
                 display: flex;
                 height: auto;
 
+                .border-top-bottom {
+                    @media(max-width:$screen-xs-max) {
+                        width: 95%;
+                        margin: 0 auto;
+                    }
+                }
+
                 .widget-placeholder-inner {
-                    padding:0;
-                    margin:0;
+                    padding: 0;
+                    margin: 0;
+
                     .content-widget {
-                        padding:0;
-                        margin:0;
+                        padding: 0;
+                        margin: 0;
+
                         &.generic-content {
                             .content-widget-inner {
-                                padding:0;
-                                margin:0;
+                                padding: 0;
+                                margin: 0;
+
                                 .wraper {
-                                    
                                 }
                             }
                         }
@@ -96,20 +105,19 @@
         .border-top-bottom {
             transition: background-color $default-transition-time ease;
             margin-top: 45px;
-            border-top: 1px solid $brand-med-grey;
-            border-bottom: 1px solid $brand-med-grey;
+            border-top: 1px solid $off-brand-grey;
+            border-bottom: 1px solid $off-brand-grey;
             padding: 15px 15px 15px 15px;
             text-align: center;
             margin: 0 10px;
 
 
             @media(max-width:$screen-sm-max) {
-                
             }
 
             @media(max-width:$screen-xs-max) {
-                width:100%;
-                margin:0;
+                width: 100%;
+                margin: 0;
             }
 
             .widget-placeholder-inner {
@@ -147,7 +155,7 @@
 
                     hgroup {
                         .h4 {
-                            color: $brand-med-grey;
+                            color: $off-brand-grey;
                         }
                     }
 

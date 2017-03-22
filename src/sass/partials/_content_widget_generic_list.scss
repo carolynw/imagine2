@@ -34,7 +34,7 @@
 
             li {
                 list-style-type: none;
-                color: $brand-dark-grey;
+                color: $off-brand-grey-dark;
                 padding-bottom: 20px;
 
                 .check {
@@ -73,7 +73,7 @@
         }
 
         .line {
-            border-bottom: 1px solid $brand-med-grey;
+            border-bottom: 1px solid $off-brand-grey;
             width: 66%;
             margin: 0 auto;
             transform: translateY(103px);
@@ -85,7 +85,7 @@
         }
 
         ol {
-            color: $brand-dark-grey;
+            color: $off-brand-grey-dark;
             list-style: none;
             padding-left: 0;
             text-align: center;
@@ -123,7 +123,7 @@
                         content: "";
                         position: absolute;
                         left: 20px;
-                        border-left: 1px solid rgba($brand-med-grey,0.3);
+                        border-left: 1px solid rgba($off-brand-grey,0.3);
                         height: 107%;
                         width: 1px;
                     }

@@ -36,7 +36,7 @@
                                     }
 
                                     &.button-green-solid-invert, &.button-green-solid-block-invert {
-                                        @include linear-h-gradient($brand-dark-grey, $brand-med-light-grey);
+                                        @include linear-h-gradient($off-brand-grey-dark, $off-brand-grey-light);
                                     }
                                 }
 
@@ -67,7 +67,7 @@
                                 }
 
                                 .panel-pre-heading {
-                                    background-color: $brand-med-grey;
+                                    background-color: $off-brand-grey;
                                     min-height: 6px;
                                     border-top-left-radius:$default-border-radius;
                                     border-top-right-radius:$default-border-radius;
@@ -103,7 +103,7 @@
                                 }
 
                                 .discount-block {
-                                    background-color: $brand-light-grey;
+                                    background-color: $off-brand-grey-ultralight;
                                     padding: 10px;
                                     float: right;
                                     @media (max-width:$screen-xs-max) {

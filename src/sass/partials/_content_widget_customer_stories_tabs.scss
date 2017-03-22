@@ -27,12 +27,15 @@
                     .carousel-indicators {
                         width: 100%;
                         margin-left: -50%;
+
                         &.hidden {
-                            pointer-events:none;
-                             @media (max-width:$screen-md-max) {
-                                display:none !important;
+                            pointer-events: none;
+
+                            @media (max-width:$screen-md-max) {
+                                display: none !important;
                             }
                         }
+
                         @media (max-width:$screen-xs-max) {
                             bottom: auto;
                             top: 30px;
@@ -85,6 +88,19 @@
                     .carousel-inner {
                         .item {
                             font-size: 1.3em;
+                            min-height: 650px;
+
+                            @media (max-width:$screen-sm-max) and (min-width:$screen-sm-min) {
+                                min-height: 740px;
+                            }
+
+                            @media (max-width:$screen-xs-max) and (min-width:$screen-xs-min) {
+                                min-height: 570px;
+                            }
+
+                            @media (max-width:$screen-xxs-max) {
+                                min-height: 410px;
+                            }
 
                             .carousel-item-inner {
                                 .story-container {
@@ -110,9 +126,11 @@
 
                                                 .section {
                                                     padding: 0 30px 0 0;
+
                                                     @media(max-width:$screen-md-min) and (min-width: $screen-sm-min) {
                                                         padding: 0 30px 0 0;
                                                     }
+
                                                     @media(max-width:$screen-xs-max) {
                                                         padding: 0;
                                                     }
@@ -126,18 +144,18 @@
                                         @media (max-width:$screen-md-max) {
                                             padding: 165px 0 0 0;
                                         }
+
                                         @media (max-width:$screen-sm-max) {
                                             padding: 280px 0 0 0;
                                         }
+
                                         @media (max-width:$screen-xs-max) {
                                             padding: 125px 0 0 0;
                                         }
+
                                         @media (max-width:$screen-xxs-max) {
                                             padding: 165px 0 0 0;
                                         }
-                                        
-                                        
-                                        
                                     }
 
                                     .blurred {
@@ -231,6 +249,7 @@
                                                         }
                                                     }
                                                 }
+
                                                 .section {
 
                                                     blockquote {
@@ -295,6 +314,7 @@
                                                     h1 {
                                                         transform: translateY(-100%);
                                                     }
+
                                                     .wrapper {
                                                         .video-container {
                                                             transform: translateY(100%);
@@ -303,7 +323,7 @@
                                                 }
 
                                                 @media (max-width:$screen-xxs-max) {
-                                                    padding: 15px 0 0 0;                                                     
+                                                    padding: 15px 0 0 0;
                                                 }
 
                                                 h1 {
@@ -337,9 +357,10 @@
                                                     }
 
                                                     .video-container {
-                                                        margin-top:10px;
+                                                        margin-top: 10px;
                                                         transform: translateY(0);
                                                         transition: $default-transition-time ease;
+
                                                         @media (max-width:$screen-xs-max) {
                                                             padding-right: 0px;
                                                         }
