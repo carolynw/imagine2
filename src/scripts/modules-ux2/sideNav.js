@@ -1,8 +1,7 @@
-﻿/*jslint browser: true*/
-/*jslint jquery: true*/
+﻿/*jslint jquery: true*/
 /*global sageApp */
 
-sageApp.modules.register("ux2Nav", function ($) {
+sageApp.modules.register("sideNav", function ($) {
     "use strict";
 
     function init() {
@@ -11,13 +10,13 @@ sageApp.modules.register("ux2Nav", function ($) {
 
         $body.on("click", "[data-sidenav='open']", function (event) {
             event.preventDefault();
-            $body.addClass("side-nav-open");
+            $body.addClass("no-scroll").addClass("blur-all");
             $sideNav.addClass("open");
         });
 
         $body.on("click", "[data-sidenav='close']", function (event) {
             event.preventDefault();
-            $body.removeClass("side-nav-open");
+            $body.removeClass("no-scroll").removeClass("blur-all");
             $sideNav.removeClass("open");
         });
 

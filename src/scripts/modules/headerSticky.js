@@ -2,15 +2,15 @@
 /*jslint jquery: true*/
 /*global sageApp */
 
-sageApp.modules.register("stickyHeader", function ($) {
+sageApp.modules.register("headerSticky", function ($) {
     "use strict";
 
-    var $stickyHeader;
+    var $headerSticky;
 
     function init() {
-        $stickyHeader = $("[data-sticky-header]");
+        $headerSticky = $("#header-sticky");
 
-        if (!$stickyHeader.length)
+        if (!$headerSticky.length)
             return;
 
         update();
@@ -18,10 +18,11 @@ sageApp.modules.register("stickyHeader", function ($) {
     }
 
     function attachEvents() {
+        // Todo: throttle these?
         $(window).resize(update);
         $(window).scroll(update);
 
-        $stickyHeader.on("click", "[data-toggle-nav-bar]", function (event) {
+        $headerSticky.on("click", "[data-toggle-nav-bar]", function (event) {
             event.preventDefault();
             $(event.delegateTarget).find("[data-nav-bar]").toggleClass("open");
             $(event.target).toggleClass("open");
@@ -34,28 +35,32 @@ sageApp.modules.register("stickyHeader", function ($) {
     }
 
     function updateVisibility() {
-        var shouldStickyHeaderBeVisible = $("[data-sticky-header-hider]:inPartialView").length > 0;
+        var shouldBeVisible = $("[data-sticky-header-hider]:inPartialView").length > 0;
 
-        if (shouldStickyHeaderBeVisible)
-            $stickyHeader.addClass("no-vis");
-        else
-            $stickyHeader.removeClass("no-vis");
+        if (shouldBeVisible) {
+            $headerSticky
+                .addClass("no-vis");
+        }
+        else {
+            $headerSticky
+                .removeClass("no-vis");
+        }
     }
 
     function updateStickiness() {
-        var contentsHeight = $stickyHeader.find(">.sticky-header-content").height();
+        var contentsHeight = $headerSticky.find(">.sticky-header-content").height();
         $("body").data("top-offset", contentsHeight);
 
-        var top = $stickyHeader[0]
-            .getBoundingClientRect()
-            .top;
+        var shouldBeSticky = $headerSticky[0]
+                .getBoundingClientRect()
+                .top < 0;
 
-        if (top < 0) {
-            $stickyHeader
+        if (shouldBeSticky) {
+            $headerSticky
                 .addClass("sticky")
                 .height(contentsHeight);
         } else {
-            $stickyHeader
+            $headerSticky
                 .removeClass("sticky")
                 .height("auto");
         }

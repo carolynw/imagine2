@@ -11,20 +11,7 @@
   right: 0;
 }
 
-.nav-close {
-  display: block;
-  height: 24px;
-  width: 24px;
-  background: url('/Content/images/sample_content_images/icon_close_white.svg') no-repeat;
-}
 
-body.side-nav-open {
-  overflow: hidden;
-
-  #page_main {
-    filter: blur(5px);
-  }
-}
 
 #ux2_side_nav {
   @include linear-v-gradient(rgba($brand-slate-light, 0.95), rgba($brand-slate, 0.95));

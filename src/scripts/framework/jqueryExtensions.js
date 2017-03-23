@@ -2,10 +2,10 @@
 /*jslint jquery: true*/
 /*global sageApp */
 
-sageApp.modules.register("jqueryExtensions", function ($) {
+(function () {
     "use strict";
 
-    $.extend($.expr[":"], {
+    window.$.extend($.expr[":"], {
         inView: isElementCompletelyInView,
         inPartialView: isElementPartiallyInView
     });
@@ -21,4 +21,4 @@ sageApp.modules.register("jqueryExtensions", function ($) {
         var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
         return (rect.top >= 0 && rect.top < viewHeight) || (rect.bottom >= 0 && rect.bottom < viewHeight);
     }
-});
+}());

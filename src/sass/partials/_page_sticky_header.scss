@@ -2,7 +2,7 @@
 @import "common_colours";
 @import "common_mixins";
 
-.sticky-header {
+#header-sticky {
   position: relative;
   color: $brand-white;
   z-index: 100;
@@ -123,10 +123,8 @@
       }
     }
   }
-}
 
-@media(max-width: $screen-xs-max) {
-  .sticky-header {
+  @media(max-width: $screen-xs-max) {
     height: auto;
     overflow: visible;
 

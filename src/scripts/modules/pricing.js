@@ -6,16 +6,16 @@ sageApp.modules.register("pricing", function ($) {
   "use strict";
 
   function init() {
-    if (!$(".range-number").length)
-      return;
+      if ($(".range-number").length) {
+          initClicks();
+      }
 
-    initClicks();
-    initSlick();
+      initSlick();
   }
 
   function initClicks() {
     $(document).on("input change", ".range-number", function () {
-      var output = $(this).prev('output'),
+      var output = $(this).prev("output"),
         theValue = $(this).val();
       $(this).attr("value", theValue);
       if (theValue <= 500) {
@@ -27,11 +27,13 @@ sageApp.modules.register("pricing", function ($) {
   }
 
   function initSlick() {
+    var numSlides = $("#sage_pricing_options div.product-price-panel").length;
+
     $("#sage_pricing_options").slick({
       dots: false,
       infinite: false,
       speed: 300,
-      slidesToShow: 3,
+      slidesToShow: numSlides,
       slidesToScroll: 1,
       focusOnSelect: false,
       arrows: false,
@@ -47,14 +49,11 @@ sageApp.modules.register("pricing", function ($) {
             initialSlide: 1
           }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ]
     });
   }
 
   return {
     init: init
-  }
+  };
 });
