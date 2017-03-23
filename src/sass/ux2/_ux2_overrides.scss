@@ -2,14 +2,14 @@
 
 .button-black, .button-black-block, .button-blue, .button-blue-block, .button-green, .button-green-block, .button-pink, .button-pink-block, .button-white, .button-white-block {
   padding: 6px 70px 6px 20px;
-  font-size:14px;
+  font-size: 14px;
 
   &:before {
     width: 20px;
   }
 }
 
-a{
+a {
   &.button-pink {
     border-color: $brand-plum;
     background-color: transparent;
@@ -54,8 +54,8 @@ a{
 
 #page_header_nav.navbar-sage {
   .navbar-sage-brand {
-    height:34px;
-    margin-top:19px;
+    height: 34px;
+    margin-top: 19px;
   }
 
   .nav-pills-sage.header-right li a {
@@ -69,7 +69,9 @@ a{
       font-family: AdelleSansSAGE;
 
       i {
-        margin-left: 10px;
+        font-size:16px;
+        margin-right: 5px;
+        vertical-align:baseline;
       }
     }
   }
