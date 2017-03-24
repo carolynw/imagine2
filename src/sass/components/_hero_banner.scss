@@ -1,0 +1,77 @@
+﻿/*Main Site Sass*/
+@import '../common/mixins';
+@import '../common/colours';
+@import '../common/variables';
+@import '../common/_bootstrap_variables';
+
+.content-widget {
+    &.hero-banner {
+        @include reset-bootstrap-margin($bootstrap-margin-reset);
+        background-color: transparent;
+        color: $brand-white;
+        height: 420px;
+        overflow: hidden;
+
+        .content-widget {
+            &.generic-content-hero {
+                .content-widget-inner {
+                    padding: 5% 15px;
+                    display: table;
+                    width: 100%;
+                    margin: 0 auto;
+                    max-width: 1360px;
+                    height:420px;
+
+                    .wrapper {
+                        
+                        display: table-cell;
+                        vertical-align: middle;
+
+                        .wrapper-content {
+                            header, .header {
+                            }
+
+                            section, .section {
+                            }
+
+                            footer, .footer {
+                                a {
+                                    margin:5px 10px; 
+                                    @media (max-width:$screen-xs-max) {
+                                        margin:5px 0;    
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                }
+
+                &.with-back-image {
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .active & {
+                .content-widget-inner {
+                    padding-top: 5%;
+                    padding-bottom: 5%;
+
+                    .wrapper {
+                        .wrapper-content {
+                            header, .header {
+                            }
+
+                            section, .section {
+                            }
+
+                            footer, .footer {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

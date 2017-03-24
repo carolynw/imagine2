@@ -1,87 +1,66 @@
-﻿/*Imports Libs*/
-@import './partials/_common_variables';
-@import './partials/_common_colours';
-@import './partials/_common_mixins';
-@import './partials/_common_fonts';
+﻿// Variables
+@import 'common/_variables';
+@import 'common/_colours';
+@import 'common/_mixins';
+@import 'common/_fonts';
 
-@import './partials/_sage_bootstrap_variables';
-
+// Vendor styles
+@import 'common/_bootstrap_variables'; // Must be imported prior to bootstrap to work properly
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
-@import './partials/_sage_grids';
 @import '../../node_modules/font-awesome/scss/font-awesome';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
-@import './partials/_lib_slick_theme';
 
+@import 'common/_lib_slick_theme';
+@import 'common/_grids';
+@import 'common/_fonts';
+@import 'common/_buttons';
+@import 'common/_typography';
+@import 'common/_helpers';
+@import 'common/_colour_classes';
+@import 'common/_icons';
+@import 'common/_common';
 
+@import 'components/_content_widget';
+@import 'components/_tree_list';
+@import 'components/_generic_content';
+@import 'components/_promoted_article';
+@import 'components/_two_col_generic_content';
+@import 'components/_page_listing';
+@import 'components/_solution_listing';
+@import 'components/_solutions_module';
+@import 'components/_accounting_module';
+@import 'components/_product_filter_module';
+@import 'components/_video';
+@import 'components/_switcher';
+@import 'components/_form';
+@import 'components/_roi';
+@import 'components/_articles';
+@import 'components/_search';
+@import 'components/_page_not_found';
+@import 'components/_hero_banner';
+@import 'components/_hero_banner_tabs';
+@import 'components/_hero_banner_static';
+@import 'components/_hero_banner_solutions';
+@import 'components/_generic_tabs';
+@import 'components/_solution_explorer';
+@import 'components/_product_pricing';
+@import 'components/_generic_list';
+@import 'components/_customer_stories_tabs';
+@import 'components/_product_device';
 
-/*Main Site Sass*/
-@import './partials/_sage_buttons.scss';
-@import './partials/_common_fonts';
-@import './partials/_common_typography';
-@import './partials/_common_helpers.scss';
-@import './partials/_common_colour_classes';
-@import './partials/_common_icons';
-@import './partials/_common';
+@import 'page/_header_nav_content';
+@import 'page/_header_sticky';
+@import 'page/_section_content';
+@import 'page/_footer';
+@import 'page/_side_nav_content';
+@import 'page/_experience_editor';
 
-
-/*Common Element Styles*/
-/*Widgets*/
-@import './partials/_content_widget';
-@import './partials/_content_widget_tree_list';
-@import './partials/_content_widget_generic_content';
-@import './partials/_content_widget_promoted_article';
-@import './partials/_content_widget_two_col_generic_content';
-@import './partials/_content_widget_page_listing';
-@import './partials/_content_widget_solution_listing';
-@import './partials/_content_widget_solutions_module';
-@import './partials/_content_widget_accounting_module';
-@import './partials/_content_widget_product_filter_module';
-@import './partials/_content_widget_video';
-@import './partials/_content_widget_switcher';
-@import './partials/_content_widget_form';
-@import './partials/_content_widget_roi';
-@import './partials/_content_widget_articles';
-@import './partials/_content_widget_search';
-@import './partials/_content_widget_page_not_found';
-
-@import './partials/_content_widget_hero_banner';
-@import './partials/_content_widget_hero_banner_tabs';
-@import './partials/_content_widget_hero_banner_static.scss';
-@import './partials/_content_widget_hero_banner_solutions.scss';
-@import './partials/_content_widget_hero.scss';
-@import './partials/_content_widget_generic_tabs';
-@import './partials/_content_widget_solution_explorer';
-@import './partials/_content_widget_product_pricing';
-@import './partials/_content_widget_generic_list';
-
-@import './partials/_content_widget_customer_stories_tabs';
-
-@import './partials/_content_widget_product_device';
-
-
-/*Header*/
-@import './partials/_page_header_nav_content';
-@import './partials/_page_header_nav_sub_content';
-@import './partials/_page_header_nav_sub_call_to_action.scss';
-@import './partials/_page_sticky_header';
-
-/*Content Section*/
-@import './partials/_page_section_content';
-
-/*Footer*/
-@import './partials/_page_footer';
-
-/*Experience Editor Overrides*/
-@import './partials/_page_experience_editor';
-
-/* UX2 styles */
 @import 'ux2/_ux2_colour_classes';
 @import 'ux2/_ux2_common';
 @import 'ux2/_ux2_form';
 @import 'ux2/_ux2_page_header';
 @import 'ux2/_ux2_page_footer';
 @import 'ux2/_ux2_side_nav';
-
 @import 'ux2/_ux2_content_widget_accordion';
 @import 'ux2/_ux2_content_widget_explore';
 @import 'ux2/_ux2_content_widget_info_boxes';

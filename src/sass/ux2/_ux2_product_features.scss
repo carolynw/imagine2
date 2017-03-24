@@ -1,6 +1,6 @@
-﻿@import '../partials/sage_bootstrap_variables';
-@import '../partials/common_mixins';
-@import '../partials/common_colours';
+﻿@import '../common/_bootstrap_variables';
+@import '../common/_mixins';
+@import '../common/_colours';
 
 .content-widget.product-features {
   h1, h2 {

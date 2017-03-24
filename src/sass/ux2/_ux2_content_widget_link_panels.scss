@@ -1,6 +1,6 @@
-﻿@import '../partials/sage_bootstrap_variables';
-@import '../partials/common_mixins';
-@import '../partials/common_colours';
+﻿@import '../common/_bootstrap_variables';
+@import '../common/_mixins';
+@import '../common/_colours';
 
 .content-widget.link-panels {
   .section {
@@ -144,7 +144,7 @@
     padding: 30px 20px 80px 70px;
 
     &:before {
-      content: "";
+      content: '';
       background: $brand-azul;
       width: 25px;
       height: 100px;
@@ -155,7 +155,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       background: $brand-azul;
       width: 25px;
       height: 100px;

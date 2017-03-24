@@ -18,8 +18,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.1.0",
     "gulp-watch": "^4.3.11",
+    "gulp-wrap-js": "^0.4.1",
     "jquery": "^3.1.1",
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.6.0"

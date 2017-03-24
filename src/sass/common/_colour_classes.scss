@@ -1,0 +1,91 @@
+﻿/*Main Site Sass*/
+@import 'mixins';
+
+/*Base color classes*/
+.brand-light-grey-fg {color: $off-brand-grey-light;}
+.brand-light-grey-bg {background-color: $off-brand-grey-light;}
+
+.brand-lightest-grey-fg {color:$off-brand-grey-ultralight;}
+.brand-lightest-grey-bg {background-color: $off-brand-grey-ultralight;}
+
+.brand-dark-grey-fg {color: $off-brand-grey-dark;}
+.brand-dark-grey-bg {background-color: $off-brand-grey-dark;}
+
+.brand-dark-blue-fg {color: $brand-azul-dark;}
+.brand-dark-blue-bg {background-color: $brand-azul-dark;}
+
+.brand-med-blue-fg {color: $brand-azul-light;}
+.brand-med-blue-bg {background-color: $brand-azul-light;}
+
+.brand-white-fg {color: $brand-white;}
+.brand-white-bg {background-color: $brand-white;}
+
+.brand-azul-fg {color: $brand-azul;}
+.brand-azul-bg {background-color: $brand-azul;}
+
+.brand-slate-fg {color: $brand-slate;}
+.brand-slate-bg {background-color: $brand-slate;}
+
+.brand-fuchsia-fg {color: $brand-fuchsia;}
+.brand-fuchsia-bg {background-color: $brand-fuchsia;}
+
+.brand-plum-fg {color: $brand-plum;}
+.brand-plum-bg {background-color: $brand-plum;}
+.brand-dark-plum-fg {color: $brand-plum-dark;}
+.brand-dark-plum-bg {background-color: $brand-plum-dark;}
+
+
+.brand-amethyst-fg {color: $brand-amethyst;}
+.brand-amethyst-bg {background-color: $brand-amethyst;}
+
+.brand-black-fg {color: $brand-black;}
+.brand-black-bg {background-color: $brand-black;}
+.brand-black-20-bg {background-color: rgba($brand-black, 0.2);}
+.brand-black-40-bg {background-color: rgba($brand-black, 0.4);}
+.brand-black-60-bg {background-color: rgba($brand-black, 0.6);}
+.brand-black-80-bg {background-color: rgba($brand-black, 0.8);}
+
+
+.brand-light-green-fg {color: $brand-brilliant-green;}
+.brand-light-green-bg {background-color: $brand-brilliant-green;}
+
+.brand-pink-fg {color: $brand-fuchsia;}
+.brand-pink-bg {background-color: $brand-fuchsia;}
+
+.brand-light-green-AA-fg {color: $brand-brilliant-green-AA;}
+.brand-light-green-AA-bg {background-color: $brand-brilliant-green-AA;}
+
+
+.linear-v-gradient-grey {
+    @include linear-v-gradient(rgba($brand-black, 1.0), rgba($brand-black, 0.0));
+}
+.linear-v-gradient-grey-inverse {
+    @include linear-v-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}
+.linear-h-gradient-grey {
+    @include linear-h-gradient(rgba($brand-black, 1.0), rgba($brand-black, 0.0));
+}
+.linear-h-gradient-grey-inverse {
+    @include linear-h-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}
+.radial-tl-gradient-grey {
+    @include radial-tl-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}
+.radial-tr-gradient-grey {
+    @include radial-tr-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}
+.radial-tc-gradient-grey {
+    @include radial-tc-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}
+.radial-cc-gradient-grey {
+    @include radial-cc-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}
+.radial-bl-gradient-grey {
+    @include radial-bl-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}
+.radial-br-gradient-grey {
+    @include radial-br-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}
+.radial-bc-gradient-grey {
+    @include radial-bc-gradient(rgba($brand-black, 0.0), rgba($brand-black, 1.0));
+}

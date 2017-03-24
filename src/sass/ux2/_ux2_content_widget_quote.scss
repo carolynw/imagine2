@@ -1,4 +1,4 @@
-﻿@import '../partials/common_colours';
+﻿@import '../common/_colours';
 
 //todo: improve this
 .indent-more .content-widget.quote .row {
@@ -38,7 +38,7 @@
     footer {
       margin-top: 45px;
       &:before {
-        content: ""
+        content: ''
       }
     }
   }

@@ -1,7 +1,7 @@
-﻿@import '../partials/common_colours';
+﻿@import '../common/_colours';
 @import '../../../node_modules/font-awesome/scss/_variables.scss';
-@import '../partials/sage_bootstrap_variables';
-@import '../partials/common_mixins';
+@import '../common/_bootstrap_variables';
+@import '../common/_mixins';
 
 body {
   &.no-scroll {
@@ -23,7 +23,7 @@ body {
 
 a {
   &.anchor:before {
-    content: "";
+    content: '';
     display: block;
     height: 90px;
     margin: -90px 0 0; // Offset to counteract sticky header vertical space

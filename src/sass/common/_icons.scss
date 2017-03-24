@@ -1,0 +1,153 @@
+﻿/*Main Site Sass*/
+@import 'mixins';
+@import 'colours';
+@import 'variables';
+@import 'bootstrap_variables';
+
+.icon {
+    &.icon-xs {
+        width: 16px;
+        height: 16px;
+    }
+
+    &.icon-sm {
+        width: 32px;
+        height: 32px;
+    }
+
+    &.icon-md {
+        width: 48px;
+        height: 48px;
+    }
+
+    &.icon-lg {
+        width: 64px;
+        height: 64px;
+    }
+
+    &.icon-xl {
+        width: 80px;
+        height: 80px;
+    }
+
+    &.follow-link {
+        border-top: solid 1px;
+        border-right: solid 1px;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &.arrow-right {
+        border-top: solid 1px;
+        border-right: solid 1px;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &.arrow-left {
+        border-bottom: solid 1px;
+        border-left: solid 1px;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &.solution {
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+
+        &.distribution {
+            background-image: url('/Content/images/sample_content_images/icon_distribution.svg');
+        }
+
+        &.manufacturing {
+            background-image: url('/Content/images/sample_content_images/icon_manufacturing.svg');
+        }
+
+        &.process {
+            background-image: url('/Content/images/sample_content_images/icon_process.svg');
+        }
+
+        &.services {
+            background-image: url('/Content/images/sample_content_images/icon_services.svg');
+        }
+
+        &.service-reseller {
+            background-image: url('/Content/images/sample_content_images/icon_service_reseller.svg');
+        }
+
+        &.system-implementer {
+            background-image: url('/Content/images/sample_content_images/icon_system_implementer.svg');
+        }
+
+        &.independant-software-vendor {
+            background-image: url('/Content/images/sample_content_images/icon_independant_software_vendor.svg');
+        }
+
+        &.professional-accountant {
+            background-image: url('/Content/images/sample_content_images/icon_professional_accountant.svg');
+        }
+
+        &.alliance-partner {
+            background-image: url('/Content/images/sample_content_images/icon_alliance_partner.svg');
+        }
+    }
+}
+
+.social-icons {
+    a {
+        &.social {
+            color: $off-brand-grey;
+            transition: color $default-transition-time;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &.icon-twitter {
+                &:hover {
+                    color: $brand-twitter;
+                }
+            }
+
+            &.icon-google-plus {
+                &:hover {
+                    color: $brand-google-plus;
+                }
+            }
+
+            &.icon-facebook {
+                &:hover {
+                    color: $brand-facebook;
+                }
+            }
+
+            &.icon-youtube {
+                &:hover {
+                    color: $brand-youtube;
+                }
+            }
+
+            &.icon-linkedin {
+                &:hover {
+                    color: $brand-linkedin;
+                }
+            }
+
+            &.icon-instagram {
+                &:hover {
+                    color: $brand-instagram;
+                }
+            }
+
+            &.icon-pinterest {
+                &:hover {
+                    color: $brand-pinterest;
+                }
+            }
+        }
+    }
+}

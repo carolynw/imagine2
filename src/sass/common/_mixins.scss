@@ -1,0 +1,273 @@
+﻿@import 'colours';
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.otf') format('opentype');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype'), url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+@mixin reset-bootstrap-margin($margin-val) {
+  margin-left: $margin-val;
+  margin-right: $margin-val;
+}
+
+@mixin default-shadow() {
+  -webkit-box-shadow: 0 0 6px 2px rgba($brand-black, 0.1);
+  -moz-box-shadow: 0 0 6px 2px rgba($brand-black, 0.1);
+  box-shadow: 0 0 6px 2px rgba($brand-black, 0.1);
+}
+
+@mixin default-shadow-hover() {
+  -webkit-box-shadow: 0 4px 8px 4px rgba($brand-black, 0.2);
+  -moz-box-shadow: 0 4px 8px 4px rgba($brand-black, 0.2);
+  box-shadow: 0 4px 8px 4px rgba($brand-black, 0.2);
+}
+
+@mixin default-shadow-active() {
+  -webkit-box-shadow: 0 4px 8px 4px rgba($brand-black, 0.2);
+  -moz-box-shadow: 0 4px 8px 4px rgba($brand-black, 0.2);
+  box-shadow: 0 4px 8px 4px rgba($brand-black, 0.2);
+}
+
+//============================================================
+// Transforms
+//============================================================
+
+@mixin transform($arguments...) {
+  -webkit-transform: $arguments;
+  -ms-transform: $arguments; // IE9
+  transform: $arguments;
+}
+
+@mixin transform-origin($arguments...) {
+  -webkit-transform-origin: $arguments;
+  -ms-transform-origin: $arguments; // IE9
+  transform-origin: $arguments;
+}
+
+@mixin rotate($arguments...) {
+  -webkit-transform: rotate($arguments);
+  -ms-transform: rotate($arguments); // IE9
+  transform: rotate($arguments);
+}
+
+@mixin backface-visibility($arguments) {
+  -webkit-backface-visibility: $arguments;
+  -moz-backface-visibility: $arguments;
+  backface-visibility: $arguments;
+}
+
+//============================================================
+// Animations
+//============================================================
+
+@mixin transition($arguments...) {
+  -webkit-transition: $arguments;
+  -moz-transition: $arguments;
+  -o-transition: $arguments;
+  transition: $arguments;
+}
+
+@mixin animation($arguments) {
+  -webkit-animation: $arguments;
+  animation: $arguments;
+}
+
+//============================================================
+// Gradients
+//============================================================
+
+@mixin linear-v-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-linear-gradient(top, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -webkit-linear-gradient(top, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-linear-gradient(bottom, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(bottom, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(to bottom, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin linear-h-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-linear-gradient(left, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -webkit-linear-gradient(left, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-linear-gradient(right, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(right, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(to right, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin linear-tl-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-linear-gradient(left top, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -webkit-linear-gradient(left top, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-linear-gradient(bottom right, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(bottom right, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(to bottom right, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin linear-tr-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-linear-gradient(right top, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -webkit-linear-gradient(right top, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-linear-gradient(bottom left, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(bottom left, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(to bottom left, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin radial-cc-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-radial-gradient(circle cover, $from, $to) unquote($passThrough); /*For IE 11*/
+  background-image: -webkit-radial-gradient(circle, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-radial-gradient(circle, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-radial-gradient(circle, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: radial-gradient(circle, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin radial-tl-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-radial-gradient(top left, circle cover, $from, $to) unquote($passThrough); /*For IE 11*/
+  background-image: -webkit-radial-gradient(top left, circle, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-radial-gradient(top left, circle, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-radial-gradient(top left, circle, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: radial-gradient(at top left, circle, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin radial-tr-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-radial-gradient(top right, circle cover, $from, $to) unquote($passThrough); /*For IE 11*/
+  background-image: -webkit-radial-gradient(top right, circle, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-radial-gradient(top right, circle, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-radial-gradient(top right, circle, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: radial-gradient(at top right, circle, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin radial-tc-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-radial-gradient(top, circle cover, $from, $to) unquote($passThrough); /*For IE 11*/
+  background-image: -webkit-radial-gradient(top, circle, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-radial-gradient(top, circle, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-radial-gradient(top, circle, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: radial-gradient(at top, circle, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin radial-bl-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-radial-gradient(bottom left, circle cover, $from, $to) unquote($passThrough); /*For IE 11*/
+  background-image: -webkit-radial-gradient(bottom left, circle, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-radial-gradient(bottom left, circle, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-radial-gradient(bottom left, circle, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: radial-gradient(at bottom left, circle, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin radial-br-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-radial-gradient(bottom right, circle cover, $from, $to) unquote($passThrough); /*For IE 11*/
+  background-image: -webkit-radial-gradient(bottom right, circle, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-radial-gradient(bottom right, circle, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-radial-gradient(bottom right, circle, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: radial-gradient(at bottom right, circle, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+@mixin radial-bc-gradient($from, $to, $passThrough:"") {
+  @if $passThrough != "" {
+    $passThrough: ","+$passThrough;
+  }
+  background-image: -ms-radial-gradient(bottom, circle cover, $from, $to) unquote($passThrough); /*For IE 11*/
+  background-image: -webkit-radial-gradient(bottom, circle, $from, $to) unquote($passThrough); /* For Safari 5.1 to 6.0 */
+  background-image: -o-radial-gradient(bottom, circle, $from, $to) unquote($passThrough); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-radial-gradient(bottom, circle, $from, $to) unquote($passThrough); /* For Firefox 3.6 to 15 */
+  background-image: radial-gradient(at bottom, circle, $from, $to) unquote($passThrough); /* Standard syntax */
+}
+
+//============================================================
+// Structure
+//============================================================
+
+@mixin box-sizing($arguments) {
+  -webkit-box-sizing: $arguments;
+  -moz-box-sizing: $arguments;
+  box-sizing: $arguments;
+}
+
+//============================================================
+//
+// Easing
+//
+// Thanks to Robert Penner for his sterling work on easing,
+// and to Matthew Lein for converting these functions into
+// approximated cubic-bezier functions. Respect.
+//
+// @see http://robertpenner.com/
+// @see http://matthewlein.com/ceaser/
+//
+//============================================================
+
+// Cubic
+$easeInCubic: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+// Circ
+$easeInCirc: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+// Expo
+$easeInExpo: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$easeInOutExpo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+
+// Quad
+$easeInQuad: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$easeOutQuad: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+// Quart
+$easeInQuart: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$easeOutQuart: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+// Quint
+$easeInQuint: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+// Sine
+$easeInSine: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$easeInOutSine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+
+// Back
+$easeInBack: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$easeInOutBack: cubic-bezier(0.680, -0.550, 0.265, 1.550);

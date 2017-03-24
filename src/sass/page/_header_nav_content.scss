@@ -1,0 +1,51 @@
+﻿/*Main Site Sass*/
+@import '../common/mixins';
+@import '../common/colours';
+@import '../common/variables';
+
+#page_header_nav {
+    &.navbar-sage {
+        color:$brand-white;
+        background-color:transparent;
+        margin:0;
+        #page_header_nav_content {
+            padding:0;
+            background-color:transparent;
+        }
+        .navbar-sage-brand {
+            margin: 15px 0 0 0;
+            text-indent:-5000px;
+            width:100%;
+            height:40px;
+            display:block;
+            background:url('/Content/images/sage_logo_green.svg') no-repeat center center;
+        }
+        .nav-pills-sage {
+            font-size:1.0em;
+            font-weight:normal;
+            padding: 10px 10px 10px 0;
+            li {
+                a {
+                    color:$brand-dark-grey;
+                    &:hover,
+                     &:active,
+                     &:focus{
+                        background-color:transparent;
+                    }
+                }
+            }
+            &.header-right {
+                li {
+                    a {
+                        color:$brand-dark-grey;
+                         &:hover,
+                         &:active,
+                         &:focus{
+                        background-color:transparent;
+                    }
+                    }
+                }
+            }
+        }
+    }
+}

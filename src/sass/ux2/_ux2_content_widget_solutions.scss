@@ -1,7 +1,7 @@
-﻿@import '../partials/_common_mixins';
-@import '../partials/_common_colours';
-@import '../partials/_common_variables';
-@import '../partials/_sage_bootstrap_variables';
+﻿@import '../common/_mixins';
+@import '../common/_colours';
+@import '../common/_variables';
+@import '../common/_bootstrap_variables';
 
 .content-widget.solutions {
   .content-widget-inner {
@@ -81,7 +81,7 @@
                 border-radius: 0 0 5px 5px;
                 padding: 65px 15px 15px 15px;
                 border: 0 none;
-                background: transparent url("/Content/images/cardCurve.svg") top center;
+                background: transparent url('/Content/images/cardCurve.svg') top center;
                 background-size: cover;
 
                 p {

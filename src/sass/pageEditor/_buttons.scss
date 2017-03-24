@@ -1,0 +1,23 @@
+﻿/*Main Site Sass*/
+@import '../common/mixins';
+@import '../common/colours';
+@import '../common/variables';
+
+.button-primary {
+    color: $brand-brilliant-green-AA;
+}
+.button-block-primary {
+    color: $brand-brilliant-green-AA;
+}
+.button-secondary {
+    color: $brand-black;
+}
+.button-block-secondary {
+    color: $brand-black;
+}
+.button-tertiary {
+    color: $brand-med-grey;
+}
+.button-block-tertiary {
+    color: $brand-med-grey;
+}

@@ -1,5 +1,5 @@
-﻿@import "../partials/sage_bootstrap_variables";
-@import "../partials/common_colours";
+﻿@import '../common/_bootstrap_variables';
+@import '../common/_colours';
 
 #footer-ux2 {
   background: $off-brand-grey-ultralight;
@@ -191,7 +191,7 @@
         margin-right: 10px;
 
         &:after {
-          content: "";
+          content: '';
           border-right: 1px solid $brand-black;
           line-height: 0.5;
           position: absolute;

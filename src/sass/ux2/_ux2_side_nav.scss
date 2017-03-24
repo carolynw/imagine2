@@ -1,6 +1,6 @@
-﻿@import '../partials/sage_bootstrap_variables';
-@import '../partials/common_mixins';
-@import '../partials/common_colours';
+﻿@import '../common/_bootstrap_variables';
+@import '../common/_mixins';
+@import '../common/_colours';
 
 @mixin stretch-fit {
   position: absolute;
@@ -111,7 +111,7 @@
       font-size: 16px;
 
       &:after {
-        content: "";
+        content: '';
         border-left: 2px solid $brand-slate-dark;
         position: absolute;
         left: 0;
@@ -201,7 +201,7 @@
             &:after {
               @include stretch-fit;
 
-              content: "";
+              content: '';
               display: block;
               border-top: 2px solid $brand-azul-light;
               border-right: 2px solid $brand-azul-light;
@@ -213,7 +213,7 @@
           }
 
           &:after {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
             top: 0;
@@ -263,7 +263,7 @@
             padding-top: 10px;
 
             &:after {
-              content: "";
+              content: '';
               position: absolute;
               left: 0;
               top: 0;
@@ -276,7 +276,7 @@
             padding-bottom: 10px;
 
             &:after {
-              content: "";
+              content: '';
               position: absolute;
               left: 0;
               bottom: 0;

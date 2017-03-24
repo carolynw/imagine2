@@ -1,5 +1,5 @@
-﻿@import '../partials/common_colours';
-@import '../partials/common_mixins';
+﻿@import '../common/_colours';
+@import '../common/_mixins';
 
 .content-widget.skinny-hero {
   @include radial-cc-gradient($brand-med-grey, $brand-med-dark-grey);

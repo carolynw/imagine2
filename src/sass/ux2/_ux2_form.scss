@@ -1,5 +1,5 @@
-﻿@import '../partials/common_mixins';
-@import '../partials/common_colours';
+﻿@import '../common/_mixins';
+@import '../common/_colours';
 
 form.ux2form {
   margin: 50px 0;
@@ -19,7 +19,7 @@ form.ux2form {
       color: $brand-fuchsia;
     }
 
-    input[type="text"], input[type="password"] {
+    input[type='text'], input[type='password'] {
       display: block;
       width: 100%;
       border-top: none;
@@ -33,7 +33,7 @@ form.ux2form {
       }
     }
 
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       visibility: hidden;
       height: 0;
       width: 0;
@@ -48,7 +48,7 @@ form.ux2form {
       }
 
       & + i:before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         width: 26px;
@@ -58,7 +58,7 @@ form.ux2form {
       }
 
       & + i:after {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         left: 8px;
@@ -79,7 +79,7 @@ form.ux2form {
     }
   }
 
-  button[type="submit"] {
+  button[type='submit'] {
     @include linear-h-gradient(rgba($brand-fuchsia-dark, 1.0), rgba($brand-fuchsia, 1.0));
     color: $brand-white;
     font-weight: bold;
