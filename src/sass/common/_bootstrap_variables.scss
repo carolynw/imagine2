@@ -1,10 +1,8 @@
-﻿@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
-@import 'colours';
+﻿@import 'colours';
 
 $brand-primary:                  $brand-black;
 $icon-font-path:                 "../fonts/";
 
-// Extra small screen / phone
 $screen-xxs:                     0px;
 $screen-xxs-min:                 $screen-xxs;
 $screen-xxs-max:                 479px;
@@ -12,3 +10,6 @@ $screen-xxs-max:                 479px;
 $nav-tabs-active-link-hover-bg:                   transparent;
 $nav-tabs-justified-link-border-color:            transparent;
 $nav-tabs-justified-active-link-border-color:     transparent;
+
+// Must be imported at end of this file otherwise bootstrap defaults will not be overwritten/cascaded properly
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
