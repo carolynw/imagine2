@@ -6,9 +6,8 @@
 @@include("../../_common/_side_nav.html")
 
 <div id="page_main">
-    <div id="page_header_nav" class="navbar-sage">
-        @@include("../../_common/_header_nav.html")
-        @@include("../../_common/_header_nav_sticky.html", {
+    @@include("../../_common/_header.html", {
+        "sticky" : {
             "title" : "Sage One",
             "theme" : "plum",
             "leadIn" : "",
@@ -19,8 +18,8 @@
                 {"title":"Switching to Sage", "href":"/html/products/sage_one/switching.html"},
                 {"title":"Sage One for Accountants", "href":"/html/products/sage_one/for_accountants.html", "class":"active"}
             ]
-        })
-    </div>
+        }
+    })
 
     <header id="page_header">
         <div id="page_header_content">

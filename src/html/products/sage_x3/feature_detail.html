@@ -6,9 +6,8 @@
 @@include("../../_common/_side_nav.html")
 
 <div id="page_main">
-    <div id="page_header_nav" class="navbar-sage">
-        @@include("../../_common/_header_nav.html")
-        @@include("../../_common/_header_nav_sticky.html", {
+    @@include("../../_common/_header.html", {
+        "sticky" : {
             "title" : "Sage X3",
             "theme" : "plum",
             "leadIn" : "Call us on 1-866-749-7243",
@@ -18,8 +17,8 @@
                 {"title":"Customer stories"},
                 {"title":"Switching to Sage"}
             ]
-        })
-    </div>
+        }
+    })
 
     <header id="page_header">
         <div id="page_header_content">

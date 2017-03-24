@@ -1,0 +1,10 @@
+﻿<div id="page_header_nav" class="navbar-sage">
+    @@include("_header_nav.html")
+    @@include("_header_search.html")
+
+    @@if(sticky) {
+        @@for(var i=0; i < 1; i++) {
+            @@include("_header_sticky.html", `+JSON.stringify(sticky)+`)
+        }
+    }
+</div>
