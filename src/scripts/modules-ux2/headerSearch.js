@@ -8,7 +8,7 @@ sageApp.modules.register("headerSearch", function ($) {
     var $headerSearch;
 
     function init() {
-        $headerSearch = $("#header-search");
+        $headerSearch = $("#header-search").not(".force");
 
         if (!$headerSearch.length)
             return;
