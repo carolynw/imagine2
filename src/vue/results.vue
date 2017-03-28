@@ -1,6 +1,6 @@
 <div class="results">
     <ul class="list">
-        <li v-for="result in results" :key="result.id">
+        <li v-for="result in results">
             <div class="left">
 
             </div>

@@ -1,6 +1,6 @@
-<div class="paging">
+<div class="paging" v-if="paging.hits > 0">
     <paginate
-            :page-count="20"
+            :page-count="Math.ceil(paging.hits / paging.perPage)"
             :initial-page="paging.currentPage"
             :margin-pages="0"
             :page-range="5"
@@ -11,7 +11,6 @@
     </paginate>
 
     <div>
-        Showing {{paging.perPage * (paging.currentPage - 1) + 1}} - {{paging.perPage * paging.currentPage}}
-        of {{paging.hits}} results
+        Showing {{rangeMin}} - {{rangeMax}} of {{paging.hits}} results
     </div>
 </div>

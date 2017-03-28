@@ -42,7 +42,8 @@ var vendorSrc = {
         './node_modules/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
         './node_modules/slick-carousel/slick/slick.js',
         './node_modules/vue/dist/vue.js',
-        './node_modules/vuejs-paginate/dist/index.js'
+        './node_modules/vuejs-paginate/dist/index.js',
+        './node_modules/vue-router/dist/vue-router.js'
     ]
 };
 
