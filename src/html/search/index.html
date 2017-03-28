@@ -11,39 +11,12 @@
         "search" : {"force" : true}
     })
 
-    <div id="search">
+    <div id="search-page">
         <div id="refine">
-            <div class="filters">
-                <div>Refine <span>1,234 results</span></div>
-                <ul>
-                    <li>Facet 1
-                        <ul>
-                            <li>Category 1</li>
-                            <li>Category 2</li>
-                            <li>Category 3</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Facet 2
-                        <ul>
-                            <li>Category 1</li>
-                            <li>Category 2</li>
-                            <li>Category 3</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Facet 3
-                        <ul>
-                            <li>Category 1</li>
-                            <li>Category 2</li>
-                            <li>Category 3</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            <search-facets v-bind="{facets:facets, paging:paging}"></search-facets>
         </div>
         <div id="results">
-            fdsafdasfda
+            <search-results v-bind="{results:results}"></search-results>
         </div>
     </div>
 

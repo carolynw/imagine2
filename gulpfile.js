@@ -9,6 +9,7 @@ var gulp = require("gulp"),
     del = require("del"),
     fileInclude = require("gulp-file-include"),
     htmlHint = require("gulp-htmlhint"),
+    includeFile = require("gulp-include-file"),
     merge = require("gulp-merge"),
     rename = require("gulp-rename"),
     replace = require("gulp-replace"),
@@ -42,7 +43,9 @@ var vendorSrc = {
         "./node_modules/jquery/dist/jquery.js",
         "./node_modules/bootstrap/dist/js/bootstrap.js",
         "./node_modules/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js",
-        "./node_modules/slick-carousel/slick/slick.js"
+        "./node_modules/slick-carousel/slick/slick.js",
+        "./node_modules/vue/dist/vue.js"
+
     ]
 };
 
@@ -62,6 +65,7 @@ var src = {
         gulpConfig.themeProjectRoot + "sass/htmlEditor.scss"
     ],
     scripts: [
+        gulpConfig.themeProjectRoot + "vue/**/*.js",
         gulpConfig.themeProjectRoot + "scripts/framework/**/*.js", // important: must be first due to load-order concerns
         gulpConfig.themeProjectRoot + "scripts/**/*.js",
         "!" + gulpConfig.themeProjectRoot + "scripts/**/*.test.js" // exclude unit tests
@@ -77,7 +81,7 @@ gulp.task("TestSite-Server", ["TestSite-All"], function () {
     gulp.watch([vendorSrc.fonts, src.fonts], ["TestSite-Fonts", refreshWebServer]);
     gulp.watch([vendorSrc.images, src.images], ["TestSite-Images", refreshWebServer]);
     gulp.watch([gulpConfig.themeProjectRoot + "sass/**/*.scss"], ["TestSite-Sass", refreshWebServer]);
-    gulp.watch([vendorSrc.scripts, src.scripts], ["TestSite-Scripts", refreshWebServer]);
+    gulp.watch([vendorSrc.scripts, src.scripts, gulpConfig.themeProjectRoot + "vue/**/*.html"], ["TestSite-Scripts", refreshWebServer]);
 
     function refreshWebServer() {
         return gulp.src(gulpConfig.webProjectRoot)
@@ -189,7 +193,13 @@ gulp.task("Content-Scripts", function () {
     }
 
     function compileScripts() {
+        function strip(content){
+            console.log(content);
+            return "wtf" + content.replace(/\v+/g, "");
+        }
+
         return gulp.src(src.scripts, {base: "./"})
+            .pipe(includeFile())
             .pipe(sourceMaps.init())
             .pipe(concat("sage.js"))
             // Optimization: wrap in self-executing function with common globals/settings passed in for better minification
@@ -203,5 +213,7 @@ gulp.task("Content-Scripts", function () {
         function mapSources(sourcePath) {
             return "/" + sourcePath;
         }
+
+
     }
 });

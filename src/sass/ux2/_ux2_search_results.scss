@@ -1,0 +1,30 @@
+﻿@import '../common/_bootstrap_variables';
+@import '../common/_colours';
+
+#search-page {
+  display: flex;
+
+  #refine {
+    background: $off-brand-grey-light;
+    width: 40%;
+
+    .facets {
+      float: right;
+
+      .list {
+        > li {
+          &.applied {
+            > ul {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #results {
+    width: 60%;
+    background: $brand-white;
+  }
+}
