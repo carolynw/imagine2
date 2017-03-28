@@ -9,6 +9,8 @@
                 <ul class="categories">
                     <li v-for="category in result.categories">
                         {{category.title}}
+
+
                     </li>
                 </ul>
                 <p class="desc">
@@ -22,6 +24,8 @@
                 <ul class="tags" v-if="result.tags">
                     <li v-for="tag in result.tags">
                         {{tag}}
+
+
                     </li>
                 </ul>
             </div>

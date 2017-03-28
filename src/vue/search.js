@@ -1,12 +1,14 @@
 (function () {
+    Vue.component("paginate", VuejsPaginate);
+
     var results = {
         props: ["results"],
-        template: INCLUDE_FILE("./src/vue/results.template.html")
+        template: vueTemplates["results.vue"]
     };
 
     var facets = {
         props: ["facets", "paging"],
-        template: INCLUDE_FILE("./src/vue/facets.template.html"),
+        template: vueTemplates["facets.vue"],
         methods: {
             setFacet: function (facet, category) {
                 facet.isApplied = true;
@@ -18,23 +20,36 @@
         }
     };
 
+    var paging = {
+        props: ["paging"],
+        template: vueTemplates["paging.vue"],
+        methods: {
+            changePage: function (pageNumber) {
+                var self = this;
+                self.paging.currentPage = pageNumber;
+            }
+        }
+    };
+
     var vm = new Vue({
         el: "#search-page",
         components: {
             "searchResults": results,
-            "searchFacets": facets
+            "searchFacets": facets,
+            "searchPaging": paging
         },
         data: {
-            facets: null,
-            results: null,
-            paging: null
+            facets: {},
+            results: [],
+            paging: []
         }
     });
 
     vm.paging = {
         hits: 123456,
         currentPage: 1,
-        perPage: 10
+        perPage: 10,
+        pageCount: 16
     };
 
     // Mock data

@@ -13,10 +13,19 @@
 
     <div id="search-page">
         <div id="refine">
-            <search-facets v-bind="{facets:facets, paging:paging}"></search-facets>
+            <search-facets
+                    :facets="facets"
+                    :paging="paging">
+            </search-facets>
         </div>
         <div id="results">
-            <search-results v-bind="{results:results}"></search-results>
+            <search-results
+                    :results="results">
+            </search-results>
+
+            <search-paging
+                :paging="paging">
+            </search-paging>
         </div>
     </div>
 
@@ -24,4 +33,5 @@
 </div>
 </body>
 
+<script src="/Content/scripts/sage.templates.min.js"></script>
 @@include("../_common/_html_end.html")

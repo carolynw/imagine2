@@ -3,19 +3,13 @@
   "private": true,
   "main": "gulpfile.js",
   "devDependencies": {
-    "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7",
     "del": "^2.2.2",
-    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-concat-util": "^0.5.5",
     "gulp-connect": "^5.0.0",
-    "gulp-cssmin": "^0.1.7",
     "gulp-file-include": "^1.0.0",
+    "gulp-html2js": "^0.4.2",
     "gulp-htmlhint": "^0.3.1",
-    "gulp-include-file": "^0.1.1",
-    "gulp-merge": "^0.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^3.1.0",
@@ -23,11 +17,16 @@
     "gulp-uglify": "^2.1.0",
     "gulp-watch": "^4.3.11",
     "gulp-wrap-js": "^0.4.1",
-    "jquery": "^3.1.1",
-    "scrollmagic": "^2.0.5",
-    "slick-carousel": "^1.6.0"
+    "merge-stream": "^1.0.1"
   },
   "dependencies": {
-    "vue": "^2.2.6"
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "scrollmagic": "^2.0.5",
+    "slick-carousel": "^1.6.0",
+    "vue": "^2.2.6",
+    "vuejs-paginate": "^0.8.2"
   }
 }
